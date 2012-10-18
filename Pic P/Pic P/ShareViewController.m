@@ -18,7 +18,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        self.title = NSLocalizedString(@"Share", @"First");
+        self.tabBarItem.image = [UIImage imageNamed:@"First"];
     }
     return self;
 }

@@ -116,6 +116,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51E2AD691630C88C007DA5C4 /* Iphone Views */ = {
+			isa = PBXGroup;
+			children = (
+				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
+				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
+				51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */,
+				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
+				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
+			);
+			name = "Iphone Views";
+			sourceTree = "<group>";
+		};
+		51E2AD6A1630C8B3007DA5C4 /* Ipad Views */ = {
+			isa = PBXGroup;
+			children = (
+				76BA2B1D1630977D00DAE149 /* FirstViewController_iPad.xib */,
+				76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */,
+				51E2AD621630C6E3007DA5C4 /* CategoryViewController_iPad.xib */,
+				51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */,
+				51E2AD5B1630C6CE007DA5C4 /* PictureViewController_iPad.xib */,
+			);
+			name = "Ipad Views";
+			sourceTree = "<group>";
+		};
+		51E2AD6B1630C8D2007DA5C4 /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				76BA2B0F1630977D00DAE149 /* first.png */,
+				76BA2B111630977D00DAE149 /* first@2x.png */,
+				76BA2B161630977D00DAE149 /* second.png */,
+				76BA2B181630977D00DAE149 /* second@2x.png */,
+			);
+			name = pictures;
+			sourceTree = "<group>";
+		};
+		51E2AD6C1630C8E4007DA5C4 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				76BA2B091630977D00DAE149 /* AppDelegate.h */,
+				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
+				76BA2B131630977D00DAE149 /* SecondViewController.h */,
+				51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */,
+				51E2AD561630C6BF007DA5C4 /* ShareViewController.h */,
+				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
+			);
+			name = Headers;
+			sourceTree = "<group>";
+		};
+		51E2AD6D1630C8E8007DA5C4 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				76BA2B0A1630977D00DAE149 /* AppDelegate.m */,
+				76BA2B0D1630977D00DAE149 /* FirstViewController.m */,
+				76BA2B141630977D00DAE149 /* SecondViewController.m */,
+				51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */,
+				51E2AD571630C6BF007DA5C4 /* ShareViewController.m */,
+				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
 		76BA2AEB1630977D00DAE149 = {
 			isa = PBXGroup;
 			children = (
@@ -149,32 +210,11 @@
 		76BA2B001630977D00DAE149 /* Pic P */ = {
 			isa = PBXGroup;
 			children = (
-				76BA2B091630977D00DAE149 /* AppDelegate.h */,
-				76BA2B0A1630977D00DAE149 /* AppDelegate.m */,
-				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
-				76BA2B0D1630977D00DAE149 /* FirstViewController.m */,
-				76BA2B0F1630977D00DAE149 /* first.png */,
-				76BA2B111630977D00DAE149 /* first@2x.png */,
-				76BA2B131630977D00DAE149 /* SecondViewController.h */,
-				76BA2B141630977D00DAE149 /* SecondViewController.m */,
-				76BA2B161630977D00DAE149 /* second.png */,
-				76BA2B181630977D00DAE149 /* second@2x.png */,
-				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
-				76BA2B1D1630977D00DAE149 /* FirstViewController_iPad.xib */,
-				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
-				76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */,
-				51E2AD621630C6E3007DA5C4 /* CategoryViewController_iPad.xib */,
-				51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */,
-				51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */,
-				51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */,
-				51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */,
-				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
-				51E2AD561630C6BF007DA5C4 /* ShareViewController.h */,
-				51E2AD571630C6BF007DA5C4 /* ShareViewController.m */,
-				51E2AD5B1630C6CE007DA5C4 /* PictureViewController_iPad.xib */,
-				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
-				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
-				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
+				51E2AD6D1630C8E8007DA5C4 /* Source */,
+				51E2AD6C1630C8E4007DA5C4 /* Headers */,
+				51E2AD6B1630C8D2007DA5C4 /* pictures */,
+				51E2AD6A1630C8B3007DA5C4 /* Ipad Views */,
+				51E2AD691630C88C007DA5C4 /* Iphone Views */,
 				76BA2B011630977D00DAE149 /* Supporting Files */,
 			);
 			path = "Pic P";
