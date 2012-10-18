@@ -16,6 +16,24 @@
 		51E2AD661630C6E3007DA5C4 /* CategoryViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD621630C6E3007DA5C4 /* CategoryViewController_iPad.xib */; };
 		51E2AD671630C6E3007DA5C4 /* CategoryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */; };
 		51E2AD681630C6E3007DA5C4 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */; };
+		51E2AD711630CAED007DA5C4 /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */; };
+		51E2AD721630CAED007DA5C4 /* ListViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */; };
+		51E2AD741630CB16007DA5C4 /* ListViewViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD731630CB16007DA5C4 /* ListViewViewController_iPad.xib */; };
+		51E2AD781630CCC1007DA5C4 /* ListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */; };
+		51E2AD791630CCC1007DA5C4 /* ListEditViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */; };
+		51E2AD7D1630CCD7007DA5C4 /* ListCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */; };
+		51E2AD7E1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */; };
+		51E2AD821630CCFA007DA5C4 /* CategoryViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD801630CCF9007DA5C4 /* CategoryViewViewController.m */; };
+		51E2AD831630CCFA007DA5C4 /* CategoryViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD811630CCF9007DA5C4 /* CategoryViewViewController_iPhone.xib */; };
+		51E2AD871630CD12007DA5C4 /* CategoryAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD851630CD12007DA5C4 /* CategoryAddViewController.m */; };
+		51E2AD881630CD12007DA5C4 /* CategoryAddViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD861630CD12007DA5C4 /* CategoryAddViewController_iPhone.xib */; };
+		51E2AD8C1630CD22007DA5C4 /* CategoryEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD8A1630CD22007DA5C4 /* CategoryEditViewController.m */; };
+		51E2AD8D1630CD22007DA5C4 /* CategoryEditViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD8B1630CD22007DA5C4 /* CategoryEditViewController_iPhone.xib */; };
+		51E2AD8F1630CE72007DA5C4 /* ListEditViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD8E1630CE72007DA5C4 /* ListEditViewController_iPad.xib */; };
+		51E2AD911630CEB0007DA5C4 /* ListCreateViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD901630CEB0007DA5C4 /* ListCreateViewController_iPad.xib */; };
+		51E2AD931630CECA007DA5C4 /* CategoryEditViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD921630CECA007DA5C4 /* CategoryEditViewController_iPad.xib */; };
+		51E2AD951630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD941630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib */; };
+		51E2AD971630CF05007DA5C4 /* CategoryViewViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD961630CF05007DA5C4 /* CategoryViewViewController_iPad.xib */; };
 		76BA2AFB1630977D00DAE149 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFA1630977D00DAE149 /* UIKit.framework */; };
 		76BA2AFD1630977D00DAE149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFC1630977D00DAE149 /* Foundation.framework */; };
 		76BA2AFF1630977D00DAE149 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFE1630977D00DAE149 /* CoreGraphics.framework */; };
@@ -62,6 +80,30 @@
 		51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
 		51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewViewController.h; path = "Pic P/ListViewViewController.h"; sourceTree = SOURCE_ROOT; };
+		51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewViewController.m; path = "Pic P/ListViewViewController.m"; sourceTree = SOURCE_ROOT; };
+		51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewViewController_iPhone.xib; path = "Pic P/ListViewViewController_iPhone.xib"; sourceTree = SOURCE_ROOT; };
+		51E2AD731630CB16007DA5C4 /* ListViewViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListViewViewController_iPad.xib; sourceTree = "<group>"; };
+		51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListEditViewController.h; sourceTree = "<group>"; };
+		51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListEditViewController.m; sourceTree = "<group>"; };
+		51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListEditViewController_iPhone.xib; sourceTree = "<group>"; };
+		51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCreateViewController.h; sourceTree = "<group>"; };
+		51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCreateViewController.m; sourceTree = "<group>"; };
+		51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCreateViewController_iPhone.xib; sourceTree = "<group>"; };
+		51E2AD7F1630CCF9007DA5C4 /* CategoryViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewViewController.h; sourceTree = "<group>"; };
+		51E2AD801630CCF9007DA5C4 /* CategoryViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewViewController.m; sourceTree = "<group>"; };
+		51E2AD811630CCF9007DA5C4 /* CategoryViewViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewViewController_iPhone.xib; sourceTree = "<group>"; };
+		51E2AD841630CD12007DA5C4 /* CategoryAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAddViewController.h; sourceTree = "<group>"; };
+		51E2AD851630CD12007DA5C4 /* CategoryAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryAddViewController.m; sourceTree = "<group>"; };
+		51E2AD861630CD12007DA5C4 /* CategoryAddViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryAddViewController_iPhone.xib; sourceTree = "<group>"; };
+		51E2AD891630CD22007DA5C4 /* CategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEditViewController.h; sourceTree = "<group>"; };
+		51E2AD8A1630CD22007DA5C4 /* CategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEditViewController.m; sourceTree = "<group>"; };
+		51E2AD8B1630CD22007DA5C4 /* CategoryEditViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryEditViewController_iPhone.xib; sourceTree = "<group>"; };
+		51E2AD8E1630CE72007DA5C4 /* ListEditViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListEditViewController_iPad.xib; sourceTree = "<group>"; };
+		51E2AD901630CEB0007DA5C4 /* ListCreateViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCreateViewController_iPad.xib; sourceTree = "<group>"; };
+		51E2AD921630CECA007DA5C4 /* CategoryEditViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryEditViewController_iPad.xib; sourceTree = "<group>"; };
+		51E2AD941630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryAddViewController_iPad.xib; sourceTree = "<group>"; };
+		51E2AD961630CF05007DA5C4 /* CategoryViewViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewViewController_iPad.xib; sourceTree = "<group>"; };
 		76BA2AF61630977D00DAE149 /* Pic P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic P.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BA2AFA1630977D00DAE149 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		76BA2AFC1630977D00DAE149 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -121,7 +163,13 @@
 			children = (
 				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
 				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
+				51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */,
+				51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */,
+				51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */,
 				51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */,
+				51E2AD8B1630CD22007DA5C4 /* CategoryEditViewController_iPhone.xib */,
+				51E2AD861630CD12007DA5C4 /* CategoryAddViewController_iPhone.xib */,
+				51E2AD811630CCF9007DA5C4 /* CategoryViewViewController_iPhone.xib */,
 				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
 				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
 			);
@@ -133,7 +181,13 @@
 			children = (
 				76BA2B1D1630977D00DAE149 /* FirstViewController_iPad.xib */,
 				76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */,
+				51E2AD8E1630CE72007DA5C4 /* ListEditViewController_iPad.xib */,
+				51E2AD901630CEB0007DA5C4 /* ListCreateViewController_iPad.xib */,
+				51E2AD731630CB16007DA5C4 /* ListViewViewController_iPad.xib */,
 				51E2AD621630C6E3007DA5C4 /* CategoryViewController_iPad.xib */,
+				51E2AD921630CECA007DA5C4 /* CategoryEditViewController_iPad.xib */,
+				51E2AD941630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib */,
+				51E2AD961630CF05007DA5C4 /* CategoryViewViewController_iPad.xib */,
 				51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */,
 				51E2AD5B1630C6CE007DA5C4 /* PictureViewController_iPad.xib */,
 			);
@@ -156,8 +210,14 @@
 			children = (
 				76BA2B091630977D00DAE149 /* AppDelegate.h */,
 				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
+				51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */,
+				51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */,
+				51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */,
 				76BA2B131630977D00DAE149 /* SecondViewController.h */,
 				51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */,
+				51E2AD7F1630CCF9007DA5C4 /* CategoryViewViewController.h */,
+				51E2AD841630CD12007DA5C4 /* CategoryAddViewController.h */,
+				51E2AD891630CD22007DA5C4 /* CategoryEditViewController.h */,
 				51E2AD561630C6BF007DA5C4 /* ShareViewController.h */,
 				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
 			);
@@ -170,7 +230,13 @@
 				76BA2B0A1630977D00DAE149 /* AppDelegate.m */,
 				76BA2B0D1630977D00DAE149 /* FirstViewController.m */,
 				76BA2B141630977D00DAE149 /* SecondViewController.m */,
+				51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */,
+				51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */,
+				51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */,
 				51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */,
+				51E2AD801630CCF9007DA5C4 /* CategoryViewViewController.m */,
+				51E2AD8A1630CD22007DA5C4 /* CategoryEditViewController.m */,
+				51E2AD851630CD12007DA5C4 /* CategoryAddViewController.m */,
 				51E2AD571630C6BF007DA5C4 /* ShareViewController.m */,
 				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
 			);
@@ -336,6 +402,17 @@
 				51E2AD601630C6CE007DA5C4 /* PictureViewController_iPhone.xib in Resources */,
 				51E2AD661630C6E3007DA5C4 /* CategoryViewController_iPad.xib in Resources */,
 				51E2AD671630C6E3007DA5C4 /* CategoryViewController_iPhone.xib in Resources */,
+				51E2AD741630CB16007DA5C4 /* ListViewViewController_iPad.xib in Resources */,
+				51E2AD791630CCC1007DA5C4 /* ListEditViewController_iPhone.xib in Resources */,
+				51E2AD7E1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib in Resources */,
+				51E2AD831630CCFA007DA5C4 /* CategoryViewViewController_iPhone.xib in Resources */,
+				51E2AD881630CD12007DA5C4 /* CategoryAddViewController_iPhone.xib in Resources */,
+				51E2AD8D1630CD22007DA5C4 /* CategoryEditViewController_iPhone.xib in Resources */,
+				51E2AD8F1630CE72007DA5C4 /* ListEditViewController_iPad.xib in Resources */,
+				51E2AD911630CEB0007DA5C4 /* ListCreateViewController_iPad.xib in Resources */,
+				51E2AD931630CECA007DA5C4 /* CategoryEditViewController_iPad.xib in Resources */,
+				51E2AD951630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib in Resources */,
+				51E2AD971630CF05007DA5C4 /* CategoryViewViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76BA2B371630977D00DAE149 /* InfoPlist.strings in Resources */,
+				51E2AD721630CAED007DA5C4 /* ListViewViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +455,11 @@
 				51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */,
 				51E2AD611630C6CE007DA5C4 /* PictureViewController.m in Sources */,
 				51E2AD681630C6E3007DA5C4 /* CategoryViewController.m in Sources */,
+				51E2AD781630CCC1007DA5C4 /* ListEditViewController.m in Sources */,
+				51E2AD7D1630CCD7007DA5C4 /* ListCreateViewController.m in Sources */,
+				51E2AD821630CCFA007DA5C4 /* CategoryViewViewController.m in Sources */,
+				51E2AD871630CD12007DA5C4 /* CategoryAddViewController.m in Sources */,
+				51E2AD8C1630CD22007DA5C4 /* CategoryEditViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76BA2B3A1630977D00DAE149 /* Pic_PTests.m in Sources */,
+				51E2AD711630CAED007DA5C4 /* ListViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
