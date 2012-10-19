@@ -52,9 +52,15 @@
 
 - (IBAction)manageList{
     // Should go to the second view (List View)
-    //If I am using an iphone
-    SecondViewController *secondView = [[SecondViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
-    [self presentModalViewController:secondView animated:YES];
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) { 
+        SecondViewController *secondView = [[SecondViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
+        [self presentModalViewController:secondView animated:YES];
+    }
+    else{
+        SecondViewController *secondView = [[SecondViewController alloc]initWithNibName:@"SecondViewController_iPad" bundle:nil];
+        [self presentModalViewController:secondView animated:YES];
+    }
+    
     
 }
 
