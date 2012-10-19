@@ -141,7 +141,7 @@
 					<object class="IBUILabel" id="126430658">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{343, 111}, {82, 67}}</string>
+						<string key="NSFrame">{{333, 112}, {102, 67}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="488899274"/>
@@ -151,7 +151,7 @@
 						<int key="IBUIContentMode">7</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
-						<string key="IBUIText">List View</string>
+						<string key="IBUIText">Manage Lists</string>
 						<object class="NSColor" key="IBUITextColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MCAwIDAAA</bytes>
@@ -175,6 +175,7 @@
 						<string key="NSFrame">{{60, 724}, {627, 125}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -255,9 +256,9 @@
 							<reference ref="679231111"/>
 							<reference ref="973611935"/>
 							<reference ref="488899274"/>
-							<reference ref="126430658"/>
 							<reference ref="916636507"/>
 							<reference ref="151219878"/>
+							<reference ref="126430658"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
