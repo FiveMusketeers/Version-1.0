@@ -51,7 +51,7 @@
 					<object class="IBUIButton" id="44024349">
 						<reference key="NSNextResponder" ref="766721923"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{117, 122}, {534, 165}}</string>
+						<string key="NSFrame">{{117, 126}, {534, 165}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="364997355"/>
@@ -136,6 +136,7 @@
 						<string key="NSFrame">{{117, 751}, {534, 165}}</string>
 						<reference key="NSSuperview" ref="766721923"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBIPadFramework</string>
@@ -196,7 +197,7 @@
 						<reference key="destination" ref="841351856"/>
 						<int key="IBEventType">7</int>
 					</object>
-					<int key="connectionID">16</int>
+					<int key="connectionID">18</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -252,8 +253,8 @@
 							<reference ref="912991569"/>
 							<reference ref="639061907"/>
 							<reference ref="363280364"/>
-							<reference ref="44024349"/>
 							<reference ref="364997355"/>
+							<reference ref="44024349"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -306,7 +307,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">16</int>
+			<int key="maxID">18</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -314,17 +315,27 @@
 					<string key="className">FirstViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="goBack">id</string>
+						<string key="manageCategories:">UIButton</string>
 						<string key="manageList">id</string>
+						<string key="managePictures:">UIButton</string>
+						<string key="share:">UIButton</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="goBack">
-							<string key="name">goBack</string>
-							<string key="candidateClassName">id</string>
+						<object class="IBActionInfo" key="manageCategories:">
+							<string key="name">manageCategories:</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 						<object class="IBActionInfo" key="manageList">
 							<string key="name">manageList</string>
 							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="managePictures:">
+							<string key="name">managePictures:</string>
+							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBActionInfo" key="share:">
+							<string key="name">share:</string>
+							<string key="candidateClassName">UIButton</string>
 						</object>
 					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
