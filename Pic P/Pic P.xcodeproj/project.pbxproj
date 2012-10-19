@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3D1BEE9B1630D2FD00DBA893 /* CreatePictureViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEE9A1630D2FD00DBA893 /* CreatePictureViewController_iPad.xib */; };
 		3D1BEEB21630DBE000DBA893 /* CreatePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB01630DBE000DBA893 /* CreatePictureViewController.m */; };
-		3D1BEEB51630DCB700DBA893 /* CreatePictureController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB41630DCB700DBA893 /* CreatePictureController_iPhone.xib */; };
+		3D1BEEB51630DCB700DBA893 /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB41630DCB700DBA893 /* CreatePictureViewController_iPhone.xib */; };
 		3D1BEEB71630DCE800DBA893 /* CreatePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB61630DCE800DBA893 /* CreatePictureViewController.xib */; };
 		51E2AD581630C6BF007DA5C4 /* ShareViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */; };
 		51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
@@ -57,7 +57,7 @@
 		3D1BEE9A1630D2FD00DBA893 /* CreatePictureViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPad.xib; sourceTree = "<group>"; };
 		3D1BEEAF1630DBE000DBA893 /* CreatePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePictureViewController.h; sourceTree = "<group>"; };
 		3D1BEEB01630DBE000DBA893 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePictureViewController.m; sourceTree = "<group>"; };
-		3D1BEEB41630DCB700DBA893 /* CreatePictureController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureController_iPhone.xib; sourceTree = "<group>"; };
+		3D1BEEB41630DCB700DBA893 /* CreatePictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		3D1BEEB61630DCE800DBA893 /* CreatePictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController.xib; sourceTree = "<group>"; };
 		51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			children = (
 				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
 				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
-				3D1BEEB41630DCB700DBA893 /* CreatePictureController_iPhone.xib */,
+				3D1BEEB41630DCB700DBA893 /* CreatePictureViewController_iPhone.xib */,
 				51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */,
 				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
 				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
@@ -351,7 +351,7 @@
 				51E2AD661630C6E3007DA5C4 /* CategoryViewController_iPad.xib in Resources */,
 				51E2AD671630C6E3007DA5C4 /* CategoryViewController_iPhone.xib in Resources */,
 				3D1BEE9B1630D2FD00DBA893 /* CreatePictureViewController_iPad.xib in Resources */,
-				3D1BEEB51630DCB700DBA893 /* CreatePictureController_iPhone.xib in Resources */,
+				3D1BEEB51630DCB700DBA893 /* CreatePictureViewController_iPhone.xib in Resources */,
 				3D1BEEB71630DCE800DBA893 /* CreatePictureViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
