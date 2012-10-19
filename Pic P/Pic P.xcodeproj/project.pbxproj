@@ -20,6 +20,9 @@
 		3D1BEECB1630E1D000DBA893 /* ShareListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BEEC91630E1CF00DBA893 /* ShareListsViewController.m */; };
 		3D1BEECC1630E1D000DBA893 /* ShareListsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEECA1630E1CF00DBA893 /* ShareListsViewController_iPhone.xib */; };
 		3D1BEECE1630E21A00DBA893 /* ShareListsViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEECD1630E21A00DBA893 /* ShareListsViewController_iPad.xib */; };
+		3D1BEED21630E2BF00DBA893 /* ShareCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BEED01630E2BF00DBA893 /* ShareCategoriesViewController.m */; };
+		3D1BEED31630E2BF00DBA893 /* ShareCategoriesViewController__iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEED11630E2BF00DBA893 /* ShareCategoriesViewController__iPhone.xib */; };
+		3D1BEED51630E2DE00DBA893 /* ShareCategoriesViewController__iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEED41630E2DE00DBA893 /* ShareCategoriesViewController__iPad.xib */; };
 		51E2AD581630C6BF007DA5C4 /* ShareViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */; };
 		51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
 		51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD571630C6BF007DA5C4 /* ShareViewController.m */; };
@@ -80,6 +83,10 @@
 		3D1BEEC91630E1CF00DBA893 /* ShareListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListsViewController.m; sourceTree = "<group>"; };
 		3D1BEECA1630E1CF00DBA893 /* ShareListsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareListsViewController_iPhone.xib; sourceTree = "<group>"; };
 		3D1BEECD1630E21A00DBA893 /* ShareListsViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareListsViewController_iPad.xib; sourceTree = "<group>"; };
+		3D1BEECF1630E2BF00DBA893 /* ShareCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCategoriesViewController.h; sourceTree = "<group>"; };
+		3D1BEED01630E2BF00DBA893 /* ShareCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCategoriesViewController.m; sourceTree = "<group>"; };
+		3D1BEED11630E2BF00DBA893 /* ShareCategoriesViewController__iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCategoriesViewController__iPhone.xib; sourceTree = "<group>"; };
+		3D1BEED41630E2DE00DBA893 /* ShareCategoriesViewController__iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareCategoriesViewController__iPad.xib; sourceTree = "<group>"; };
 		51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD561630C6BF007DA5C4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
@@ -150,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				3D1BEEBA1630DFA100DBA893 /* EditPictureViewController_iPhone.xib */,
+				3D1BEED11630E2BF00DBA893 /* ShareCategoriesViewController__iPhone.xib */,
 				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
 				3D1BEECA1630E1CF00DBA893 /* ShareListsViewController_iPhone.xib */,
 				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
@@ -168,6 +176,7 @@
 				3D1BEE9A1630D2FD00DBA893 /* CreatePictureViewController_iPad.xib */,
 				76BA2B1D1630977D00DAE149 /* FirstViewController_iPad.xib */,
 				3D1BEECD1630E21A00DBA893 /* ShareListsViewController_iPad.xib */,
+				3D1BEED41630E2DE00DBA893 /* ShareCategoriesViewController__iPad.xib */,
 				76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */,
 				51E2AD621630C6E3007DA5C4 /* CategoryViewController_iPad.xib */,
 				51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */,
@@ -197,6 +206,7 @@
 				3D1BEEAF1630DBE000DBA893 /* CreatePictureViewController.h */,
 				76BA2B091630977D00DAE149 /* AppDelegate.h */,
 				3D1BEEC11630E0F000DBA893 /* DeletePictureViewController.h */,
+				3D1BEECF1630E2BF00DBA893 /* ShareCategoriesViewController.h */,
 				3D1BEEC81630E1CF00DBA893 /* ShareListsViewController.h */,
 				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
 				76BA2B131630977D00DAE149 /* SecondViewController.h */,
@@ -220,6 +230,7 @@
 				3D1BEEB01630DBE000DBA893 /* CreatePictureViewController.m */,
 				3D1BEEB91630DFA100DBA893 /* EditPictureViewController.m */,
 				3D1BEEC91630E1CF00DBA893 /* ShareListsViewController.m */,
+				3D1BEED01630E2BF00DBA893 /* ShareCategoriesViewController.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -392,6 +403,8 @@
 				3D1BEEC71630E11700DBA893 /* DeletePictureViewController_iPad.xib in Resources */,
 				3D1BEECC1630E1D000DBA893 /* ShareListsViewController_iPhone.xib in Resources */,
 				3D1BEECE1630E21A00DBA893 /* ShareListsViewController_iPad.xib in Resources */,
+				3D1BEED31630E2BF00DBA893 /* ShareCategoriesViewController__iPhone.xib in Resources */,
+				3D1BEED51630E2DE00DBA893 /* ShareCategoriesViewController__iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +450,7 @@
 				3D1BEEBB1630DFA100DBA893 /* EditPictureViewController.m in Sources */,
 				3D1BEEC41630E0F000DBA893 /* DeletePictureViewController.m in Sources */,
 				3D1BEECB1630E1D000DBA893 /* ShareListsViewController.m in Sources */,
+				3D1BEED21630E2BF00DBA893 /* ShareCategoriesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
