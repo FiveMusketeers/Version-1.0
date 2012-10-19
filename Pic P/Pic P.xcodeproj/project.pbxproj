@@ -11,6 +11,9 @@
 		3D1BEEB21630DBE000DBA893 /* CreatePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB01630DBE000DBA893 /* CreatePictureViewController.m */; };
 		3D1BEEB51630DCB700DBA893 /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB41630DCB700DBA893 /* CreatePictureViewController_iPhone.xib */; };
 		3D1BEEB71630DCE800DBA893 /* CreatePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB61630DCE800DBA893 /* CreatePictureViewController.xib */; };
+		3D1BEEBB1630DFA100DBA893 /* EditPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D1BEEB91630DFA100DBA893 /* EditPictureViewController.m */; };
+		3D1BEEBC1630DFA100DBA893 /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEBA1630DFA100DBA893 /* EditPictureViewController_iPhone.xib */; };
+		3D1BEEC01630E04500DBA893 /* EditPictureViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D1BEEBF1630E04500DBA893 /* EditPictureViewController_iPad.xib */; };
 		51E2AD581630C6BF007DA5C4 /* ShareViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */; };
 		51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
 		51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD571630C6BF007DA5C4 /* ShareViewController.m */; };
@@ -59,6 +62,10 @@
 		3D1BEEB01630DBE000DBA893 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePictureViewController.m; sourceTree = "<group>"; };
 		3D1BEEB41630DCB700DBA893 /* CreatePictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		3D1BEEB61630DCE800DBA893 /* CreatePictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController.xib; sourceTree = "<group>"; };
+		3D1BEEB81630DFA100DBA893 /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
+		3D1BEEB91630DFA100DBA893 /* EditPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPictureViewController.m; sourceTree = "<group>"; };
+		3D1BEEBA1630DFA100DBA893 /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
+		3D1BEEBF1630E04500DBA893 /* EditPictureViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD561630C6BF007DA5C4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
@@ -128,6 +135,7 @@
 		51E2AD691630C88C007DA5C4 /* Iphone Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D1BEEBA1630DFA100DBA893 /* EditPictureViewController_iPhone.xib */,
 				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
 				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
 				3D1BEEB41630DCB700DBA893 /* CreatePictureViewController_iPhone.xib */,
@@ -148,6 +156,7 @@
 				51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */,
 				51E2AD5B1630C6CE007DA5C4 /* PictureViewController_iPad.xib */,
 				3D1BEEB61630DCE800DBA893 /* CreatePictureViewController.xib */,
+				3D1BEEBF1630E04500DBA893 /* EditPictureViewController_iPad.xib */,
 			);
 			name = "Ipad Views";
 			sourceTree = "<group>";
@@ -166,6 +175,7 @@
 		51E2AD6C1630C8E4007DA5C4 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				3D1BEEB81630DFA100DBA893 /* EditPictureViewController.h */,
 				3D1BEEAF1630DBE000DBA893 /* CreatePictureViewController.h */,
 				76BA2B091630977D00DAE149 /* AppDelegate.h */,
 				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
@@ -187,6 +197,7 @@
 				51E2AD571630C6BF007DA5C4 /* ShareViewController.m */,
 				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
 				3D1BEEB01630DBE000DBA893 /* CreatePictureViewController.m */,
+				3D1BEEB91630DFA100DBA893 /* EditPictureViewController.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -353,6 +364,8 @@
 				3D1BEE9B1630D2FD00DBA893 /* CreatePictureViewController_iPad.xib in Resources */,
 				3D1BEEB51630DCB700DBA893 /* CreatePictureViewController_iPhone.xib in Resources */,
 				3D1BEEB71630DCE800DBA893 /* CreatePictureViewController.xib in Resources */,
+				3D1BEEBC1630DFA100DBA893 /* EditPictureViewController_iPhone.xib in Resources */,
+				3D1BEEC01630E04500DBA893 /* EditPictureViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,6 +408,7 @@
 				51E2AD611630C6CE007DA5C4 /* PictureViewController.m in Sources */,
 				51E2AD681630C6E3007DA5C4 /* CategoryViewController.m in Sources */,
 				3D1BEEB21630DBE000DBA893 /* CreatePictureViewController.m in Sources */,
+				3D1BEEBB1630DFA100DBA893 /* EditPictureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
