@@ -10,4 +10,16 @@
 
 @interface ListCreateViewController : UIViewController
 
+
+
+//I am only trying to write some code
+@property (strong, nonatomic) IBOutlet UITextField *nameOfImage;
+- (IBAction)chooseImage:(id)sender;
+- (IBAction)save:(id)sender;
+
+
+
+
+- (IBAction)previousMenu:(id)sender;
+
 @end

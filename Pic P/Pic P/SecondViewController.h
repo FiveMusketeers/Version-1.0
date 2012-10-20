@@ -13,4 +13,5 @@
 
 -(IBAction)goBack;
 
+- (IBAction)viewLists:(id)sender;
 @end

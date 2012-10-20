@@ -18,6 +18,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        self.title=NSLocalizedString(@"ListEdit", @"ListEdit");
+        self.tabBarItem.image = [UIImage imageNamed:@"listEdit"];
+        
+        
         // Custom initialization
     }
     return self;
@@ -38,7 +42,23 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    if ([[UIDevice currentDevice] userInterfaceIdiom]== UIUserInterfaceIdiomPhone){
+        
+        return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    }
+    else{
+        return YES;
+    
+    }
+}
+
+- (IBAction)previousMenu:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
+
+- (IBAction)viewLists:(id)sender {
+    
 }
 
 @end

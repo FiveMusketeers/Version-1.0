@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ListEditViewController : UIViewController
+- (IBAction)previousMenu:(id)sender;
 
 @end
