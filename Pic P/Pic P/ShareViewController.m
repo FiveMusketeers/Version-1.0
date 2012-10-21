@@ -61,7 +61,7 @@
         [self presentModalViewController:shareCategories animated:YES];
     }
     else{
-        ShareCategoriesViewController *shareCategories = [[ShareCategoriesViewController alloc]initWithNibName:@"ShareCategoriesViewController_iPad" bundle:nil];
+        ShareCategoriesViewController *shareCategories = [[ShareCategoriesViewController alloc]initWithNibName:@"ShareCategoriesViewController__iPad" bundle:nil];
         [self presentModalViewController:shareCategories animated:YES];
     }
 }
