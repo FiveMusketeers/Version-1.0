@@ -39,7 +39,7 @@
 					<object class="IBUIButton" id="1038153776">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{90, 242}, {141, 37}}</string>
+						<string key="NSFrame">{{58, 178}, {204, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="549577945"/>
@@ -75,7 +75,7 @@
 					<object class="IBUIButton" id="845338013">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{90, 165}, {135, 37}}</string>
+						<string key="NSFrame">{{58, 272}, {204, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1038153776"/>
@@ -98,7 +98,7 @@
 					<object class="IBUIButton" id="168928256">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{89, 91}, {136, 37}}</string>
+						<string key="NSFrame">{{58, 85}, {204, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="845338013"/>
@@ -152,7 +152,7 @@
 					<object class="IBUIButton" id="549577945">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{56, 327}, {209, 65}}</string>
+						<string key="NSFrame">{{58, 365}, {204, 55}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -172,7 +172,7 @@
 						<reference key="IBUIFont" ref="887582807"/>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {320, 412}}</string>
+				<string key="NSFrame">{{0, 20}, {320, 461}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="66801004"/>
@@ -260,8 +260,8 @@
 							<reference ref="66801004"/>
 							<reference ref="549577945"/>
 							<reference ref="1038153776"/>
-							<reference ref="845338013"/>
 							<reference ref="168928256"/>
+							<reference ref="845338013"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -308,7 +308,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">37</int>
+			<int key="maxID">40</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
