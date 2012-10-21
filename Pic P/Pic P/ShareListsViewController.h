@@ -10,4 +10,6 @@
 
 @interface ShareListsViewController : UIViewController
 
+- (IBAction)PreviousMenu:(id)sender;
+
 @end

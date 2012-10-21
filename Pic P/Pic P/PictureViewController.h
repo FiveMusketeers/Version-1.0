@@ -10,4 +10,10 @@
 
 @interface PictureViewController : UIViewController
 
+- (IBAction)pictureCreate;
+
+- (IBAction)pictureEdit;
+
+-(IBAction)goBack;
+
 @end

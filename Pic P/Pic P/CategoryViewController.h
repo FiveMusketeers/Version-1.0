@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FirstViewController.h"
 
 @interface CategoryViewController : UIViewController
+
+- (IBAction)categoryAdd;
+
+- (IBAction)goBack;
+
+- (IBAction)categoryEdit;
+
+- (IBAction)categoryView;
 
 @end

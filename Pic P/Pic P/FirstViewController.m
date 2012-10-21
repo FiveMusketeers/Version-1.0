@@ -8,6 +8,9 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
+#import "CategoryViewController.h"
+#import "PictureViewController.h"
+#import "ShareViewController.h"
 
 
 @interface FirstViewController ()
@@ -16,15 +19,6 @@
 
 @implementation FirstViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"First", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
-    }
-    return self;
-}
 							
 - (void)viewDidLoad
 {
@@ -48,8 +42,6 @@
 }
 
 
-
-
 - (IBAction)manageList{
     // Should go to the second view (List View)
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) { 
@@ -64,16 +56,38 @@
     
 }
 
-- (IBAction)manageCategories:(UIButton *)sender {
-    // Should go to the # view ()
+- (IBAction)manageCategories{
+        if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+            CategoryViewController *categoryView = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController_iPhone" bundle:nil];
+            [self presentModalViewController:categoryView animated:YES];
+        }
+        else{
+            CategoryViewController *categoryView = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController_iPad" bundle:nil];
+            [self presentModalViewController:categoryView animated:YES];
+        }
 }
 
-- (IBAction)managePictures:(UIButton *)sender {
-    // Should go to the # view ()
+
+- (IBAction)managePictures{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        PictureViewController *PictureView = [[PictureViewController alloc]initWithNibName:@"PictureViewController_iPhone" bundle:nil];
+        [self presentModalViewController:PictureView animated:YES];
+    }
+    else{
+        PictureViewController *PictureView = [[PictureViewController alloc]initWithNibName:@"PictureViewController_iPad" bundle:nil];
+        [self presentModalViewController:PictureView animated:YES];
+    }
 }
 
-- (IBAction)share:(UIButton *)sender {
-    // Should go to the # view ()
+- (IBAction)share{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        ShareViewController *ShareView = [[ShareViewController alloc]initWithNibName:@"ShareViewController_iPhone" bundle:nil];
+        [self presentModalViewController:ShareView animated:YES];
+    }
+    else{
+        ShareViewController *ShareView = [[ShareViewController alloc]initWithNibName:@"ShareViewController_iPad" bundle:nil];
+        [self presentModalViewController:ShareView animated:YES];
+    }
 }
 
 

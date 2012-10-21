@@ -22,6 +22,7 @@
 		5119FE901632048B00CFCD33 /* EditPictureViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE8E1632048B00CFCD33 /* EditPictureViewController_iPad.xib */; };
 		5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */; };
 		5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */; };
+		5165C2481634902000883671 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5165C2471634902000883671 /* SecondViewController_iPad.xib */; };
 		51E2AD581630C6BF007DA5C4 /* ShareViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */; };
 		51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
 		51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD571630C6BF007DA5C4 /* ShareViewController.m */; };
@@ -56,20 +57,17 @@
 		76BA2B071630977D00DAE149 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B061630977D00DAE149 /* main.m */; };
 		76BA2B0B1630977D00DAE149 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B0A1630977D00DAE149 /* AppDelegate.m */; };
 		76BA2B0E1630977D00DAE149 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B0D1630977D00DAE149 /* FirstViewController.m */; };
-		76BA2B101630977D00DAE149 /* first.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B0F1630977D00DAE149 /* first.png */; };
-		76BA2B121630977D00DAE149 /* first@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B111630977D00DAE149 /* first@2x.png */; };
 		76BA2B151630977D00DAE149 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B141630977D00DAE149 /* SecondViewController.m */; };
-		76BA2B171630977D00DAE149 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B161630977D00DAE149 /* second.png */; };
-		76BA2B191630977D00DAE149 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B181630977D00DAE149 /* second@2x.png */; };
 		76BA2B1C1630977D00DAE149 /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */; };
 		76BA2B1F1630977D00DAE149 /* FirstViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B1D1630977D00DAE149 /* FirstViewController_iPad.xib */; };
 		76BA2B221630977D00DAE149 /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */; };
-		76BA2B251630977D00DAE149 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */; };
 		76BA2B2D1630977D00DAE149 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2B2C1630977D00DAE149 /* SenTestingKit.framework */; };
 		76BA2B2E1630977D00DAE149 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFA1630977D00DAE149 /* UIKit.framework */; };
 		76BA2B2F1630977D00DAE149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFC1630977D00DAE149 /* Foundation.framework */; };
 		76BA2B371630977D00DAE149 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B351630977D00DAE149 /* InfoPlist.strings */; };
 		76BA2B3A1630977D00DAE149 /* Pic_PTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B391630977D00DAE149 /* Pic_PTests.m */; };
+		A10DE6C51634A03200E2380A /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */; };
+		A10DE6C71634A03B00E2380A /* ListViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,14 +93,14 @@
 		5119FE84163203BA00CFCD33 /* ShareCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCategoriesViewController.h; sourceTree = "<group>"; };
 		5119FE85163203BA00CFCD33 /* SharePicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePicturesViewController.h; sourceTree = "<group>"; };
 		5119FE86163203BA00CFCD33 /* ShareListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListsViewController.h; sourceTree = "<group>"; };
-		5119FE871632046500CFCD33 /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
 		5119FE881632046500CFCD33 /* CreatePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePictureViewController.h; sourceTree = "<group>"; };
-		5119FE891632046F00CFCD33 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreatePictureViewController.m; sourceTree = "<group>"; };
-		5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPictureViewController.m; sourceTree = "<group>"; };
+		5119FE891632046F00CFCD33 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CreatePictureViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EditPictureViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5119FE8D1632048B00CFCD33 /* CreatePictureViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPad.xib; sourceTree = "<group>"; };
 		5119FE8E1632048B00CFCD33 /* EditPictureViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPad.xib; sourceTree = "<group>"; };
 		5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
+		5165C2471634902000883671 /* SecondViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD561630C6BF007DA5C4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
@@ -113,8 +111,8 @@
 		51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureViewController.m; sourceTree = "<group>"; };
 		51E2AD621630C6E3007DA5C4 /* CategoryViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD631630C6E3007DA5C4 /* CategoryViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPhone.xib; sourceTree = "<group>"; };
-		51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
-		51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
+		51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CategoryViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CategoryViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewViewController.h; path = "Pic P/ListViewViewController.h"; sourceTree = SOURCE_ROOT; };
 		51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewViewController.m; path = "Pic P/ListViewViewController.m"; sourceTree = SOURCE_ROOT; };
 		51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewViewController_iPhone.xib; path = "Pic P/ListViewViewController_iPhone.xib"; sourceTree = SOURCE_ROOT; };
@@ -125,14 +123,14 @@
 		51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCreateViewController.h; sourceTree = "<group>"; };
 		51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCreateViewController.m; sourceTree = "<group>"; };
 		51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCreateViewController_iPhone.xib; sourceTree = "<group>"; };
-		51E2AD7F1630CCF9007DA5C4 /* CategoryViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewViewController.h; sourceTree = "<group>"; };
-		51E2AD801630CCF9007DA5C4 /* CategoryViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewViewController.m; sourceTree = "<group>"; };
+		51E2AD7F1630CCF9007DA5C4 /* CategoryViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CategoryViewViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		51E2AD801630CCF9007DA5C4 /* CategoryViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CategoryViewViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		51E2AD811630CCF9007DA5C4 /* CategoryViewViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewViewController_iPhone.xib; sourceTree = "<group>"; };
-		51E2AD841630CD12007DA5C4 /* CategoryAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryAddViewController.h; sourceTree = "<group>"; };
-		51E2AD851630CD12007DA5C4 /* CategoryAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryAddViewController.m; sourceTree = "<group>"; };
+		51E2AD841630CD12007DA5C4 /* CategoryAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CategoryAddViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		51E2AD851630CD12007DA5C4 /* CategoryAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CategoryAddViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		51E2AD861630CD12007DA5C4 /* CategoryAddViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryAddViewController_iPhone.xib; sourceTree = "<group>"; };
-		51E2AD891630CD22007DA5C4 /* CategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEditViewController.h; sourceTree = "<group>"; };
-		51E2AD8A1630CD22007DA5C4 /* CategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEditViewController.m; sourceTree = "<group>"; };
+		51E2AD891630CD22007DA5C4 /* CategoryEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CategoryEditViewController.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		51E2AD8A1630CD22007DA5C4 /* CategoryEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CategoryEditViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		51E2AD8B1630CD22007DA5C4 /* CategoryEditViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryEditViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD8E1630CE72007DA5C4 /* ListEditViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListEditViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD901630CEB0007DA5C4 /* ListCreateViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCreateViewController_iPad.xib; sourceTree = "<group>"; };
@@ -150,23 +148,20 @@
 		76BA2B091630977D00DAE149 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		76BA2B0A1630977D00DAE149 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		76BA2B0C1630977D00DAE149 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		76BA2B0D1630977D00DAE149 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		76BA2B0F1630977D00DAE149 /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
-		76BA2B111630977D00DAE149 /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
+		76BA2B0D1630977D00DAE149 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FirstViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		76BA2B131630977D00DAE149 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		76BA2B141630977D00DAE149 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		76BA2B161630977D00DAE149 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
-		76BA2B181630977D00DAE149 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		76BA2B1B1630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPhone.xib; sourceTree = "<group>"; };
 		76BA2B1E1630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstViewController_iPad.xib; sourceTree = "<group>"; };
 		76BA2B211630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPhone.xib; sourceTree = "<group>"; };
-		76BA2B241630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController_iPad.xib; sourceTree = "<group>"; };
 		76BA2B2B1630977D00DAE149 /* Pic PTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pic PTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BA2B2C1630977D00DAE149 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		76BA2B341630977D00DAE149 /* Pic PTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pic PTests-Info.plist"; sourceTree = "<group>"; };
 		76BA2B361630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76BA2B381630977D00DAE149 /* Pic_PTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic_PTests.h; sourceTree = "<group>"; };
 		76BA2B391630977D00DAE149 /* Pic_PTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic_PTests.m; sourceTree = "<group>"; };
+		A16E881D1634B4290094C978 /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
+		A1B417F51634854C00E9D17B /* pictureDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pictureDeleteViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,7 +191,6 @@
 		5119FE95163204B600CFCD33 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				76BA2B141630977D00DAE149 /* SecondViewController.m */,
 				51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */,
 				51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */,
 				51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */,
@@ -242,7 +236,6 @@
 				51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */,
 				51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */,
 				51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */,
-				76BA2B131630977D00DAE149 /* SecondViewController.h */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -273,7 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
-				5119FE871632046500CFCD33 /* EditPictureViewController.h */,
+				A1B417F51634854C00E9D17B /* pictureDeleteViewController.h */,
+				A16E881D1634B4290094C978 /* EditPictureViewController.h */,
 				5119FE881632046500CFCD33 /* CreatePictureViewController.h */,
 			);
 			name = Picture;
@@ -314,7 +308,7 @@
 		5119FEA51632058100CFCD33 /* List */ = {
 			isa = PBXGroup;
 			children = (
-				76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */,
+				5165C2471634902000883671 /* SecondViewController_iPad.xib */,
 				51E2AD8E1630CE72007DA5C4 /* ListEditViewController_iPad.xib */,
 				51E2AD901630CEB0007DA5C4 /* ListCreateViewController_iPad.xib */,
 				51E2AD731630CB16007DA5C4 /* ListViewViewController_iPad.xib */,
@@ -347,10 +341,10 @@
 		5119FEA81632059E00CFCD33 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
 				5119FE771632036D00CFCD33 /* ShareCategoriesViewController__iPhone.xib */,
 				5119FE781632036D00CFCD33 /* ShareListsViewController_iPhone.xib */,
 				5119FE791632036D00CFCD33 /* SharePicturesViewController_iPhone.xib */,
-				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
 			);
 			name = Share;
 			sourceTree = "<group>";
@@ -389,20 +383,10 @@
 			name = "Ipad Views";
 			sourceTree = "<group>";
 		};
-		51E2AD6B1630C8D2007DA5C4 /* pictures */ = {
-			isa = PBXGroup;
-			children = (
-				76BA2B0F1630977D00DAE149 /* first.png */,
-				76BA2B111630977D00DAE149 /* first@2x.png */,
-				76BA2B161630977D00DAE149 /* second.png */,
-				76BA2B181630977D00DAE149 /* second@2x.png */,
-			);
-			name = pictures;
-			sourceTree = "<group>";
-		};
 		51E2AD6C1630C8E4007DA5C4 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				76BA2B131630977D00DAE149 /* SecondViewController.h */,
 				76BA2B091630977D00DAE149 /* AppDelegate.h */,
 				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
 				5119FE9E1632054B00CFCD33 /* List */,
@@ -417,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				76BA2B0A1630977D00DAE149 /* AppDelegate.m */,
+				76BA2B141630977D00DAE149 /* SecondViewController.m */,
 				76BA2B0D1630977D00DAE149 /* FirstViewController.m */,
 				5119FE95163204B600CFCD33 /* List */,
 				5119FE96163204C300CFCD33 /* Category */,
@@ -461,7 +446,6 @@
 			children = (
 				51E2AD6D1630C8E8007DA5C4 /* Source */,
 				51E2AD6C1630C8E4007DA5C4 /* Headers */,
-				51E2AD6B1630C8D2007DA5C4 /* pictures */,
 				51E2AD6A1630C8B3007DA5C4 /* Ipad Views */,
 				51E2AD691630C88C007DA5C4 /* Iphone Views */,
 				76BA2B011630977D00DAE149 /* Supporting Files */,
@@ -570,15 +554,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10DE6C71634A03B00E2380A /* ListViewViewController_iPhone.xib in Resources */,
 				76BA2B051630977D00DAE149 /* InfoPlist.strings in Resources */,
-				76BA2B101630977D00DAE149 /* first.png in Resources */,
-				76BA2B121630977D00DAE149 /* first@2x.png in Resources */,
-				76BA2B171630977D00DAE149 /* second.png in Resources */,
-				76BA2B191630977D00DAE149 /* second@2x.png in Resources */,
 				76BA2B1C1630977D00DAE149 /* FirstViewController_iPhone.xib in Resources */,
 				76BA2B1F1630977D00DAE149 /* FirstViewController_iPad.xib in Resources */,
 				76BA2B221630977D00DAE149 /* SecondViewController_iPhone.xib in Resources */,
-				76BA2B251630977D00DAE149 /* SecondViewController_iPad.xib in Resources */,
 				51E2AD581630C6BF007DA5C4 /* ShareViewController_iPad.xib in Resources */,
 				51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */,
 				51E2AD5F1630C6CE007DA5C4 /* PictureViewController_iPad.xib in Resources */,
@@ -606,6 +586,7 @@
 				5119FE901632048B00CFCD33 /* EditPictureViewController_iPad.xib in Resources */,
 				5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */,
 				5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */,
+				5165C2481634902000883671 /* SecondViewController_iPad.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -641,6 +622,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10DE6C51634A03200E2380A /* ListViewViewController.m in Sources */,
 				76BA2B071630977D00DAE149 /* main.m in Sources */,
 				76BA2B0B1630977D00DAE149 /* AppDelegate.m in Sources */,
 				76BA2B0E1630977D00DAE149 /* FirstViewController.m in Sources */,
@@ -711,14 +693,6 @@
 				76BA2B211630977D00DAE149 /* en */,
 			);
 			name = SecondViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		76BA2B231630977D00DAE149 /* SecondViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				76BA2B241630977D00DAE149 /* en */,
-			);
-			name = SecondViewController_iPad.xib;
 			sourceTree = "<group>";
 		};
 		76BA2B351630977D00DAE149 /* InfoPlist.strings */ = {

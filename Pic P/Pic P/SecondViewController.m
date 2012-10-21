@@ -7,6 +7,11 @@
 //
 
 #import "SecondViewController.h"
+#import "ListCreateViewController.h"
+#import "ListViewViewController.h"
+#import "ListEditViewController.h"
+#import "CategoryViewController.h"
+
 
 @interface SecondViewController ()
 
@@ -14,15 +19,6 @@
 
 @implementation SecondViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"Second", @"Second");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
-    }
-    return self;
-}
 							
 - (void)viewDidLoad
 {
@@ -45,13 +41,45 @@
     }
 }
 
+//For Lists 
+- (IBAction)listCreate {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        ListCreateViewController *listView = [[ListCreateViewController alloc]initWithNibName:@"ListCreateViewController_iPhone" bundle:nil];
+        [self presentModalViewController:listView animated:YES];
+    }
+    else{
+        ListCreateViewController *listView = [[ListCreateViewController alloc]initWithNibName:@"ListCreateViewController_iPad" bundle:nil];
+        [self presentModalViewController:listView animated:YES];
+    }
+}
 
-- (IBAction)goBack{
-    [self dismissModalViewControllerAnimated:YES];
+- (IBAction)listEdit {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        ListEditViewController *ListEditView = [[ListEditViewController alloc]initWithNibName:@"ListEditViewController_iPhone" bundle:nil];
+        [self presentModalViewController:ListEditView animated:YES];
+    }
+    else{
+        ListEditViewController *ListEditView = [[ListEditViewController alloc]initWithNibName:@"ListEditViewController_iPad" bundle:nil];
+        [self presentModalViewController:ListEditView animated:YES];
+    }
     
 }
 
-- (IBAction)viewLists:(id)sender {
+- (IBAction)listView{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+        [self presentModalViewController:listView animated:YES];
+    }
+    else{
+        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPad" bundle:nil];
+        [self presentModalViewController:listView animated:YES];
+    }
+}
+
+
+//Goes to the previous menu
+- (IBAction)goBack{
+    [self dismissModalViewControllerAnimated:YES];
     
 }
 

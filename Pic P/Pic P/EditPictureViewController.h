@@ -10,4 +10,6 @@
 
 @interface EditPictureViewController : UIViewController
 
+- (IBAction)PreviousMenu:(id)sender;
+
 @end

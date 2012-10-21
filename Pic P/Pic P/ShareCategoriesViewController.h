@@ -10,4 +10,6 @@
 
 @interface ShareCategoriesViewController : UIViewController
 
+
+- (IBAction)PreviousMenu:(id)sender;
 @end

@@ -7,6 +7,9 @@
 //
 
 #import "CategoryViewController.h"
+#import "CategoryAddViewController.h"
+#import "CategoryEditViewController.h"
+#import "CategoryViewViewController.h"
 
 @interface CategoryViewController ()
 
@@ -44,6 +47,46 @@
     } else {
         return YES;
     }
+}
+
+
+
+- (IBAction)categoryAdd {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        CategoryAddViewController *categoryView = [[CategoryAddViewController alloc]initWithNibName:@"CategoryAddViewController_iPhone" bundle:nil];
+        [self presentModalViewController:categoryView animated:YES];
+    }
+    else{
+        CategoryAddViewController *categoryView = [[CategoryAddViewController alloc]initWithNibName:@"CategoryAddViewController_iPad" bundle:nil];
+        [self presentModalViewController:categoryView animated:YES];
+    }
+}
+
+- (IBAction)categoryEdit {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        CategoryEditViewController *categoryEdit = [[CategoryEditViewController alloc]initWithNibName:@"CategoryEditViewController_iPhone" bundle:nil];
+        [self presentModalViewController:categoryEdit animated:YES];
+    }
+    else{
+        CategoryEditViewController *categoryEdit = [[CategoryEditViewController alloc]initWithNibName:@"CategoryEditViewController_iPad" bundle:nil];
+        [self presentModalViewController:categoryEdit animated:YES];
+    }
+}
+
+- (IBAction)categoryView {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        CategoryViewViewController *categoryView = [[CategoryViewViewController alloc]initWithNibName:@"CategoryViewViewController_iPhone" bundle:nil];
+        [self presentModalViewController:categoryView animated:YES];
+    }
+    else{
+        CategoryViewViewController *categoryView = [[CategoryViewViewController alloc]initWithNibName:@"CategoryViewViewController_iPad" bundle:nil];
+        [self presentModalViewController:categoryView animated:YES];
+    }
+}
+
+- (IBAction)goBack{
+    [self dismissModalViewControllerAnimated:YES];
+    
 }
 
 @end

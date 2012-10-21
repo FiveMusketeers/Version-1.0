@@ -10,4 +10,12 @@
 
 @interface ShareViewController : UIViewController
 
+- (IBAction)goBack;
+
+- (IBAction)shareLists;
+
+- (IBAction)sharePictures;
+
+- (IBAction)shareCategories;
+
 @end

@@ -10,4 +10,6 @@
 
 @interface SharePicturesViewController : UIViewController
 
+- (IBAction)PreviousMenu:(id)sender;
+
 @end

@@ -40,5 +40,7 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
+- (IBAction)PreviousMenu:(id)sender {
+    [self dismissModalViewControllerAnimated:YES];
+}
 @end

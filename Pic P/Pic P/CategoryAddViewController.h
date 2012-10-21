@@ -10,4 +10,5 @@
 
 @interface CategoryAddViewController : UIViewController
 
+- (IBAction)PreviousMenu:(id)sender;
 @end

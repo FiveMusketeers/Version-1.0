@@ -7,22 +7,15 @@
 //
 
 #import "PictureViewController.h"
+#import "CreatePictureViewController.h"
+#import "EditPictureViewController.h"
+
 
 @interface PictureViewController ()
 
 @end
 
 @implementation PictureViewController
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        self.title = NSLocalizedString(@"Category", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"First"];
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -40,6 +33,34 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+- (IBAction)pictureCreate {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        CreatePictureViewController *Create = [[CreatePictureViewController alloc]initWithNibName:@"CreatePictureViewController_iPhone" bundle:nil];
+        [self presentModalViewController:Create animated:YES];
+    }
+    else{
+        CreatePictureViewController *Create = [[CreatePictureViewController alloc]initWithNibName:@"CreatePictureViewController_iPad" bundle:nil];
+        [self presentModalViewController:Create animated:YES];
+    }
+}
+
+- (IBAction)pictureEdit {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        EditPictureViewController *pictureEdit = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPhone" bundle:nil];
+        [self presentModalViewController:pictureEdit animated:YES];
+    }
+    else{
+        EditPictureViewController *pictureEdit = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPad" bundle:nil];
+        [self presentModalViewController:pictureEdit animated:YES];
+    }
+}
+
+- (IBAction)goBack{
+    [self dismissModalViewControllerAnimated:YES];
+    
 }
 
 @end

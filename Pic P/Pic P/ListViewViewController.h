@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ListViewViewController : UIViewController
-- (IBAction)goBack:(id)sender;
+
+- (IBAction)PreviousMenu:(id)sender;
 @end

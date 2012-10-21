@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FirstViewController.h"
+
 
 @interface SecondViewController : UIViewController
 
--(IBAction)goBack;
+- (IBAction)goBack;
 
-- (IBAction)viewLists:(id)sender;
+- (IBAction)listCreate;
+
+- (IBAction)listEdit;
+
+- (IBAction)listView;
+
+
+
 @end

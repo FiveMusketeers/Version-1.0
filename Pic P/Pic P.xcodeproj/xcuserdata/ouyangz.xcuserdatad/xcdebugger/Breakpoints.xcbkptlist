@@ -20,12 +20,14 @@
          shouldBeEnabled = "Yes"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "Pic P/ListViewViewController.h"
-         timestampString = "372385266.138912"
+         filePath = "Pic P/SecondViewController.h"
+         timestampString = "372292627.335631"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "7"
-         endingLineNumber = "7">
+         startingLineNumber = "16"
+         endingLineNumber = "16"
+         landmarkName = "@interface SecondViewController"
+         landmarkType = "2">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

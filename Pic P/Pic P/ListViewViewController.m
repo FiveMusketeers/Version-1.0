@@ -18,16 +18,11 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title=NSLocalizedString("@ListView", @"ListView");
-        [self.tabBarItem.image=[UIImage imageNamed:@"listView"];
-        
-         
         // Custom initialization
     }
     return self;
 }
 
-         
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,17 +38,22 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom]==UIUserInterfaceIdiomPhone)
-        return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+- (IBAction)listView {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
+        [self presentModalViewController:listView animated:YES];
+    }
     else{
-        return YES;
+        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPad" bundle:nil];
+        [self presentModalViewController:listView animated:YES];
     }
 }
 
-- (IBAction)goBack:(id)sender {
+
+- (IBAction)PreviousMenu:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
-
-
 
 @end

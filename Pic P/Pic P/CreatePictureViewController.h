@@ -10,4 +10,5 @@
 
 @interface CreatePictureViewController : UIViewController
 
+- (IBAction)PreviousMenu:(id)sender;
 @end

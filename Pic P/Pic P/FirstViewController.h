@@ -1,4 +1,4 @@
-//
+
 //  FirstViewController.h
 //  Pic P
 //
@@ -12,5 +12,13 @@
 @interface FirstViewController : UIViewController
 
 - (IBAction)manageList;
+
+- (IBAction)manageCategories;
+
+- (IBAction)managePictures;
+
+- (IBAction)share;
+
+
 
 @end
