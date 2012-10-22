@@ -11,7 +11,7 @@
 
 @implementation ListCreateViewController
 
-@synthesize textField1, label1;
+@synthesize textField1, label1, items;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,7 +25,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    UIImage *image = [UIImage imageNamed:@"icon.png"];
+    items = [[UIImageView alloc] initWithImage: image];
     // Do any additional setup after loading the view from its nib.
 }
 
