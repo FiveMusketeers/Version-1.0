@@ -11,4 +11,8 @@
 @interface CategoryViewViewController : UIViewController
 
 - (IBAction)PreviousMenu:(id)sender;
+
+@property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) IBOutlet UITableView *listTable;
+
 @end

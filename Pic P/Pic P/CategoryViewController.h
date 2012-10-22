@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FirstViewController.h"
 
-@interface CategoryViewController : UIViewController
+@interface CategoryViewController : UIViewController <UITableViewDataSource>
 
 - (IBAction)categoryAdd;
 
@@ -18,5 +17,8 @@
 - (IBAction)categoryEdit;
 
 - (IBAction)categoryView;
+
+@property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) IBOutlet UITableView *ListTable;
 
 @end

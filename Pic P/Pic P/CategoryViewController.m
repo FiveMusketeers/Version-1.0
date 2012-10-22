@@ -17,10 +17,13 @@
 
 @implementation CategoryViewController
 
+@synthesize tableData;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+	{
         self.title = NSLocalizedString(@"Category", @"First");
         self.tabBarItem.image = [UIImage imageNamed:@"First"];
     }
@@ -42,49 +45,62 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+	{
         return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
-    } else {
+    }
+	else
+	{
         return YES;
     }
 }
 
 
 
-- (IBAction)categoryAdd {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+- (IBAction)categoryAdd
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+	{
         CategoryAddViewController *categoryView = [[CategoryAddViewController alloc]initWithNibName:@"CategoryAddViewController_iPhone" bundle:nil];
         [self presentModalViewController:categoryView animated:YES];
     }
-    else{
+    else
+	{
         CategoryAddViewController *categoryView = [[CategoryAddViewController alloc]initWithNibName:@"CategoryAddViewController_iPad" bundle:nil];
         [self presentModalViewController:categoryView animated:YES];
     }
 }
 
-- (IBAction)categoryEdit {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+- (IBAction)categoryEdit
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+	{
         CategoryEditViewController *categoryEdit = [[CategoryEditViewController alloc]initWithNibName:@"CategoryEditViewController_iPhone" bundle:nil];
         [self presentModalViewController:categoryEdit animated:YES];
     }
-    else{
+    else
+	{
         CategoryEditViewController *categoryEdit = [[CategoryEditViewController alloc]initWithNibName:@"CategoryEditViewController_iPad" bundle:nil];
         [self presentModalViewController:categoryEdit animated:YES];
     }
 }
 
-- (IBAction)categoryView {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+- (IBAction)categoryView
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+	{
         CategoryViewViewController *categoryView = [[CategoryViewViewController alloc]initWithNibName:@"CategoryViewViewController_iPhone" bundle:nil];
         [self presentModalViewController:categoryView animated:YES];
     }
-    else{
+    else
+	{
         CategoryViewViewController *categoryView = [[CategoryViewViewController alloc]initWithNibName:@"CategoryViewViewController_iPad" bundle:nil];
         [self presentModalViewController:categoryView animated:YES];
     }
 }
 
-- (IBAction)goBack{
+- (IBAction)goBack
+{
     [self dismissModalViewControllerAnimated:YES];
     
 }

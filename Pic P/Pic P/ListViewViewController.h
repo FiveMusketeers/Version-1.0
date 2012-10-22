@@ -8,7 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListViewViewController : UIViewController
+@interface ListViewViewController : UIViewController <UITableViewDataSource>
+{
+	
+}
 
 - (IBAction)PreviousMenu:(id)sender;
+
+
+@property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) IBOutlet UITableView *ListTable;
+
 @end

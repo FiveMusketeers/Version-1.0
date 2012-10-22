@@ -50,6 +50,10 @@
 		51E2AD931630CECA007DA5C4 /* CategoryEditViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD921630CECA007DA5C4 /* CategoryEditViewController_iPad.xib */; };
 		51E2AD951630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD941630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib */; };
 		51E2AD971630CF05007DA5C4 /* CategoryViewViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD961630CF05007DA5C4 /* CategoryViewViewController_iPad.xib */; };
+		6C2D4CA416352C7D007F8DE1 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D4CA316352C7D007F8DE1 /* Category.m */; };
+		6C9C006916350D3A00CB30C3 /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C006816350D3A00CB30C3 /* ListCell.m */; };
+		6C9C006C16350E6700CB30C3 /* ListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9C006B16350E6700CB30C3 /* ListCell_iPhone.xib */; };
+		6C9C006F1635141800CB30C3 /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C006E1635141800CB30C3 /* ListItem.m */; };
 		76BA2AFB1630977D00DAE149 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFA1630977D00DAE149 /* UIKit.framework */; };
 		76BA2AFD1630977D00DAE149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFC1630977D00DAE149 /* Foundation.framework */; };
 		76BA2AFF1630977D00DAE149 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFE1630977D00DAE149 /* CoreGraphics.framework */; };
@@ -66,9 +70,6 @@
 		76BA2B2F1630977D00DAE149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFC1630977D00DAE149 /* Foundation.framework */; };
 		76BA2B371630977D00DAE149 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B351630977D00DAE149 /* InfoPlist.strings */; };
 		76BA2B3A1630977D00DAE149 /* Pic_PTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B391630977D00DAE149 /* Pic_PTests.m */; };
-		88641F6D1635049E00FA2D96 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 88641F6C1635049E00FA2D96 /* Default-568h@2x.png */; };
-		88641F6F163505E300FA2D96 /* PictureDeleteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88641F6E163505E300FA2D96 /* PictureDeleteViewController_iPhone.xib */; };
-		88641F721635095600FA2D96 /* PictureDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88641F711635095600FA2D96 /* PictureDeleteViewController.m */; };
 		A10DE6C51634A03200E2380A /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */; };
 		A10DE6C71634A03B00E2380A /* ListViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */; };
 		A16E882F1634BFE80094C978 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16E882E1634BFE80094C978 /* icon.png */; };
@@ -142,6 +143,13 @@
 		51E2AD921630CECA007DA5C4 /* CategoryEditViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryEditViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD941630CEE9007DA5C4 /* CategoryAddViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryAddViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD961630CF05007DA5C4 /* CategoryViewViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewViewController_iPad.xib; sourceTree = "<group>"; };
+		6C2D4CA216352C7D007F8DE1 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		6C2D4CA316352C7D007F8DE1 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		6C9C006716350D3A00CB30C3 /* ListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCell.h; sourceTree = "<group>"; };
+		6C9C006816350D3A00CB30C3 /* ListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCell.m; sourceTree = "<group>"; };
+		6C9C006B16350E6700CB30C3 /* ListCell_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell_iPhone.xib; sourceTree = "<group>"; };
+		6C9C006D1635141800CB30C3 /* ListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListItem.h; sourceTree = "<group>"; };
+		6C9C006E1635141800CB30C3 /* ListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListItem.m; sourceTree = "<group>"; };
 		76BA2AF61630977D00DAE149 /* Pic P.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pic P.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76BA2AFA1630977D00DAE149 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		76BA2AFC1630977D00DAE149 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -165,13 +173,10 @@
 		76BA2B361630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76BA2B381630977D00DAE149 /* Pic_PTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic_PTests.h; sourceTree = "<group>"; };
 		76BA2B391630977D00DAE149 /* Pic_PTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic_PTests.m; sourceTree = "<group>"; };
-		88641F6C1635049E00FA2D96 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		88641F6E163505E300FA2D96 /* PictureDeleteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureDeleteViewController_iPhone.xib; sourceTree = "<group>"; };
-		88641F701635093600FA2D96 /* PictureDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureDeleteViewController.h; sourceTree = "<group>"; };
-		88641F711635095600FA2D96 /* PictureDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDeleteViewController.m; sourceTree = "<group>"; };
 		A16E881D1634B4290094C978 /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
 		A16E882E1634BFE80094C978 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A16E88301634BFF50094C978 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		A1B417F51634854C00E9D17B /* pictureDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pictureDeleteViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +209,8 @@
 				51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */,
 				51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */,
 				51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */,
+				6C9C006816350D3A00CB30C3 /* ListCell.m */,
+				6C9C006E1635141800CB30C3 /* ListItem.m */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -215,6 +222,7 @@
 				51E2AD801630CCF9007DA5C4 /* CategoryViewViewController.m */,
 				51E2AD8A1630CD22007DA5C4 /* CategoryEditViewController.m */,
 				51E2AD851630CD12007DA5C4 /* CategoryAddViewController.m */,
+				6C2D4CA316352C7D007F8DE1 /* Category.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -234,7 +242,6 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
-				88641F711635095600FA2D96 /* PictureDeleteViewController.m */,
 				5119FE891632046F00CFCD33 /* CreatePictureViewController.m */,
 				5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */,
 			);
@@ -244,8 +251,10 @@
 		5119FE9E1632054B00CFCD33 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				6C9C006716350D3A00CB30C3 /* ListCell.h */,
 				51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */,
 				51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */,
+				6C9C006D1635141800CB30C3 /* ListItem.h */,
 				51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */,
 			);
 			name = List;
@@ -255,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD641630C6E3007DA5C4 /* CategoryViewController.h */,
+				6C2D4CA216352C7D007F8DE1 /* Category.h */,
 				51E2AD7F1630CCF9007DA5C4 /* CategoryViewViewController.h */,
 				51E2AD841630CD12007DA5C4 /* CategoryAddViewController.h */,
 				51E2AD891630CD22007DA5C4 /* CategoryEditViewController.h */,
@@ -277,7 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
-				88641F701635093600FA2D96 /* PictureDeleteViewController.h */,
+				A1B417F51634854C00E9D17B /* pictureDeleteViewController.h */,
 				A16E881D1634B4290094C978 /* EditPictureViewController.h */,
 				5119FE881632046500CFCD33 /* CreatePictureViewController.h */,
 			);
@@ -334,6 +344,7 @@
 				51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */,
 				51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */,
 				51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */,
+				6C9C006B16350E6700CB30C3 /* ListCell_iPhone.xib */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -366,7 +377,6 @@
 				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
 				5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */,
 				5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */,
-				88641F6E163505E300FA2D96 /* PictureDeleteViewController_iPhone.xib */,
 			);
 			name = Picture;
 			sourceTree = "<group>";
@@ -398,9 +408,9 @@
 		51E2AD6C1630C8E4007DA5C4 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
-				76BA2B131630977D00DAE149 /* SecondViewController.h */,
 				76BA2B091630977D00DAE149 /* AppDelegate.h */,
 				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
+				76BA2B131630977D00DAE149 /* SecondViewController.h */,
 				5119FE9E1632054B00CFCD33 /* List */,
 				5119FE9F1632055100CFCD33 /* Category */,
 				5119FEA01632055700CFCD33 /* Share */,
@@ -426,7 +436,6 @@
 		76BA2AEB1630977D00DAE149 = {
 			isa = PBXGroup;
 			children = (
-				88641F6C1635049E00FA2D96 /* Default-568h@2x.png */,
 				A16E88301634BFF50094C978 /* icon.png */,
 				76BA2B001630977D00DAE149 /* Pic P */,
 				76BA2B321630977D00DAE149 /* Pic PTests */,
@@ -604,8 +613,7 @@
 				5165C2481634902000883671 /* SecondViewController_iPad.xib in Resources */,
 				A16E882F1634BFE80094C978 /* icon.png in Resources */,
 				A16E88311634BFF50094C978 /* icon.png in Resources */,
-				88641F6D1635049E00FA2D96 /* Default-568h@2x.png in Resources */,
-				88641F6F163505E300FA2D96 /* PictureDeleteViewController_iPhone.xib in Resources */,
+				6C9C006C16350E6700CB30C3 /* ListCell_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,7 +667,9 @@
 				5119FE831632039200CFCD33 /* SharePicturesViewController.m in Sources */,
 				5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */,
 				5119FE8C1632046F00CFCD33 /* EditPictureViewController.m in Sources */,
-				88641F721635095600FA2D96 /* PictureDeleteViewController.m in Sources */,
+				6C9C006916350D3A00CB30C3 /* ListCell.m in Sources */,
+				6C9C006F1635141800CB30C3 /* ListItem.m in Sources */,
+				6C2D4CA416352C7D007F8DE1 /* Category.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

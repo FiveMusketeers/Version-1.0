@@ -7,18 +7,33 @@
 //
 
 #import "ListViewViewController.h"
+#import "ListCell.h"
+#import "ListItem.h"
 
 @interface ListViewViewController ()
+
 
 @end
 
 @implementation ListViewViewController
 
+@synthesize tableData; // The array with the items.
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    if (self)
+	{
+		// This will need to be an SQL query, or some other call where we generate our list of items.
+		// Constructs an item.
+		ListItem *objectOne = [[ListItem alloc] initWithName:@"Musketeer 1" imagePath:@"icon.png"];
+		ListItem *objectTwo = [[ListItem alloc] initWithName:@"Musketeer 2" imagePath:@"icon.png"];
+		ListItem *objectThree = [[ListItem alloc] initWithName:@"Musketeer 3" imagePath:@"icon.png"];
+		ListItem *objectFour = [[ListItem alloc] initWithName:@"Musketeer 4" imagePath:@"icon.png"];
+		ListItem *objectFive = [[ListItem alloc] initWithName:@"Musketeer 5" imagePath:@"icon.png"];
+		
+		// Creates an array of staticly called objects (for now)
+		tableData = [[NSArray alloc] initWithObjects: objectOne, objectTwo, objectThree, objectFour, objectFive, nil];
     }
     return self;
 }
@@ -31,6 +46,7 @@
 
 - (void)viewDidUnload
 {
+	[self setListTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -40,20 +56,77 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-- (IBAction)listView {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+
+// Switch to listview.
+- (IBAction)listView
+{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+	{
         ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
         [self presentModalViewController:listView animated:YES];
     }
-    else{
+    else
+	{
         ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPad" bundle:nil];
         [self presentModalViewController:listView animated:YES];
     }
 }
 
-
-- (IBAction)PreviousMenu:(id)sender {
+- (IBAction)PreviousMenu:(id)sender
+{
     [self dismissModalViewControllerAnimated:YES];
 }
+
+// Determines how many rows the table view will contain. We can artificially inflate or limit this
+// as we please.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+	// Pretty simple here.
+	return [tableData count];
+}
+
+// Returns the data of a single row cell.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+	NSString *identifier = @"ListCell";
+	
+	// Simply initialize the local variable.
+	ListCell *cell = nil;
+	
+	// We've built and called our custom tableView cell.
+
+	cell = (ListCell *)[ self.ListTable dequeueReusableCellWithIdentifier: identifier ];
+	
+	// We want to populate the cell with a listItem.
+	
+	ListItem *listItem = [ self.tableData objectAtIndex: indexPath.row ];
+	
+	if( cell == nil ) // It always is...unless there's some kind of caching going on.
+	{
+		// Load all of.....these things.
+		NSArray *objects = [ [ NSBundle mainBundle ] loadNibNamed: @"ListCell_iPhone" owner:nil options:nil ];
+		
+		// Iterate through each object.
+		
+		for ( id currentObject in objects )
+		{
+			if ( [ currentObject isKindOfClass:[ ListCell class ] ] ) // If the object is suitable...
+			{
+				cell = (ListCell *)currentObject; // Cast it as a ListCell.
+				break;
+			}
+		}
+		
+		// Assign all the object attributes to the cell attributes here.
+		
+		cell.nameLabel.text = listItem.name; // The cell takes on the name of the object.
+		cell.image.image = listItem.getImage; // Cell's image grabs the listItem's image.
+		
+		// End of plugging object attributes into the cellview.
+	}
+	
+	return cell;
+}
+// End generating tableviewcell
 
 @end

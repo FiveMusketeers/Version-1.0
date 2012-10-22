@@ -14,8 +14,6 @@
 
 - (IBAction)pictureEdit;
 
-- (IBAction)pictureDelete;
-
 -(IBAction)goBack;
 
 @end

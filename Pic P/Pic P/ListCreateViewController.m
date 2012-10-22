@@ -8,11 +8,10 @@
 
 #import "ListCreateViewController.h"
 
-@interface ListCreateViewController ()
-
-@end
 
 @implementation ListCreateViewController
+
+@synthesize textField1, label1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,6 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -40,7 +40,16 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+- (IBAction) textFieldReturn:(id)sender
+{
+    label1.text = textField1.text;
+    [sender resignFirstResponder];
+}
+
 - (IBAction)PreviousMenu:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+    
 }
+
 @end

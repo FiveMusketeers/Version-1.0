@@ -9,7 +9,6 @@
 #import "PictureViewController.h"
 #import "CreatePictureViewController.h"
 #import "EditPictureViewController.h"
-#import "PictureDeleteViewController.h"
 
 
 @interface PictureViewController ()
@@ -34,17 +33,6 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-- (IBAction)pictureDelete{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        PictureDeleteViewController *PictureDelete = [[PictureDeleteViewController alloc]initWithNibName:@"PictureDeleteViewController_iPhone" bundle:nil];
-        [self presentModalViewController:PictureDelete animated:YES];
-    }
-    else{
-        CreatePictureViewController *Create = [[CreatePictureViewController alloc]initWithNibName:@"CreatePictureViewController_iPad" bundle:nil];
-        [self presentModalViewController:Create animated:YES];
-    }
 }
 
 
