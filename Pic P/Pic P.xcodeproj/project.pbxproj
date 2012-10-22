@@ -23,12 +23,11 @@
 		5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */; };
 		5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */; };
 		5165C2481634902000883671 /* SecondViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5165C2471634902000883671 /* SecondViewController_iPad.xib */; };
-		51B1155E1635F50600F9934D /* 2012-10-21 22.26.21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* 2012-10-21 22.26.21.jpg */; };
-		51B115611635F50F00F9934D /* 2012-10-21 22.23.13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* 2012-10-21 22.23.13.jpg */; };
-		51B115661635F51C00F9934D /* 2012-10-21 22.24.25.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* 2012-10-21 22.24.25.jpg */; };
-		51B115671635F51C00F9934D /* 2012-10-21 22.24.43.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115631635F51C00F9934D /* 2012-10-21 22.24.43.jpg */; };
-		51B115681635F51C00F9934D /* 2012-10-21 22.24.59.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115641635F51C00F9934D /* 2012-10-21 22.24.59.jpg */; };
-		51B115691635F51C00F9934D /* 2012-10-21 22.25.32.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115651635F51C00F9934D /* 2012-10-21 22.25.32.jpg */; };
+		51B1155E1635F50600F9934D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
+		51B115611635F50F00F9934D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
+		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
+		51B115671635F51C00F9934D /* hanger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115631635F51C00F9934D /* hanger.jpg */; };
+		51B115681635F51C00F9934D /* hat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115641635F51C00F9934D /* hat.jpg */; };
 		51E2AD581630C6BF007DA5C4 /* ShareViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */; };
 		51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
 		51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD571630C6BF007DA5C4 /* ShareViewController.m */; };
@@ -113,12 +112,11 @@
 		5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		5165C2471634902000883671 /* SecondViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController_iPad.xib; sourceTree = "<group>"; };
-		51B1155D1635F50600F9934D /* 2012-10-21 22.26.21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2012-10-21 22.26.21.jpg"; sourceTree = "<group>"; };
-		51B115601635F50F00F9934D /* 2012-10-21 22.23.13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2012-10-21 22.23.13.jpg"; sourceTree = "<group>"; };
-		51B115621635F51C00F9934D /* 2012-10-21 22.24.25.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2012-10-21 22.24.25.jpg"; sourceTree = "<group>"; };
-		51B115631635F51C00F9934D /* 2012-10-21 22.24.43.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2012-10-21 22.24.43.jpg"; sourceTree = "<group>"; };
-		51B115641635F51C00F9934D /* 2012-10-21 22.24.59.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2012-10-21 22.24.59.jpg"; sourceTree = "<group>"; };
-		51B115651635F51C00F9934D /* 2012-10-21 22.25.32.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "2012-10-21 22.25.32.jpg"; sourceTree = "<group>"; };
+		51B1155D1635F50600F9934D /* scissors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpg; sourceTree = "<group>"; };
+		51B115601635F50F00F9934D /* brush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brush.jpg; sourceTree = "<group>"; };
+		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
+		51B115631635F51C00F9934D /* hanger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hanger.jpg; sourceTree = "<group>"; };
+		51B115641635F51C00F9934D /* hat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hat.jpg; sourceTree = "<group>"; };
 		51E2AD541630C6BF007DA5C4 /* ShareViewController_iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPad.xib; sourceTree = "<group>"; };
 		51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD561630C6BF007DA5C4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
@@ -480,12 +478,11 @@
 			isa = PBXGroup;
 			children = (
 				A16E882E1634BFE80094C978 /* icon.png */,
-				51B1155D1635F50600F9934D /* 2012-10-21 22.26.21.jpg */,
-				51B115601635F50F00F9934D /* 2012-10-21 22.23.13.jpg */,
-				51B115621635F51C00F9934D /* 2012-10-21 22.24.25.jpg */,
-				51B115631635F51C00F9934D /* 2012-10-21 22.24.43.jpg */,
-				51B115641635F51C00F9934D /* 2012-10-21 22.24.59.jpg */,
-				51B115651635F51C00F9934D /* 2012-10-21 22.25.32.jpg */,
+				51B1155D1635F50600F9934D /* scissors.jpg */,
+				51B115601635F50F00F9934D /* brush.jpg */,
+				51B115621635F51C00F9934D /* socks.jpg */,
+				51B115631635F51C00F9934D /* hanger.jpg */,
+				51B115641635F51C00F9934D /* hat.jpg */,
 				51E2AD6D1630C8E8007DA5C4 /* Source */,
 				51E2AD6C1630C8E4007DA5C4 /* Headers */,
 				51E2AD6A1630C8B3007DA5C4 /* Ipad Views */,
@@ -632,12 +629,11 @@
 				A16E882F1634BFE80094C978 /* icon.png in Resources */,
 				A16E88311634BFF50094C978 /* icon.png in Resources */,
 				6C9C006C16350E6700CB30C3 /* ListCell_iPhone.xib in Resources */,
-				51B1155E1635F50600F9934D /* 2012-10-21 22.26.21.jpg in Resources */,
-				51B115611635F50F00F9934D /* 2012-10-21 22.23.13.jpg in Resources */,
-				51B115661635F51C00F9934D /* 2012-10-21 22.24.25.jpg in Resources */,
-				51B115671635F51C00F9934D /* 2012-10-21 22.24.43.jpg in Resources */,
-				51B115681635F51C00F9934D /* 2012-10-21 22.24.59.jpg in Resources */,
-				51B115691635F51C00F9934D /* 2012-10-21 22.25.32.jpg in Resources */,
+				51B1155E1635F50600F9934D /* scissors.jpg in Resources */,
+				51B115611635F50F00F9934D /* brush.jpg in Resources */,
+				51B115661635F51C00F9934D /* socks.jpg in Resources */,
+				51B115671635F51C00F9934D /* hanger.jpg in Resources */,
+				51B115681635F51C00F9934D /* hat.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

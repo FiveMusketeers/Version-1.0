@@ -25,8 +25,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    UIImage *image = [UIImage imageNamed:@"icon.png"];
-    items = [[UIImageView alloc] initWithImage: image];
     // Do any additional setup after loading the view from its nib.
 }
 
