@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface pictureDeleteViewController : UIViewController
+@interface PictureDeleteViewController : UIViewController
 
 - (IBAction)PreviousMenu:(id)sender;
 @end
