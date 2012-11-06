@@ -9,6 +9,7 @@
 #import "PictureViewController.h"
 #import "CreatePictureViewController.h"
 #import "EditPictureViewController.h"
+#import "PictureDeleteViewController.h"
 
 
 @interface PictureViewController ()
@@ -37,25 +38,18 @@
 
 
 - (IBAction)pictureCreate {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         CreatePictureViewController *Create = [[CreatePictureViewController alloc]initWithNibName:@"CreatePictureViewController_iPhone" bundle:nil];
         [self presentModalViewController:Create animated:YES];
-    }
-    else{
-        CreatePictureViewController *Create = [[CreatePictureViewController alloc]initWithNibName:@"CreatePictureViewController_iPad" bundle:nil];
-        [self presentModalViewController:Create animated:YES];
-    }
 }
 
 - (IBAction)pictureEdit {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         EditPictureViewController *pictureEdit = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPhone" bundle:nil];
         [self presentModalViewController:pictureEdit animated:YES];
-    }
-    else{
-        EditPictureViewController *pictureEdit = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPad" bundle:nil];
-        [self presentModalViewController:pictureEdit animated:YES];
-    }
+}
+
+- (IBAction)pictureDelete {
+    PictureDeleteViewController *pictureDelete = [[PictureDeleteViewController alloc]initWithNibName:@"PictureDeleteViewController_iPhone" bundle:nil];
+    [self presentModalViewController:pictureDelete animated:YES];
 }
 
 - (IBAction)goBack{

@@ -17,15 +17,18 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
+        self.window.rootViewController = viewController1;
+        [self.window makeKeyAndVisible];
+        return YES;
     }
-    else {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPad" bundle:nil];
+    else
+    {
+        return NO;
     }
-    self.window.rootViewController = viewController1;
-    [self.window makeKeyAndVisible];
-    return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

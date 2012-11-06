@@ -18,8 +18,6 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"Category", @"First");
-        self.tabBarItem.image = [UIImage imageNamed:@"First"];
     }
     return self;
 }

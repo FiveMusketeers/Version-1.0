@@ -60,16 +60,8 @@
 // Switch to listview.
 - (IBAction)listView
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
-	{
         ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
         [self presentModalViewController:listView animated:YES];
-    }
-    else
-	{
-        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPad" bundle:nil];
-        [self presentModalViewController:listView animated:YES];
-    }
 }
 
 - (IBAction)PreviousMenu:(id)sender

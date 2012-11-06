@@ -41,40 +41,21 @@
 
 - (IBAction)goBack{
     [self dismissModalViewControllerAnimated:YES];
-    
 }
 
 - (IBAction)shareLists {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         ShareListsViewController *shareLists = [[ShareListsViewController alloc]initWithNibName:@"ShareListsViewController_iPhone" bundle:nil];
         [self presentModalViewController:shareLists animated:YES];
-    }
-    else{
-        ShareListsViewController *shareLists = [[ShareListsViewController alloc]initWithNibName:@"ShareListsViewController_iPad" bundle:nil];
-        [self presentModalViewController:shareLists animated:YES];
-    }
 }
 
 - (IBAction)shareCategories {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         ShareCategoriesViewController *shareCategories = [[ShareCategoriesViewController alloc]initWithNibName:@"ShareCategoriesViewController__iPhone" bundle:nil];
         [self presentModalViewController:shareCategories animated:YES];
-    }
-    else{
-        ShareCategoriesViewController *shareCategories = [[ShareCategoriesViewController alloc]initWithNibName:@"ShareCategoriesViewController__iPad" bundle:nil];
-        [self presentModalViewController:shareCategories animated:YES];
-    }
 }
 
 - (IBAction)sharePictures {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         SharePicturesViewController *sharePictures = [[SharePicturesViewController alloc]initWithNibName:@"SharePicturesViewController_iPhone" bundle:nil];
         [self presentModalViewController:sharePictures animated:YES];
-    }
-    else{
-        SharePicturesViewController *sharePictures = [[SharePicturesViewController alloc]initWithNibName:@"SharePicturesViewController_iPad" bundle:nil];
-        [self presentModalViewController:sharePictures animated:YES];
-    }
 }
 
 @end

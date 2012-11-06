@@ -43,44 +43,25 @@
 
 //For Lists 
 - (IBAction)listCreate {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
         ListCreateViewController *listView = [[ListCreateViewController alloc]initWithNibName:@"ListCreateViewController_iPhone" bundle:nil];
         [self presentModalViewController:listView animated:YES];
-    }
-    else{
-        ListCreateViewController *listView = [[ListCreateViewController alloc]initWithNibName:@"ListCreateViewController_iPad" bundle:nil];
-        [self presentModalViewController:listView animated:YES];
-    }
 }
 
 - (IBAction)listEdit {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        ListEditViewController *ListEditView = [[ListEditViewController alloc]initWithNibName:@"ListEditViewController_iPhone" bundle:nil];
-        [self presentModalViewController:ListEditView animated:YES];
-    }
-    else{
-        ListEditViewController *ListEditView = [[ListEditViewController alloc]initWithNibName:@"ListEditViewController_iPad" bundle:nil];
-        [self presentModalViewController:ListEditView animated:YES];
-    }
-    
+    ListEditViewController *ListEditView = [[ListEditViewController alloc]initWithNibName:@"ListEditViewController_iPhone" bundle:nil];
+    [self presentModalViewController:ListEditView animated:YES];
+
 }
 
 - (IBAction)listView{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
-        [self presentModalViewController:listView animated:YES];
-    }
-    else{
-        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPad" bundle:nil];
-        [self presentModalViewController:listView animated:YES];
-    }
+    ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+    [self presentModalViewController:listView animated:YES];
 }
 
 
 //Goes to the previous menu
 - (IBAction)goBack{
     [self dismissModalViewControllerAnimated:YES];
-    
 }
 
 @end

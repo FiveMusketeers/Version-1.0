@@ -1,26 +1,26 @@
 //
-//  ShareCategoriesViewController.m
+//  PIctureDeleteViewController.m
 //  Pic P
 //
-//  Created by Charlotte Chak on 10/18/12.
+//  Created by Steven Wong on 11/6/12.
 //  Copyright (c) 2012 Five Musketeers. All rights reserved.
 //
 
-#import "ShareCategoriesViewController.h"
+#import "PictureDeleteViewController.h"
 
-@interface ShareCategoriesViewController ()
+@interface PictureDeleteViewController ()
 
 @end
 
-@implementation ShareCategoriesViewController
+@implementation PictureDeleteViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        // Custom initialization
     }
     return self;
-
 }
 
 - (void)viewDidLoad
