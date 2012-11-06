@@ -47,25 +47,25 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Pic P/FirstViewController.m"
-         timestampString = "373920979.935023"
+         timestampString = "373925771.136235"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "57"
-         endingLineNumber = "57"
+         startingLineNumber = "66"
+         endingLineNumber = "66"
          landmarkName = "-managePictures"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Pic P/FirstViewController.h"
-         timestampString = "372386686.245317"
+         timestampString = "373925771.136235"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "20"
-         endingLineNumber = "20"
-         landmarkName = "-Share"
+         startingLineNumber = "29"
+         endingLineNumber = "29"
+         landmarkName = "-share"
          landmarkType = "4">
       </FileBreakpoint>
       <FileBreakpoint
@@ -177,11 +177,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Pic P/FirstViewController.m"
-         timestampString = "373920979.935023"
+         timestampString = "373925771.136235"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "58"
-         endingLineNumber = "58"
+         startingLineNumber = "67"
+         endingLineNumber = "67"
          landmarkName = "-managePictures"
          landmarkType = "5">
       </FileBreakpoint>
@@ -196,6 +196,32 @@
          startingLineNumber = "11"
          endingLineNumber = "11"
          landmarkName = "@interface PictureDeleteViewController()"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Pic P/FirstViewController.h"
+         timestampString = "373925550.709659"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "14"
+         endingLineNumber = "14"
+         landmarkName = "@interface FirstViewController"
+         landmarkType = "2">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Pic P/FirstViewController.h"
+         timestampString = "373926082.243361"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "30"
+         endingLineNumber = "30"
+         landmarkName = "@interface FirstViewController"
          landmarkType = "2">
       </FileBreakpoint>
    </FileBreakpoints>

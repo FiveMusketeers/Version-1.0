@@ -19,6 +19,10 @@
 		5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */; };
 		512DD2431649951E00662F15 /* PictureDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 512DD2411649951E00662F15 /* PictureDeleteViewController.m */; };
 		512DD2441649951E00662F15 /* PictureDeleteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */; };
+		51ACCBF61649A66900001603 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF51649A66900001603 /* List.png */; };
+		51ACCBFA1649A7DB00001603 /* Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF91649A7DB00001603 /* Category.png */; };
+		51ACCBFC1649A97C00001603 /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFB1649A97C00001603 /* Picture.png */; };
+		51ACCBFE1649A9B700001603 /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFD1649A9B700001603 /* Share.png */; };
 		51B1155E1635F50600F9934D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
 		51B115611635F50F00F9934D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
 		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
@@ -94,6 +98,10 @@
 		5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		512DD2411649951E00662F15 /* PictureDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDeleteViewController.m; sourceTree = "<group>"; };
 		512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureDeleteViewController_iPhone.xib; sourceTree = "<group>"; };
+		51ACCBF51649A66900001603 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
+		51ACCBF91649A7DB00001603 /* Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Category.png; sourceTree = "<group>"; };
+		51ACCBFB1649A97C00001603 /* Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Picture.png; sourceTree = "<group>"; };
+		51ACCBFD1649A9B700001603 /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Share.png; sourceTree = "<group>"; };
 		51B1155D1635F50600F9934D /* scissors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpg; sourceTree = "<group>"; };
 		51B115601635F50F00F9934D /* brush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brush.jpg; sourceTree = "<group>"; };
 		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
@@ -323,6 +331,17 @@
 			name = Picture;
 			sourceTree = "<group>";
 		};
+		51ACCBF31649A62E00001603 /* Menu Pictures */ = {
+			isa = PBXGroup;
+			children = (
+				51ACCBF51649A66900001603 /* List.png */,
+				51ACCBF91649A7DB00001603 /* Category.png */,
+				51ACCBFB1649A97C00001603 /* Picture.png */,
+				51ACCBFD1649A9B700001603 /* Share.png */,
+			);
+			name = "Menu Pictures";
+			sourceTree = "<group>";
+		};
 		51E2AD691630C88C007DA5C4 /* Iphone Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -402,6 +421,7 @@
 				51B115621635F51C00F9934D /* socks.jpg */,
 				51B115631635F51C00F9934D /* hanger.jpg */,
 				51B115641635F51C00F9934D /* hat.jpg */,
+				51ACCBF31649A62E00001603 /* Menu Pictures */,
 				51E2AD6D1630C8E8007DA5C4 /* Source */,
 				51E2AD6C1630C8E4007DA5C4 /* Headers */,
 				51E2AD691630C88C007DA5C4 /* Iphone Views */,
@@ -537,6 +557,10 @@
 				51B115671635F51C00F9934D /* hanger.jpg in Resources */,
 				51B115681635F51C00F9934D /* hat.jpg in Resources */,
 				512DD2441649951E00662F15 /* PictureDeleteViewController_iPhone.xib in Resources */,
+				51ACCBF61649A66900001603 /* List.png in Resources */,
+				51ACCBFA1649A7DB00001603 /* Category.png in Resources */,
+				51ACCBFC1649A97C00001603 /* Picture.png in Resources */,
+				51ACCBFE1649A9B700001603 /* Share.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

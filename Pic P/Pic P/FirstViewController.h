@@ -9,7 +9,16 @@
 #import <UIKit/UIKit.h>
 
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController{
+    IBOutlet UIImageView *img_list;
+    IBOutlet UIImageView *img_category;
+    IBOutlet UIImageView *img_picture;
+    IBOutlet UIImageView *img_share;
+}
+@property(nonatomic, retain) IBOutlet UIImageView *img_list;
+@property(nonatomic, retain) IBOutlet UIImageView *img_category;
+@property(nonatomic, retain) IBOutlet UIImageView *img_picture;
+@property(nonatomic, retain) IBOutlet UIImageView *img_share;
 
 - (IBAction)manageList;
 
