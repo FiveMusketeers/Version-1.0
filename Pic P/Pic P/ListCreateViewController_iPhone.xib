@@ -108,7 +108,7 @@
 					<object class="IBUIButton" id="621695580">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{20, 404}, {131, 37}}</string>
+						<string key="NSFrame">{{20, 380}, {100, 60}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="32029845"/>
@@ -118,13 +118,17 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<int key="IBUIButtonType">1</int>
-						<string key="IBUINormalTitle">Previous Menu</string>
+						<string key="IBUINormalTitle">  Back</string>
 						<reference key="IBUIHighlightedTitleColor" ref="1052203611"/>
 						<object class="NSColor" key="IBUINormalTitleColor">
 							<int key="NSColorSpace">1</int>
 							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
 						</object>
 						<reference key="IBUINormalTitleShadowColor" ref="1049522363"/>
+						<object class="NSCustomResource" key="IBUINormalImage">
+							<string key="NSClassName">NSImage</string>
+							<string key="NSResourceName">BackArrow.png</string>
+						</object>
 						<reference key="IBUIFontDescription" ref="360194555"/>
 						<reference key="IBUIFont" ref="31023011"/>
 					</object>
@@ -299,12 +303,12 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="32029845"/>
-							<reference ref="621695580"/>
 							<reference ref="341394597"/>
 							<reference ref="382021806"/>
 							<reference ref="932081118"/>
 							<reference ref="840105555"/>
 							<reference ref="995455166"/>
+							<reference ref="621695580"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -429,6 +433,10 @@
 		</object>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<object class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="NS.key.0">BackArrow.png</string>
+			<string key="NS.object.0">{50, 50}</string>
+		</object>
 		<string key="IBCocoaTouchPluginVersion">1498</string>
 	</data>
 </archive>

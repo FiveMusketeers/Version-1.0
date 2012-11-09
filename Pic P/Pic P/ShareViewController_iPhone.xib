@@ -98,11 +98,11 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">List.png</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="816108268">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="275861488">
 							<int key="type">2</int>
 							<double key="pointSize">18</double>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="7921383">
+						<object class="NSFont" key="IBUIFont" id="950251785">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
@@ -132,16 +132,15 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">Picture.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="816108268"/>
-						<reference key="IBUIFont" ref="7921383"/>
+						<reference key="IBUIFontDescription" ref="275861488"/>
+						<reference key="IBUIFont" ref="950251785"/>
 					</object>
 					<object class="IBUIButton" id="816320411">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{60, 325}, {210, 60}}</string>
+						<string key="NSFrame">{{20, 380}, {120, 60}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -159,8 +158,8 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">BackArrow.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="816108268"/>
-						<reference key="IBUIFont" ref="7921383"/>
+						<reference key="IBUIFontDescription" ref="275861488"/>
+						<reference key="IBUIFont" ref="950251785"/>
 					</object>
 					<object class="IBUIButton" id="155011656">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -186,10 +185,10 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">Category.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="816108268"/>
-						<reference key="IBUIFont" ref="7921383"/>
+						<reference key="IBUIFontDescription" ref="275861488"/>
+						<reference key="IBUIFont" ref="950251785"/>
 					</object>
-					<object class="IBUIImageView" id="783085282">
+					<object class="IBUIImageView" id="733657502">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{210, 10}, {60, 45}}</string>
@@ -280,10 +279,10 @@
 						<array class="NSMutableArray" key="children">
 							<reference ref="1013790154"/>
 							<reference ref="1023554666"/>
-							<reference ref="816320411"/>
 							<reference ref="155011656"/>
 							<reference ref="165575207"/>
-							<reference ref="783085282"/>
+							<reference ref="733657502"/>
+							<reference ref="816320411"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -325,7 +324,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">36</int>
-						<reference key="object" ref="783085282"/>
+						<reference key="object" ref="733657502"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>

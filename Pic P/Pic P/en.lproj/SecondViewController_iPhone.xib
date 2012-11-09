@@ -67,11 +67,11 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">Fix.png</string>
 						</object>
-						<object class="IBUIFontDescription" key="IBUIFontDescription" id="971000514">
+						<object class="IBUIFontDescription" key="IBUIFontDescription" id="260403620">
 							<int key="type">2</int>
 							<int key="size">2</int>
 						</object>
-						<object class="NSFont" key="IBUIFont" id="513889860">
+						<object class="NSFont" key="IBUIFont" id="590219178">
 							<string key="NSName">Helvetica-Bold</string>
 							<double key="NSSize">18</double>
 							<int key="NSfFlags">16</int>
@@ -101,8 +101,8 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">add.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="971000514"/>
-						<reference key="IBUIFont" ref="513889860"/>
+						<reference key="IBUIFontDescription" ref="260403620"/>
+						<reference key="IBUIFont" ref="590219178"/>
 					</object>
 					<object class="IBUILabel" id="513267480">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -139,7 +139,7 @@
 					<object class="IBUIButton" id="585271234">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{60, 325}, {210, 60}}</string>
+						<string key="NSFrame">{{20, 380}, {120, 60}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
@@ -159,8 +159,8 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">BackArrow.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="971000514"/>
-						<reference key="IBUIFont" ref="513889860"/>
+						<reference key="IBUIFontDescription" ref="260403620"/>
+						<reference key="IBUIFont" ref="590219178"/>
 					</object>
 					<object class="IBUIButton" id="681080699">
 						<reference key="NSNextResponder" ref="191373211"/>
@@ -186,10 +186,10 @@
 							<string key="NSClassName">NSImage</string>
 							<string key="NSResourceName">Eye.png</string>
 						</object>
-						<reference key="IBUIFontDescription" ref="971000514"/>
-						<reference key="IBUIFont" ref="513889860"/>
+						<reference key="IBUIFontDescription" ref="260403620"/>
+						<reference key="IBUIFont" ref="590219178"/>
 					</object>
-					<object class="IBUIImageView" id="263832509">
+					<object class="IBUIImageView" id="774200309">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{205, 10}, {65, 60}}</string>
@@ -205,13 +205,12 @@
 						</object>
 					</object>
 				</array>
-				<string key="NSFrame">{{0, 20}, {320, 411}}</string>
+				<string key="NSFrame">{{0, 20}, {320, 460}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView" ref="263832509"/>
+				<reference key="NSNextKeyView" ref="774200309"/>
 				<reference key="IBUIBackgroundColor" ref="736518314"/>
 				<object class="IBUISimulatedStatusBarMetrics" key="IBUISimulatedStatusBarMetrics"/>
-				<object class="IBUISimulatedTabBarMetrics" key="IBUISimulatedBottomBarMetrics"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 		</array>
@@ -275,11 +274,11 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="513267480"/>
-							<reference ref="585271234"/>
 							<reference ref="62586111"/>
 							<reference ref="133760205"/>
 							<reference ref="681080699"/>
-							<reference ref="263832509"/>
+							<reference ref="774200309"/>
+							<reference ref="585271234"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -321,7 +320,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">33</int>
-						<reference key="object" ref="263832509"/>
+						<reference key="object" ref="774200309"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
 				</array>

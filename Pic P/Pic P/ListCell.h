@@ -7,15 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Slt/Slt.h>
+#import <OpenEars/FliteController.h>
 
 @interface ListCell : UITableViewCell
 {
-	
+	FliteController *fliteController;
+    Slt *slt;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *image;
+@property (strong, nonatomic) FliteController *fliteController;
+@property (strong, nonatomic) Slt *slt;
 
+-(IBAction) Act_voice: (id) sender;
 
 @end
 

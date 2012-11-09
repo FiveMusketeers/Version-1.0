@@ -8,10 +8,14 @@
 
 #import "ListCell.h"
 
+
 @implementation ListCell
+
 
 @synthesize nameLabel;
 @synthesize image;
+@synthesize fliteController;
+@synthesize slt;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -30,5 +34,24 @@
     // Configure the view for the selected state
 }
 
+- (FliteController *)fliteController {
+	if (fliteController == nil) {
+		fliteController = [[FliteController alloc] init];
+	}
+	return fliteController;
+}
+
+- (Slt *)slt {
+	if (slt == nil) {
+		slt = [[Slt alloc] init];
+	}
+	return slt;
+}
+
+-(IBAction) Act_voice:(id)sender
+{
+    NSString *say_string = nameLabel.text;
+    [self.fliteController say:say_string withVoice:self.slt];
+}
 
 @end
