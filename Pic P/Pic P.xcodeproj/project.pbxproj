@@ -19,6 +19,11 @@
 		5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */; };
 		512DD2431649951E00662F15 /* PictureDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 512DD2411649951E00662F15 /* PictureDeleteViewController.m */; };
 		512DD2441649951E00662F15 /* PictureDeleteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */; };
+		518B6EA7164DAC2000D5FD6E /* hammer.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EA6164DAC2000D5FD6E /* hammer.png */; };
+		518B6EAA164DACDD00D5FD6E /* Fix.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EA9164DACDD00D5FD6E /* Fix.png */; };
+		518B6EAC164DADD100D5FD6E /* Eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAB164DADD100D5FD6E /* Eye.png */; };
+		518B6EAE164DB35500D5FD6E /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAD164DB35500D5FD6E /* delete.png */; };
+		518B6EB0164DB3B100D5FD6E /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAF164DB3B100D5FD6E /* add.png */; };
 		51ACCBF61649A66900001603 /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF51649A66900001603 /* List.png */; };
 		51ACCBFA1649A7DB00001603 /* Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF91649A7DB00001603 /* Category.png */; };
 		51ACCBFC1649A97C00001603 /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFB1649A97C00001603 /* Picture.png */; };
@@ -99,6 +104,11 @@
 		5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		512DD2411649951E00662F15 /* PictureDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDeleteViewController.m; sourceTree = "<group>"; };
 		512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureDeleteViewController_iPhone.xib; sourceTree = "<group>"; };
+		518B6EA6164DAC2000D5FD6E /* hammer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hammer.png; sourceTree = "<group>"; };
+		518B6EA9164DACDD00D5FD6E /* Fix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fix.png; sourceTree = "<group>"; };
+		518B6EAB164DADD100D5FD6E /* Eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eye.png; sourceTree = "<group>"; };
+		518B6EAD164DB35500D5FD6E /* delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = delete.png; sourceTree = "<group>"; };
+		518B6EAF164DB3B100D5FD6E /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		51ACCBF51649A66900001603 /* List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = List.png; sourceTree = "<group>"; };
 		51ACCBF91649A7DB00001603 /* Category.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Category.png; sourceTree = "<group>"; };
 		51ACCBFB1649A97C00001603 /* Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Picture.png; sourceTree = "<group>"; };
@@ -341,6 +351,11 @@
 				51ACCBFB1649A97C00001603 /* Picture.png */,
 				51ACCBFD1649A9B700001603 /* Share.png */,
 				51ACCBFF1649AF3000001603 /* BackArrow.png */,
+				518B6EA6164DAC2000D5FD6E /* hammer.png */,
+				518B6EA9164DACDD00D5FD6E /* Fix.png */,
+				518B6EAB164DADD100D5FD6E /* Eye.png */,
+				518B6EAD164DB35500D5FD6E /* delete.png */,
+				518B6EAF164DB3B100D5FD6E /* add.png */,
 			);
 			name = "Menu Pictures";
 			sourceTree = "<group>";
@@ -565,6 +580,11 @@
 				51ACCBFC1649A97C00001603 /* Picture.png in Resources */,
 				51ACCBFE1649A9B700001603 /* Share.png in Resources */,
 				51ACCC001649AF3000001603 /* BackArrow.png in Resources */,
+				518B6EA7164DAC2000D5FD6E /* hammer.png in Resources */,
+				518B6EAA164DACDD00D5FD6E /* Fix.png in Resources */,
+				518B6EAC164DADD100D5FD6E /* Eye.png in Resources */,
+				518B6EAE164DB35500D5FD6E /* delete.png in Resources */,
+				518B6EB0164DB3B100D5FD6E /* add.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
