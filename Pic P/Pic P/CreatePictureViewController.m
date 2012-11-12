@@ -29,8 +29,8 @@
 {
     self.imgPicker=[[UIImagePickerController alloc]init];
     self.imgPicker.allowsImageEditing=YES;
-    self.imgPicker.delegate=self;
-    self.imgPicker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+    self.imgPicker.delegate = self;
+    self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
     //[super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -55,6 +55,8 @@
 
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 - (IBAction)pickenImage:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
@@ -65,19 +67,23 @@
 
 - (IBAction)takePictures:(id)sender {
 }
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    pickenImage.image = imgPicker;
-    [[picker parentViewController]dismissModalViewControllerAnimated:YES];
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [picker dismissModalViewControllerAnimated:YES];
+    
+    pickenImage.image = [info objectForKey:UIImagePickerControllerEditedImage];
     
 }
 
+/*
 //I am not sure if below is what I am supposed to do
 - (void)imageTakerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagePicker.delegate = self;
-    [self presentModalViewController:imagePicker animated:YES];
+    imgPicker = [[UIImagePickerController alloc] init];
+    imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    imgPicker.delegate = self;
+    [self presentModalViewController:imgPicker animated:YES];
     
     UIImage * image = [info objectForKey:UIImagePickerControllerEditedImage];
     
@@ -85,6 +91,7 @@
     
     [self dismissModalViewControllerAnimated:YES];
 }
+ */
 
 - (IBAction) textFieldReturn:(id)sender
 {

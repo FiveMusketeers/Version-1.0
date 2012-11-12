@@ -115,7 +115,7 @@
 		sqlite3_stmt *compiledStatement;
 		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
 			// Loop through the results and add them to the feeds array
-			xwhile(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW) {
 				// Read the data from the result row
 				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
 				NSString *aFile = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
