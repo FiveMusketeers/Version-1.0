@@ -16,6 +16,9 @@
 @end
 
 @implementation ListViewViewController
+{
+    NSMutableArray *tableData;
+}
 
 @synthesize tableData; // The array with the items.
 
@@ -36,6 +39,12 @@
 		tableData = [[NSArray alloc] initWithObjects: objectOne, objectTwo, objectThree, objectFour, objectFive, nil];
     }
     return self;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Remove the row from data model
+    [tableData removeObjectAtIndex:indexPath.row];
 }
 
 - (void)viewDidLoad
