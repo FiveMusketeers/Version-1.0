@@ -15,6 +15,7 @@
 @implementation CreatePictureViewController
 @synthesize pickenImage;
 @synthesize imgPicker;
+@synthesize textField1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -85,6 +86,11 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
+- (IBAction) textFieldReturn:(id)sender
+{
+	//Possible to assign textField1.text to some NSString here
+    [sender resignFirstResponder];
+}
 
 - (IBAction)PreviousMenu:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
