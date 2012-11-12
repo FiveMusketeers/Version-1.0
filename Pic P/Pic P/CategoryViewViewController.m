@@ -26,6 +26,8 @@
 	{
         // Custom initialization
 		// This will need to be an SQL query, or some other call where we generate our list of items.
+        
+        
 		// Constructs an item.
 		Category *objectOne = [[Category alloc] initWithName:@"Musketeer 1" imagePath:@"icon.png"];
 		Category *objectTwo = [[Category alloc] initWithName:@"Musketeer 2" imagePath:@"icon.png"];
@@ -93,7 +95,6 @@
 		NSArray *objects = [ [ NSBundle mainBundle ] loadNibNamed: @"ListCell_iPhone" owner:nil options:nil ];
 		
 		// Iterate through each object.
-		
 		for ( id currentObject in objects )
 		{
 			if ( [ currentObject isKindOfClass:[ ListCell class ] ] ) // If the object is suitable...

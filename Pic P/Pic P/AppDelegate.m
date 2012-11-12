@@ -10,10 +10,29 @@
 
 #import "FirstViewController.h"
 
+#import "ListCell.h"
+
+#import "Listitem.h"
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //Setup Picture Database for use
+    // Setup some globals
+	databaseName = @"AnimalDatabase.sql";
+    
+	// Get the path to the documents directory and append the databaseName
+	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDir = [documentPaths objectAtIndex:0];
+	databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+    
+	// Execute the "checkAndCreateDatabase" function
+	[self checkAndCreateDatabase];
+    
+	// Query the database for all animal records and construct the "animals" array
+	[self readItemsFromDatabase];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1;
@@ -58,18 +77,62 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
+-(void) checkAndCreateDatabase{
+	// Check if the SQL database has already been saved to the users phone, if not then copy it over
+	BOOL success;
+    
+	// Create a FileManager object, we will use this to check the status
+	// of the database and to copy it over if required
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+    
+	// Check if the database has already been created in the users filesystem
+	success = [fileManager fileExistsAtPath:databasePath];
+    
+	// If the database already exists then return without doing anything
+	if(success) return;
+    
+	// If not then proceed to copy the database from the application to the users filesystem
+    
+	// Get the path to the database in the application package
+	NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
+    
+	// Copy the database from the package to the users filesystem
+	[fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 }
-*/
 
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
+
+-(void) readItemsFromDatabase {
+	// Setup the database object
+	sqlite3 *database;
+    
+	// Init the animals Array
+	items = [[NSMutableArray alloc] init];
+    
+	// Open the database from the users filessytem
+	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
+		// Setup the SQL Statement and compile it for faster access
+		const char *sqlStatement = "select * from animals";
+		sqlite3_stmt *compiledStatement;
+		if(sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL) == SQLITE_OK) {
+			// Loop through the results and add them to the feeds array
+			xwhile(sqlite3_step(compiledStatement) == SQLITE_ROW) {
+				// Read the data from the result row
+				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+				NSString *aFile = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 2)];
+                
+                //Create an item object
+                ListItem *item = [[ListItem alloc] initWithName:aName imagePath:aFile];
+                
+				// Add the item object to the animals Array
+				[items addObject:item];
+			}
+		}
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+        
+	}
+	sqlite3_close(database);
+    
 }
-*/
 
 @end

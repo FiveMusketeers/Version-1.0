@@ -88,6 +88,8 @@
 		76BA2B2F1630977D00DAE149 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76BA2AFC1630977D00DAE149 /* Foundation.framework */; };
 		76BA2B371630977D00DAE149 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B351630977D00DAE149 /* InfoPlist.strings */; };
 		76BA2B3A1630977D00DAE149 /* Pic_PTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B391630977D00DAE149 /* Pic_PTests.m */; };
+		883E453F1651A088009ACC32 /* PictureDatabase.sql in Frameworks */ = {isa = PBXBuildFile; fileRef = 883E453E1651A088009ACC32 /* PictureDatabase.sql */; };
+		883E45461651ADB0009ACC32 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 883E45451651ADB0009ACC32 /* libsqlite3.0.dylib */; };
 		A10DE6C51634A03200E2380A /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */; };
 		A10DE6C71634A03B00E2380A /* ListViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */; };
 		A16E882F1634BFE80094C978 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16E882E1634BFE80094C978 /* icon.png */; };
@@ -209,6 +211,8 @@
 		76BA2B361630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76BA2B381630977D00DAE149 /* Pic_PTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic_PTests.h; sourceTree = "<group>"; };
 		76BA2B391630977D00DAE149 /* Pic_PTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic_PTests.m; sourceTree = "<group>"; };
+		883E453E1651A088009ACC32 /* PictureDatabase.sql */ = {isa = PBXFileReference; lastKnownFileType = file; name = PictureDatabase.sql; path = PicPSql/PictureDatabase.sql; sourceTree = "<group>"; };
+		883E45451651ADB0009ACC32 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		A16E881D1634B4290094C978 /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
 		A16E882E1634BFE80094C978 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A16E88301634BFF50094C978 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -220,6 +224,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883E45461651ADB0009ACC32 /* libsqlite3.0.dylib in Frameworks */,
+				883E453F1651A088009ACC32 /* PictureDatabase.sql in Frameworks */,
 				518B6EB4164DBEA200D5FD6E /* AudioToolbox.framework in Frameworks */,
 				518B6EB2164DBE9D00D5FD6E /* AVFoundation.framework in Frameworks */,
 				76BA2AFB1630977D00DAE149 /* UIKit.framework in Frameworks */,
@@ -250,8 +256,6 @@
 				51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */,
 				51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */,
 				51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */,
-				6C9C006816350D3A00CB30C3 /* ListCell.m */,
-				6C9C006E1635141800CB30C3 /* ListItem.m */,
 			);
 			name = List;
 			sourceTree = "<group>";
@@ -384,6 +388,8 @@
 		518B6EDE164DBFC200D5FD6E /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				518B6EB3164DBEA200D5FD6E /* AudioToolbox.framework */,
+				518B6EB1164DBE9D00D5FD6E /* AVFoundation.framework */,
 				518B6EDF164DBFC300D5FD6E /* cmu07a.dic */,
 				518B6EE0164DBFC300D5FD6E /* hub4wsj_sc_8k */,
 				518B6EE8164DBFC300D5FD6E /* OpenEars.framework */,
@@ -459,6 +465,8 @@
 			children = (
 				76BA2B0A1630977D00DAE149 /* AppDelegate.m */,
 				76BA2B0D1630977D00DAE149 /* FirstViewController.m */,
+				6C9C006E1635141800CB30C3 /* ListItem.m */,
+				6C9C006816350D3A00CB30C3 /* ListCell.m */,
 				5119FE95163204B600CFCD33 /* List */,
 				5119FE96163204C300CFCD33 /* Category */,
 				5119FE97163204CC00CFCD33 /* Share */,
@@ -470,8 +478,8 @@
 		76BA2AEB1630977D00DAE149 = {
 			isa = PBXGroup;
 			children = (
-				518B6EB3164DBEA200D5FD6E /* AudioToolbox.framework */,
-				518B6EB1164DBE9D00D5FD6E /* AVFoundation.framework */,
+				883E45451651ADB0009ACC32 /* libsqlite3.0.dylib */,
+				883E453E1651A088009ACC32 /* PictureDatabase.sql */,
 				A16E88301634BFF50094C978 /* icon.png */,
 				76BA2B001630977D00DAE149 /* Pic P */,
 				76BA2B321630977D00DAE149 /* Pic PTests */,
