@@ -14,8 +14,8 @@
 
 @implementation CreatePictureViewController
 @synthesize pickenImage;
+@synthesize imageText;
 @synthesize imgPicker;
-@synthesize textField1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,6 +40,7 @@
 {
     button = nil;
     [self setPickenImage:nil];
+    [self setImageText:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -65,7 +66,32 @@
     [self presentModalViewController:self.imgPicker animated:YES];
 }
 
-- (IBAction)takePictures:(id)sender {
+- (IBAction)save:(id)sender {
+    
+        /*sqlite3_stmt    *statement;
+        
+        const char *dbpath = [databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
+        {
+            NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO CONTACTS (itemName, itemFile) VALUES (\"%@\", \"%@\")", itemName.text, itemFile.png];
+            
+            const char *insert_stmt = [insertSQL UTF8String];
+            
+            sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL);
+            if (sqlite3_step(statement) == SQLITE_DONE)
+            {
+                textField1.text = @"Contact added";
+                //name.text = @"";
+                //address.text = @"";
+                //phone.text = @"";
+            } else {
+                status.text = @"Failed to add picture";
+            }
+            sqlite3_finalize(statement);
+            sqlite3_close(contactDB);
+        }
+*/
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -76,24 +102,7 @@
     
 }
 
-/*
-//I am not sure if below is what I am supposed to do
-- (void)imageTakerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
-    imgPicker = [[UIImagePickerController alloc] init];
-    imgPicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imgPicker.delegate = self;
-    [self presentModalViewController:imgPicker animated:YES];
-    
-    UIImage * image = [info objectForKey:UIImagePickerControllerEditedImage];
-    
-    // You have the image. You can use this to present the image in the next view like you require in `#3`.
-    
-    [self dismissModalViewControllerAnimated:YES];
-}
- */
-
-- (IBAction) textFieldReturn:(id)sender
+- (IBAction)textFieldReturn:(id)sender
 {
 	//Possible to assign textField1.text to some NSString here
     [sender resignFirstResponder];
