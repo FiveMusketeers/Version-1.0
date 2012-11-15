@@ -131,6 +131,9 @@
     [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
     
     NSLog(@"image saved");
+    /*http://www.friendlydeveloper.com/2010/02/using-nsfilemanager-to-save-an-image-to-or-loadremove-an-image-from-documents-directory-coding/
+     */
+
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
