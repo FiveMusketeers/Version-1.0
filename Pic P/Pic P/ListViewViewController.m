@@ -34,9 +34,9 @@
 		ListItem *objectThree = [[ListItem alloc] initWithName:@"socks" imagePath:@"socks.jpg"];
 		ListItem *objectFour = [[ListItem alloc] initWithName:@"hanger" imagePath:@"hanger.jpg"];
 		ListItem *objectFive = [[ListItem alloc] initWithName:@"hat" imagePath:@"hat.jpg"];
-		
+		ListItem *objectSix = [[ListItem alloc] initWithName:@"earths" imagePath:@"earths.png"];
 		// Creates an array of staticly called objects (for now)
-		tableData = [[NSArray alloc] initWithObjects: objectOne, objectTwo, objectThree, objectFour, objectFive, nil];
+		tableData = [[NSArray alloc] initWithObjects: objectOne, objectTwo, objectThree, objectFour, objectFive, objectSix, nil];
     }
     return self;
 }

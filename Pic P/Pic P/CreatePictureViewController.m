@@ -117,6 +117,20 @@
     [defaults setObject:imageData forKey:@"image"];
     [defaults synchronize];
     NSLog(@"data saved");
+    
+    
+    //INSERT INTO items VALUES(whatever the name of the image, name of the file)
+    NSData *pictureData=UIImagePNGRepresentation(theImage);
+    NSFileManager *fileManager=[NSFileManager defaultManager];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
+    
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", textOfImage]]; //add our image to the path
+    
+    [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
+    
+    NSLog(@"image saved");
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -125,6 +139,14 @@
     
     pickenImage.image = [info objectForKey:UIImagePickerControllerEditedImage];
     
+    /*UIImage *takenImage=[info objectForKey:UIImagePickerControllerEditedImage];
+    [self dismissModalViewControllerAnimated:YES];
+     */
+}
+-(void)imagePickerControllerDidCancel:
+(UIImagePickerController *)picker
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 - (IBAction)textFieldReturn:(id)sender
@@ -137,8 +159,12 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-/*- (IBAction)camera:(id)sender {
-    
+- (IBAction)camera:(id)sender {
+    imgPicker=[[UIImagePickerController alloc] init];
+    imgPicker.sourceType=UIImagePickerControllerSourceTypeCamera;
+    imgPicker.delegate=self;
+    [self presentModalViewController:imgPicker animated:YES];
+    //
 }
- */
+
 @end
