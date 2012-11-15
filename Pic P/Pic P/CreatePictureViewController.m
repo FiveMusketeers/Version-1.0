@@ -15,6 +15,7 @@
 @implementation CreatePictureViewController
 @synthesize pickenImage;
 @synthesize imageText;
+@synthesize textField1;
 @synthesize imgPicker;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,12 +28,19 @@
 
 - (void)viewDidLoad
 {
-    self.imgPicker=[[UIImagePickerController alloc]init];
+    /*self.imgPicker=[[UIImagePickerController alloc]init];
     self.imgPicker.allowsImageEditing=YES;
     self.imgPicker.delegate = self;
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    //[super viewDidLoad];
+    */
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
+    NSData *imageData=[defaults dataForKey:@"image"];
+    UIImage *theImage=[UIImage imageWithData:imageData];
+    imageText.text=textOfImage;
+    pickenImage.image=theImage;
+     
+    [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -41,6 +49,7 @@
     button = nil;
     [self setPickenImage:nil];
     [self setImageText:nil];
+    [self setTextField1:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -59,10 +68,17 @@
 
 
 - (IBAction)pickenImage:(id)sender {
+    
+    
     [self dismissModalViewControllerAnimated:YES];
+
 }
 
 - (IBAction)grabSavedImage:(id)sender {
+    self.imgPicker=[[UIImagePickerController alloc]init];
+    imgPicker.delegate=self;
+    self.imgPicker.allowsImageEditing=YES;
+    self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentModalViewController:self.imgPicker animated:YES];
 }
 
@@ -92,6 +108,15 @@
             sqlite3_close(contactDB);
         }
 */
+    [imageText resignFirstResponder];
+    NSString *textOfImage=[imageText text];
+    UIImage *theImage=pickenImage.image;
+    NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setObject:textOfImage forKey:@"textOfImage"];
+    [defaults setObject:imageData forKey:@"image"];
+    [defaults synchronize];
+    NSLog(@"data saved");
 }
 
 -(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
@@ -111,4 +136,9 @@
 - (IBAction)PreviousMenu:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+/*- (IBAction)camera:(id)sender {
+    
+}
+ */
 @end
