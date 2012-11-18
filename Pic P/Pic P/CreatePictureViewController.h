@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "/usr/include/sqlite3.h"
 
 @interface CreatePictureViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     IBOutlet UIImageView *button;
     IBOutlet UITextField *imageText;
     IBOutlet UILabel *loaded;
+    sqlite3 *imageDB;
+    NSString *databasePath;
     
 }
 
@@ -30,6 +32,8 @@
 
 - (IBAction)PreviousMenu:(id)sender;
 - (IBAction)camera:(id)sender;
+
+- (IBAction)findImage:(id)sender;
 
 
 //database action

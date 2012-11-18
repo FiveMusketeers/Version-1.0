@@ -33,17 +33,60 @@
     self.imgPicker.delegate = self;
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     */
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
-    NSData *imageData=[defaults dataForKey:@"image"];
-    UIImage *theImage=[UIImage imageWithData:imageData];
-    imageText.text=textOfImage;
-    pickenImage.image=theImage;
-     
+    
+    //NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    //NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
+    //NSData *imageData=[defaults dataForKey:@"image"];
+    //UIImage *theImage=[UIImage imageWithData:imageData];
+    //imageText.text=textOfImage;
+    //pickenImage.image=theImage;
+    
+    
+    
+    NSString *docsDir;
+    NSArray *dirPaths;
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    // Build the path to the database file
+    databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"image.db"]];
+    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    
+    if ([filemgr fileExistsAtPath: databasePath ] == NO)
+    {
+		const char *dbpath = [databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &imageDB) == SQLITE_OK)
+        {
+            char *errMsg;
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS IMAGE)";
+            
+            if (sqlite3_exec(imageDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
+            {
+                loaded.text = @"Failed to create table";
+            }
+            
+            sqlite3_close(imageDB);
+            
+        } else {
+            loaded.text = @"Failed to open/create database";
+        }
+    }
+    
+    //[filemgr release];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-
+-(void)dealloc{
+  //Doesn't allow me to release, cause error if has release code
+    //[pickenImage release];
+    //[imageText release];
+    //[textField1 release];
+}
 - (void)viewDidUnload
 {
     button = nil;
@@ -117,8 +160,43 @@
     [defaults setObject:imageData forKey:@"image"];
     [defaults synchronize];
     NSLog(@"data saved");
+    [self saveTheImage];
     
+}
+-(void) saveTheImage
+{
+    UIImage *theImage=pickenImage.image;
+    NSData *pictureData=UIImagePNGRepresentation(theImage);
+    sqlite3_stmt    *statement;
     
+    const char *dbpath = [databasePath UTF8String];
+    
+    if (sqlite3_open(dbpath, &imageDB) == SQLITE_OK)
+    {
+        NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO IMAGES (imageText, pickenImage) VALUES (\"%@\", \"%@\")", [imageText.text, pickenImage.png];//,.png]; need to figure out what to put in front of .png
+                        
+    
+        const char *insert_stmt = [insertSQL UTF8String];
+        
+        sqlite3_prepare_v2(imageDB, insert_stmt, -1, &statement, NULL);
+        if (sqlite3_step(statement) == SQLITE_DONE)
+        {
+            textField1.text = @"Image added";
+            //name.text = @"";
+            //address.text = @"";
+            //phone.text = @"";
+        } else {
+            loaded.text = @"Failed to add picture";
+        }
+        sqlite3_finalize(statement);
+        sqlite3_close(imageDB);
+    }
+
+}
+
+//the code below may not be correct or needed. need to deal later
+-(void)saveImage:(UIImage*)theImage: (NSString*)textOfImage{
+
     //INSERT INTO items VALUES(whatever the name of the image, name of the file)
     NSData *pictureData=UIImagePNGRepresentation(theImage);
     NSFileManager *fileManager=[NSFileManager defaultManager];
@@ -128,7 +206,7 @@
     
     NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", textOfImage]]; //add our image to the path
     
-    [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
+    [fileManager createFileAtPath:fullPath contents:pictureData attributes:nil]; //finally save the path (image)
     
     NSLog(@"image saved");
     /*http://www.friendlydeveloper.com/2010/02/using-nsfilemanager-to-save-an-image-to-or-loadremove-an-image-from-documents-directory-coding/
@@ -168,6 +246,41 @@
     imgPicker.delegate=self;
     [self presentModalViewController:imgPicker animated:YES];
     //
+}
+
+- (IBAction)findImage:(id)sender {
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    
+    if (sqlite3_open(dbpath, &imageDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT address, phone FROM contacts WHERE name=\"%@\"", imageText.text];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(imageDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                //NSString *addressField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
+                //address.text = addressField;
+                
+               // NSString *phoneField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                //phone.text = phoneField;
+                
+                loaded.text = @"Match found";
+                
+                //[addressField release];
+                //[phoneField release];
+            } else {
+                loaded.text = @"Match not found";
+                //address.text = @"";
+                //phone.text = @"";
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(imageDB);
+    }
 }
 
 @end
