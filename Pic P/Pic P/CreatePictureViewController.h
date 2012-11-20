@@ -33,7 +33,7 @@
 - (IBAction)PreviousMenu:(id)sender;
 - (IBAction)camera:(id)sender;
 
-- (IBAction)findImage:(id)sender;
+//- (IBAction)findImage:(id)sender;
 
 
 //database action

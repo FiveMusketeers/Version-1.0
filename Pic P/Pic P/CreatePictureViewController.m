@@ -34,16 +34,16 @@
     self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     */
     
-    //NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    //NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
-    //NSData *imageData=[defaults dataForKey:@"image"];
-    //UIImage *theImage=[UIImage imageWithData:imageData];
-    //imageText.text=textOfImage;
-    //pickenImage.image=theImage;
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
+    NSData *imageData=[defaults dataForKey:@"image"];
+    UIImage *theImage=[UIImage imageWithData:imageData];
+    imageText.text=textOfImage;
+    pickenImage.image=theImage;
     
     
     
-    NSString *docsDir;
+    /*NSString *docsDir;
     NSArray *dirPaths;
     
     // Get the documents directory
@@ -76,7 +76,7 @@
             loaded.text = @"Failed to open/create database";
         }
     }
-    
+   */
     //[filemgr release];
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -160,12 +160,12 @@
     [defaults setObject:imageData forKey:@"image"];
     [defaults synchronize];
     NSLog(@"data saved");
-    [self saveTheImage];
+    [self saveImage:theImage :textOfImage];
     
 }
 -(void) saveTheImage
 {
-    UIImage *theImage=pickenImage.image;
+    /*UIImage *theImage=pickenImage.image;
     NSData *pictureData=UIImagePNGRepresentation(theImage);
     sqlite3_stmt    *statement;
     
@@ -191,6 +191,7 @@
         sqlite3_finalize(statement);
         sqlite3_close(imageDB);
     }
+     */
 
 }
 
@@ -244,11 +245,12 @@
     imgPicker=[[UIImagePickerController alloc] init];
     imgPicker.sourceType=UIImagePickerControllerSourceTypeCamera;
     imgPicker.delegate=self;
+    //[self view bringSubviewToFront:imgPicker.view];
     [self presentModalViewController:imgPicker animated:YES];
     //
 }
 
-- (IBAction)findImage:(id)sender {
+/*- (IBAction)findImage:(id)sender {
     const char *dbpath = [databasePath UTF8String];
     sqlite3_stmt    *statement;
     
@@ -282,5 +284,5 @@
         sqlite3_close(imageDB);
     }
 }
-
+*/
 @end
