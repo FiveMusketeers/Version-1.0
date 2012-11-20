@@ -15,6 +15,7 @@
 #import "Listitem.h"
 
 @implementation AppDelegate
+@synthesize imageList;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -35,6 +36,12 @@
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    NSDictionary *imageDictionary = [[NSDictionary alloc]initWithDictionary:[defaults dictionaryForKey:@"imageList"]];
+    imageList=[[NSMutableDictionary alloc]initWithDictionary:imageDictionary];
+    NSLog(@"imageList sixe:%d", [imageList count]);
+    
     UIViewController *viewController1;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
     {

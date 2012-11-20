@@ -13,7 +13,7 @@
     IBOutlet UIImageView *button;
     IBOutlet UITextField *imageText;
     IBOutlet UILabel *loaded;
-    sqlite3 *imageDB;
+    //sqlite3 *imageDB;
     NSString *databasePath;
     
 }

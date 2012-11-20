@@ -20,7 +20,7 @@ NSMutableArray *items;
 }
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NSMutableDictionary *imageList;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

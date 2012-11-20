@@ -7,7 +7,7 @@
 //
 
 #import "CreatePictureViewController.h"
-
+#import "AppDelegate.h"
 @interface CreatePictureViewController ()
 
 @end
@@ -155,12 +155,14 @@
     NSString *textOfImage=[imageText text];
     UIImage *theImage=pickenImage.image;
     NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [delegate.imageList setObject:imageData forKey:textOfImage];
+    
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    [defaults setObject:textOfImage forKey:@"textOfImage"];
-    [defaults setObject:imageData forKey:@"image"];
+    [defaults setObject:delegate.imageList forKey:@"imageList"];
     [defaults synchronize];
     NSLog(@"data saved");
-    [self saveImage:theImage :textOfImage];
+    //[self saveImage:theImage :textOfImage];
     
 }
 -(void) saveTheImage
@@ -200,14 +202,15 @@
 
     //INSERT INTO items VALUES(whatever the name of the image, name of the file)
     NSData *pictureData=UIImagePNGRepresentation(theImage);
-    NSFileManager *fileManager=[NSFileManager defaultManager];
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    //NSUserDefaults *defaults=
+    //NSFileManager *fileManager=[NSFileManager defaultManager];
+    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
     
-    NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
+    //NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
     
-    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", textOfImage]]; //add our image to the path
+    //NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", textOfImage]]; //add our image to the path
     
-    [fileManager createFileAtPath:fullPath contents:pictureData attributes:nil]; //finally save the path (image)
+    //[fileManager createFileAtPath:fullPath contents:pictureData attributes:nil]; //finally save the path (image)
     
     NSLog(@"image saved");
     /*http://www.friendlydeveloper.com/2010/02/using-nsfilemanager-to-save-an-image-to-or-loadremove-an-image-from-documents-directory-coding/
