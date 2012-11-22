@@ -7,9 +7,12 @@
 //
 
 #import "CategoryViewController.h"
-#import "CategoryAddViewController.h"
-#import "CategoryEditViewController.h"
-#import "CategoryViewViewController.h"
+
+#define path1 @""
+#define path2 @""
+#define path3 @""
+#define path4 @""
+#define path5 @""
 
 @interface CategoryViewController ()
 
@@ -17,14 +20,13 @@
 
 @implementation CategoryViewController
 
-@synthesize tableData;
+@synthesize Category_Num, Title;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
 	{
-
     }
     return self;
 }
@@ -32,7 +34,47 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    //Sets up the category based on what the user chose
+    if (Category_Num == 1){
+        Title.text = @"Food";
+    }
+    else if (Category_Num == 2){
+        Title.text = @"Clothing";
+    }
+    else if (Category_Num == 3){
+        Title.text = @"Hygiene";
+    }
+    else if (Category_Num == 4){
+        Title.text = @"Stationery";
+    }
+    else if (Category_Num == 5){
+        Title.text = @"Other";
+    }
+
+    [self LoadPictures];
+}
+
+-(void)LoadPictures{
+    NSString *categoryPath;
+    
+    //Find category path
+    if (Category_Num == 1){
+        NSString *categoryPath = path1;
+    }
+    else if (Category_Num == 2){
+        NSString *categoryPath = path2;
+    }
+    else if (Category_Num == 3){
+        NSString *categoryPath = path3;
+    }
+    else if (Category_Num == 4){
+        NSString *categoryPath = path4;
+    }
+    else if (Category_Num == 5){
+        NSString *categoryPath = path5;
+    }
+
+    //Load UIImageView based on Path
 }
 
 - (void)viewDidUnload
@@ -55,29 +97,9 @@
 }
 
 
-
-- (IBAction)categoryAdd
-{
-    CategoryAddViewController *categoryView = [[CategoryAddViewController alloc]initWithNibName:@"CategoryAddViewController_iPhone" bundle:nil];
-    [self presentModalViewController:categoryView animated:YES];
-}
-
-- (IBAction)categoryEdit
-{
-    CategoryEditViewController *categoryEdit = [[CategoryEditViewController alloc]initWithNibName:@"CategoryEditViewController_iPhone" bundle:nil];
-    [self presentModalViewController:categoryEdit animated:YES];
-}
-
-- (IBAction)categoryView
-{
-    CategoryViewViewController *categoryView = [[CategoryViewViewController alloc]initWithNibName:@"CategoryViewViewController_iPhone" bundle:nil];
-    [self presentModalViewController:categoryView animated:YES];
-}
-
 - (IBAction)goBack
 {
     [self dismissModalViewControllerAnimated:YES];
-    
 }
 
 @end

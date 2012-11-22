@@ -8,7 +8,6 @@
 
 #import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "CategoryViewController.h"
 #import "PictureViewController.h"
 #import "ShareViewController.h"
 
@@ -43,11 +42,6 @@
 - (IBAction)manageList{
         SecondViewController *secondView = [[SecondViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
         [self presentModalViewController:secondView animated:YES];  
-}
-
-- (IBAction)manageCategories{
-        CategoryViewController *categoryView = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController_iPhone" bundle:nil];
-        [self presentModalViewController:categoryView animated:YES];
 }
 
 

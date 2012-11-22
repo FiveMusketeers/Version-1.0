@@ -13,8 +13,6 @@
 
 - (IBAction)manageList;
 
-- (IBAction)manageCategories;
-
 - (IBAction)managePictures;
 
 - (IBAction)share;

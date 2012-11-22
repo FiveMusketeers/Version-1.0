@@ -8,7 +8,7 @@
 
 #import "PictureViewController.h"
 #import "CreatePictureViewController.h"
-#import "EditPictureViewController.h"
+#import "PictureAllViewController.h"
 #import "PictureDeleteViewController.h"
 
 
@@ -42,9 +42,9 @@
         [self presentModalViewController:Create animated:YES];
 }
 
-- (IBAction)pictureEdit {
-        EditPictureViewController *pictureEdit = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPhone" bundle:nil];
-        [self presentModalViewController:pictureEdit animated:YES];
+- (IBAction)pictureView {
+        PictureAllViewController *pictureView = [[PictureAllViewController alloc]initWithNibName:@"PictureAllViewController" bundle:nil];
+        [self presentModalViewController:pictureView animated:YES];
 }
 
 - (IBAction)pictureDelete {

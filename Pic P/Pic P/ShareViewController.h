@@ -16,6 +16,5 @@
 
 - (IBAction)sharePictures;
 
-- (IBAction)shareCategories;
 
 @end

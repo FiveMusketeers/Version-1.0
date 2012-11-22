@@ -12,7 +12,7 @@
 
 - (IBAction)pictureCreate;
 
-- (IBAction)pictureEdit;
+- (IBAction)pictureView;
 
 - (IBAction)pictureDelete;
 

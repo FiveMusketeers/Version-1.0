@@ -48,10 +48,6 @@
         [self presentModalViewController:shareLists animated:YES];
 }
 
-- (IBAction)shareCategories {
-        ShareCategoriesViewController *shareCategories = [[ShareCategoriesViewController alloc]initWithNibName:@"ShareCategoriesViewController__iPhone" bundle:nil];
-        [self presentModalViewController:shareCategories animated:YES];
-}
 
 - (IBAction)sharePictures {
         SharePicturesViewController *sharePictures = [[SharePicturesViewController alloc]initWithNibName:@"SharePicturesViewController_iPhone" bundle:nil];

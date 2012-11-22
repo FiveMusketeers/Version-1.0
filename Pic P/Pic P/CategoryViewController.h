@@ -9,16 +9,16 @@
 #import <UIKit/UIKit.h>
 
 @interface CategoryViewController : UIViewController <UITableViewDataSource>
+{
+    IBOutlet UILabel *Title;
+    NSInteger Category_Num;
+}
 
-- (IBAction)categoryAdd;
+@property(nonatomic, retain) IBOutlet UILabel *Title;
+@property(nonatomic, assign) NSInteger Category_Num;
 
 - (IBAction)goBack;
 
-- (IBAction)categoryEdit;
-
-- (IBAction)categoryView;
-
 @property (strong, nonatomic) NSArray *tableData;
-@property (strong, nonatomic) IBOutlet UITableView *ListTable;
 
 @end
