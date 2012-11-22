@@ -8,8 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
-@interface EditPictureViewController : UIViewController
+@interface EditPictureViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    
+}
+@property (strong, nonatomic)UIImagePickerController *imagePicker;
+@property (strong, nonatomic) IBOutlet UITextField *textOfImage;
+
+@property (weak, nonatomic) IBOutlet UIImageView *imageFromData;
+- (IBAction)chooseImageFromData:(id)sender;
+- (IBAction)editText:(id)sender;
 
 - (IBAction)PreviousMenu:(id)sender;
 
+- (IBAction)Save:(id)sender;
 @end

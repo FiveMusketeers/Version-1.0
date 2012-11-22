@@ -10,7 +10,7 @@
 #import "CreatePictureViewController.h"
 #import "EditPictureViewController.h"
 #import "PictureDeleteViewController.h"
-
+#import "AppDelegate.h"
 
 @interface PictureViewController ()
 
@@ -20,6 +20,22 @@
 
 - (void)viewDidLoad
 {
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSDictionary *dictionary=delegate.imageList;
+    NSEnumerator *e=[dictionary objectEnumerator];
+    id value;
+    id object;
+    for (object in [dictionary allKeys])
+    {
+        value=[dictionary objectForKey:object];
+    }
+    //while (object=[e nextObject]) {
+       // NSString *str = [object valueForKey:@"\"@od\""];
+        //NSLog(@"key=%@ value=%@", object, [dictionary objectForKey:object]);
+        
+    //}
+    
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }

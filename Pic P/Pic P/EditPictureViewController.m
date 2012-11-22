@@ -7,12 +7,14 @@
 //
 
 #import "EditPictureViewController.h"
-
+#import "AppDelegate.h"
 @interface EditPictureViewController ()
 
 @end
 
 @implementation EditPictureViewController
+@synthesize textOfImage;
+@synthesize imageFromData;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +33,8 @@
 
 - (void)viewDidUnload
 {
+    [self setImageFromData:nil];
+    [self setTextOfImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -40,7 +44,20 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+- (IBAction)chooseImageFromData:(id)sender {
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSDictionary *dictionary=delegate.imageList;
+}
+
+- (IBAction)editText:(id)sender {
+        //Possible to assign textField1.text to some NSString here
+        [sender resignFirstResponder];
+}
+
 - (IBAction)PreviousMenu:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)Save:(id)sender {
 }
 @end

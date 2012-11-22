@@ -7,12 +7,14 @@
 //
 
 #import "PictureDeleteViewController.h"
-
+#import "AppDelegate.h"
 @interface PictureDeleteViewController ()
 
 @end
 
 @implementation PictureDeleteViewController
+@synthesize textOfImage;
+@synthesize chosenImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +33,8 @@
 
 - (void)viewDidUnload
 {
+    [self setChosenImage:nil];
+    [self setTextOfImage:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -39,6 +43,17 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (IBAction)pickImage:(id)sender {
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSDictionary *dictionary=delegate.imageList;
+}
+
+- (IBAction)getText:(id)sender {
+}
+
+- (IBAction)deleteImage:(id)sender {
 }
 
 - (IBAction)PreviousMenu:(id)sender {
