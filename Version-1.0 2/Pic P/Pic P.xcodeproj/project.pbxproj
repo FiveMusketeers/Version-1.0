@@ -91,6 +91,7 @@
 		A10DE6C71634A03B00E2380A /* ListViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */; };
 		A16E882F1634BFE80094C978 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16E882E1634BFE80094C978 /* icon.png */; };
 		A16E88311634BFF50094C978 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16E88301634BFF50094C978 /* icon.png */; };
+		E542508E1660256900BA2F10 /* PictureDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5115485D165F180000CDE209 /* PictureDatabase.sql */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -614,6 +615,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E542508E1660256900BA2F10 /* PictureDatabase.sql in Resources */,
 				A10DE6C71634A03B00E2380A /* ListViewViewController_iPhone.xib in Resources */,
 				76BA2B051630977D00DAE149 /* InfoPlist.strings in Resources */,
 				76BA2B1C1630977D00DAE149 /* FirstViewController_iPhone.xib in Resources */,

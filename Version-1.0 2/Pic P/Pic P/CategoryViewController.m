@@ -60,10 +60,10 @@
         Title.text = @"Other";
     }
     
-    [self LoadPictures: 0];
+    [self LoadPictures];
 }
 
--(void)LoadPictures:(NSInteger*) firstPosition{
+-(void)LoadPictures{
     /*NSString *categoryPath;
     
     //Find category path
@@ -92,10 +92,13 @@
 //    }
 
 
-    while (UpperBound >= PicturePosition){
+    while (UpperBound >= PicturePosition)
+    {
         ListItem *itemRead = [self.items objectAtIndex:PicturePosition];
         NSString *setPicture = itemRead.imagePath;
-  //      NSLog(@"%@", setPicture);
+        
+       // NSLog(@"%d => %@", PicturePosition, setPicture);
+        
         UIImage *image = [UIImage imageNamed: setPicture];
         if (LowerBound == PicturePosition){
             [image0 setImage:image forState:UIButtonTypeCustom];
@@ -118,10 +121,10 @@
         else if (LowerBound + 6 == PicturePosition){
             [image6 setImage: image forState:UIButtonTypeCustom];
         }
-        else if (LowerBound + 8 == PicturePosition){
+        else if (LowerBound + 7 == PicturePosition){
             [image7 setImage: image forState:UIButtonTypeCustom];
         }
-        else if (LowerBound + 9 == PicturePosition){
+        else if (LowerBound + 8 == PicturePosition){
             [image8 setImage: image forState:UIButtonTypeCustom];
         }
         PicturePosition = PicturePosition + 1;
@@ -133,6 +136,66 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+}
+
+-(IBAction)previous
+{
+    
+    if ( LowerBound - 9 >= 0)
+    {
+        LowerBound = LowerBound - 9;
+        UpperBound = LowerBound + 8;
+        PicturePosition = LowerBound;
+        
+        [self clearPictures];
+        
+        [self LoadPictures];
+    }
+    else
+    {
+        NSLog(@"Cannot go back any further.");
+    }
+    NSLog(@"Lowerbound: %d", LowerBound);
+    NSLog(@"Upperbound: %d", UpperBound);
+    NSLog(@"Check: %d", (LowerBound - 9));
+    NSLog(@"Array size: %d", [self.items count] );
+    
+}
+
+-(IBAction)next
+{
+
+    if ( UpperBound < [self.items count] - 1 )
+    {
+        LowerBound = LowerBound + 9;
+        UpperBound = MIN([self.items count] - 1, UpperBound + 9);
+        PicturePosition = LowerBound;
+        
+        [self clearPictures];
+        
+        [self LoadPictures];
+    }
+    else
+    {
+        NSLog(@"Cannot go any further.");
+    }
+    NSLog(@"Lowerbound: %d", LowerBound);
+    NSLog(@"Upperbound: %d", UpperBound);
+    NSLog(@"Check: %d", (UpperBound + 9));
+    NSLog(@"Final array position: %d", [self.items count] -1 );
+}
+
+-(void)clearPictures
+{
+    [image0 setImage:nil forState:UIButtonTypeCustom];
+    [image1 setImage:nil forState:UIButtonTypeCustom];
+    [image2 setImage:nil forState:UIButtonTypeCustom];
+    [image3 setImage:nil forState:UIButtonTypeCustom];
+    [image4 setImage:nil forState:UIButtonTypeCustom];
+    [image5 setImage:nil forState:UIButtonTypeCustom];
+    [image6 setImage:nil forState:UIButtonTypeCustom];
+    [image7 setImage:nil forState:UIButtonTypeCustom];
+    [image8 setImage:nil forState:UIButtonTypeCustom];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

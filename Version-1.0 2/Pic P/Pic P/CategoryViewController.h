@@ -43,6 +43,8 @@
 @property(nonatomic, assign) NSInteger UpperBound;
 @property(nonatomic, assign) NSMutableArray *items;
 
+- (IBAction)next;
+- (IBAction)previous;
 - (IBAction)goBack;
 
 @property (strong, nonatomic) NSArray *tableData;
