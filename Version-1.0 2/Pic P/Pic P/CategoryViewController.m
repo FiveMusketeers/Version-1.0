@@ -98,31 +98,31 @@
   //      NSLog(@"%@", setPicture);
         UIImage *image = [UIImage imageNamed: setPicture];
         if (LowerBound == PicturePosition){
-            [image0 setImage: image];
+            [image0 setImage:image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 1 == PicturePosition){
-            [image1 setImage: image];
+            [image1 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 2 == PicturePosition){
-            [image2 setImage: image];
+            [image2 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 3 == PicturePosition){
-            [image3 setImage: image];
+            [image3 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 4 == PicturePosition){
-            [image4 setImage: image];
+            [image4 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 5 == PicturePosition){
-            [image5 setImage: image];
+            [image5 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 6 == PicturePosition){
-            [image6 setImage: image];
+            [image6 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 8 == PicturePosition){
-            [image7 setImage: image];
+            [image7 setImage: image forState:UIButtonTypeCustom];
         }
         else if (LowerBound + 9 == PicturePosition){
-            [image8 setImage: image];
+            [image8 setImage: image forState:UIButtonTypeCustom];
         }
         PicturePosition = PicturePosition + 1;
     }

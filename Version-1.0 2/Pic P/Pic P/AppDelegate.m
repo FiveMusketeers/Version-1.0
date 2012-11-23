@@ -38,9 +38,9 @@
     
 	// Query the database for all pictures
     
-    [self readListsFromDatabase];
+    //[self readListsFromDatabase];
     
-	items = [self readItemsFromDatabase:@"table"];
+	[self readItemsFromDatabase];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -99,16 +99,17 @@
 	success = [fileManager fileExistsAtPath:databasePath];
     
 	// If the database already exists then return without doing anything
-	if(success) return;
-    
-	// If not then proceed to copy the database from the application to the users filesystem
-    NSLog(@"Creating database because none was found.");
-    
+	if(success) {
+        NSLog(@"Database Found. at %@,", databasePath);
+        return;
+    }
+
+    NSLog(@"Grabbing database from App");
 	// Get the path to the database in the application package
 	NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
-    
 	// Copy the database from the package to the users filesystem
 	[fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+    
 }
 
 // This will pass an array of names.
@@ -145,10 +146,10 @@
 				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
                 
                 //Create an item object
-                List *item = [[List alloc] initWithName:aName];
+                //List *item = [[List alloc] initWithName:aName];
                 
 				// Add the item object to the animals Array
-				[lists addObject:item];
+				//[lists addObject:item];
                 
 			}
 		}
@@ -166,7 +167,7 @@
  // Based on the table names out of lists, we will readItemsFromDatabase to generate the final populated lists.
 }
 
--(NSMutableArray *) readItemsFromDatabase: (NSString *)tableName
+-(void) readItemsFromDatabase//: (NSString *)tableName
 {
 	// Setup the database object
    // NSLog(@"ReadItemsFromDatabase called. Path: %@", databasePath);
@@ -177,7 +178,8 @@
 	if( sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK )
     {
 		// Setup the SQL Statement and compile it for faster access
-        const char *sqlStatement = [[NSString "select * from %@", tableName] cStringUsingEncoding:ASCIIEncoding];
+        //const char *sqlStatement = [[NSString @"select * from %@", tableName] cStringUsingEncoding:ASCIIEncoding];
+        const char *sqlStatement = "select * from items";
         
 		sqlite3_stmt *compiledStatement;
         
@@ -192,7 +194,7 @@
         
 		if( result == SQLITE_OK )
         {
-            NSMutableArray *tempReturnArray;
+            //NSMutableArray *tempReturnArray;
             
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
@@ -202,12 +204,12 @@
                
                 //Create an item object
                 ListItem *item = [[ListItem alloc] initWithName:aName imagePath:aFile];
-                
+                [items addObject: item];
 				// Add the item object to the animals Array
-				[tempReturnArray addObject:item];
+				//[tempReturnArray addObject:item];
 			}
             
-            return tempReturnArray;
+           // return tempReturnArray;
 		}
 
         
