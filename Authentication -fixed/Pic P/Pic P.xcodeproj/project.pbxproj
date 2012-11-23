@@ -441,6 +441,8 @@
 		51E2AD691630C88C007DA5C4 /* Iphone Views */ = {
 			isa = PBXGroup;
 			children = (
+				A1A527B6165C33AB007F77FE /* SignUpViewController.xib */,
+				A1A527B1165C325F007F77FE /* AuthenticationViewController.xib */,
 				76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */,
 				5119FEA61632059200CFCD33 /* List */,
 				5119FEA71632059800CFCD33 /* Category */,
@@ -453,6 +455,8 @@
 		51E2AD6C1630C8E4007DA5C4 /* Headers */ = {
 			isa = PBXGroup;
 			children = (
+				A1A527B4165C33AB007F77FE /* SignUpViewController.h */,
+				A1A527AF165C325F007F77FE /* AuthenticationViewController.h */,
 				76BA2B091630977D00DAE149 /* AppDelegate.h */,
 				76BA2B0C1630977D00DAE149 /* FirstViewController.h */,
 				76BA2B131630977D00DAE149 /* SecondViewController.h */,
@@ -467,12 +471,8 @@
 		51E2AD6D1630C8E8007DA5C4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				A1A527AF165C325F007F77FE /* AuthenticationViewController.h */,
 				A1A527B0165C325F007F77FE /* AuthenticationViewController.m */,
-				A1A527B1165C325F007F77FE /* AuthenticationViewController.xib */,
-				A1A527B4165C33AB007F77FE /* SignUpViewController.h */,
 				A1A527B5165C33AB007F77FE /* SignUpViewController.m */,
-				A1A527B6165C33AB007F77FE /* SignUpViewController.xib */,
 				76BA2B0A1630977D00DAE149 /* AppDelegate.m */,
 				76BA2B0D1630977D00DAE149 /* FirstViewController.m */,
 				5119FE95163204B600CFCD33 /* List */,
