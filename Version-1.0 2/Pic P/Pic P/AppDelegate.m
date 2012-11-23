@@ -26,6 +26,7 @@
 	databaseName = @"PictureDatabase.sql";
     
     items = [[NSMutableArray alloc] init];
+    lists = [[NSMutableArray alloc] init];
     
 	// Get the path to the documents directory and append the databaseName
 	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -36,11 +37,34 @@
     
 	[self checkAndCreateDatabase];
     
-	// Query the database for all pictures
+	// Query the database for all pictures and lists.
     
-    //[self readListsFromDatabase];
+    NSLog(@"Now we're loading lists.");
     
-	[self readItemsFromDatabase];
+    [self readListsFromDatabase];
+    NSMutableDictionary *listDictionary = [[NSMutableDictionary alloc] init];
+    
+    // Creates the items that belong to each list.
+    for ( NSString *s in self.lists )
+    {
+        NSMutableArray *array = [self readItemsFromDatabase: s];
+        //NSLog(@"Expected table name: %@", s);
+        for ( ListItem *thing in array )
+        {
+            NSLog(@"Item Name: %@ Image Path: %@", thing.name, thing.imagePath);
+        }
+        if ( array != nil )
+        {
+            [ listDictionary setObject:array forKey:s ];
+        }
+        else
+        {
+            NSLog(@"You suck.");
+        }
+    }
+    
+    // Loads all items.
+	self.items = [self readItemsFromDatabase: @"items"];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
@@ -145,11 +169,8 @@
             {
 				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
                 
-                //Create an item object
-                //List *item = [[List alloc] initWithName:aName];
-                
-				// Add the item object to the animals Array
-				//[lists addObject:item];
+				// Add the list name to lists
+				[lists addObject:aName];
                 
 			}
 		}
@@ -167,8 +188,11 @@
  // Based on the table names out of lists, we will readItemsFromDatabase to generate the final populated lists.
 }
 
--(void) readItemsFromDatabase//: (NSString *)tableName
+-(NSMutableArray *) readItemsFromDatabase: (NSString *)tableName
 {
+    //Set up temporary array to return
+    NSMutableArray *tempReturnArray = [[NSMutableArray alloc] init];
+    BOOL success = false;
 	// Setup the database object
    // NSLog(@"ReadItemsFromDatabase called. Path: %@", databasePath);
 	sqlite3 *database;
@@ -178,12 +202,16 @@
 	if( sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK )
     {
 		// Setup the SQL Statement and compile it for faster access
-        //const char *sqlStatement = [[NSString @"select * from %@", tableName] cStringUsingEncoding:ASCIIEncoding];
-        const char *sqlStatement = "select * from items";
+        //const char *sqlStatement = [command cStringUsingEncoding:@"ASCIIEncoding"];
+        
+        NSString *sqlString = @"select * from ";
+        sqlString = [sqlString stringByAppendingString:tableName];
+        const char *sqlStatement = [sqlString UTF8String];
         
 		sqlite3_stmt *compiledStatement;
         
         // Result of database query
+        NSLog(@"SQL Query being passed: %@", sqlString);
         int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
         
         // Error checking and variable dumps
@@ -194,7 +222,7 @@
         
 		if( result == SQLITE_OK )
         {
-            //NSMutableArray *tempReturnArray;
+            NSLog(@"Reading from table: %@", tableName);
             
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
@@ -204,20 +232,36 @@
                
                 //Create an item object
                 ListItem *item = [[ListItem alloc] initWithName:aName imagePath:aFile];
-                [items addObject: item];
+                // NSLog(@"Name: %@ ImagePath: %@", item.name, item.imagePath);
 				// Add the item object to the animals Array
-				//[tempReturnArray addObject:item];
+				[tempReturnArray addObject:item];
 			}
             
-           // return tempReturnArray;
+            success = true;
+            NSLog(@"Successful read.");
 		}
-
-        
 		// Release the compiled statement from memory
 		sqlite3_finalize(compiledStatement);
         
 	}
 	sqlite3_close(database);
+    if (success)
+    {
+        if ( tempReturnArray != nil )
+        {
+            return tempReturnArray;
+        }
+        else
+        {
+            NSLog(@"Nil array passed.");
+            return Nil;
+        }
+        
+    }
+    else{
+        return Nil;
+    }
+
 }
 
 @end
