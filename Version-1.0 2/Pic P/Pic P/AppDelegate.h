@@ -9,17 +9,21 @@
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>{
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+{
     // Database variables
     NSString *databaseName;
     NSString *databasePath;
     
     // Array to store the picture objects
     NSMutableArray *items;
+    
+    // Array to store lists.
+    NSMutableArray *lists;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSMutableArray *items;
-
+@property (strong, nonatomic) NSMutableArray *lists;
 
 @end

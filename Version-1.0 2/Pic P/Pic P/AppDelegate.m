@@ -15,13 +15,16 @@
 @implementation AppDelegate{
 }
 
-@synthesize items;
+// Both NSMutableArray
+
+@synthesize items, lists;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Setup Picture Database for use
     // Setup some globals
 	databaseName = @"PictureDatabase.sql";
+    
     items = [[NSMutableArray alloc] init];
     
 	// Get the path to the documents directory and append the databaseName
@@ -30,10 +33,15 @@
 	databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
     
 	// Execute the "checkAndCreateDatabase" function
+    
 	[self checkAndCreateDatabase];
     
 	// Query the database for all pictures
-	[self readItemsFromDatabase];
+    
+    [self readListsFromDatabase];
+    
+	items = [self readItemsFromDatabase:@"table"];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1;
@@ -78,7 +86,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(void) checkAndCreateDatabase{
+-(void) checkAndCreateDatabase
+{
 	// Check if the SQL database has already been saved to the users phone, if not then copy it over
 	BOOL success;
     
@@ -102,22 +111,22 @@
 	[fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
 }
 
-
--(void) readItemsFromDatabase {
+// This will pass an array of names.
+// These names are the names of tables in the SQLite database.
+-(void)readListsFromDatabase
+{    
 	// Setup the database object
-   // NSLog(@"ReadItemsFromDatabase called. Path: %@", databasePath);
+    // NSLog(@"ReadItemsFromDatabase called. Path: %@", databasePath);
 	sqlite3 *database;
     
 	// Open the database from the users filessytem
     //NSLog(@"%d", sqlite3_open([databasePath UTF8String], &database));
-	if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK) {
-        //NSLog(@"Database opened.");
+	if( sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK )
+    {
 		// Setup the SQL Statement and compile it for faster access
-		const char *sqlStatement = "select * from items";
+		const char *sqlStatement = "select * from lists";
+        
 		sqlite3_stmt *compiledStatement;
-//        NSLog(@"%@", database);
-        //NSLog(@"%s", sqlStatement);
-        //NSLog(@"%d", sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL));
         
         // Result of database query
         int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
@@ -125,7 +134,7 @@
         // Error checking and variable dumps
         if( result != SQLITE_OK)
         {
-            NSLog(@"Prepare-error: #%i: %s", result, sqlite3_errmsg(database));
+            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
         }
         
 		if( result == SQLITE_OK )
@@ -133,14 +142,61 @@
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-//                if( result != SQLITE_DONE )
-//                {
-//                    NSLog(@"Step-error.");
-//                }
-				// Read the data from the result row
-//                NSLog( @"%s", sqlite3_column_text(compiledStatement, 0) );
-//                NSLog( @"%s", sqlite3_column_text(compiledStatement, 1) );
+				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
                 
+                //Create an item object
+                List *item = [[List alloc] initWithName:aName];
+                
+				// Add the item object to the animals Array
+				[lists addObject:item];
+                
+			}
+		}
+        
+        
+		// Release the compiled statement from memory
+		sqlite3_finalize(compiledStatement);
+        
+	}
+	sqlite3_close(database);
+}
+
+-(void)readItemsFromTable
+{
+ // Based on the table names out of lists, we will readItemsFromDatabase to generate the final populated lists.
+}
+
+-(NSMutableArray *) readItemsFromDatabase: (NSString *)tableName
+{
+	// Setup the database object
+   // NSLog(@"ReadItemsFromDatabase called. Path: %@", databasePath);
+	sqlite3 *database;
+    
+	// Open the database from the users filessytem
+    //NSLog(@"%d", sqlite3_open([databasePath UTF8String], &database));
+	if( sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK )
+    {
+		// Setup the SQL Statement and compile it for faster access
+        const char *sqlStatement = [[NSString "select * from %@", tableName] cStringUsingEncoding:ASCIIEncoding];
+        
+		sqlite3_stmt *compiledStatement;
+        
+        // Result of database query
+        int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+        
+        // Error checking and variable dumps
+        if( result != SQLITE_OK)
+        {
+            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+        }
+        
+		if( result == SQLITE_OK )
+        {
+            NSMutableArray *tempReturnArray;
+            
+			// Loop through the results and add them to the feeds array
+			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
+            {
 				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
 				NSString *aFile = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                
@@ -148,23 +204,18 @@
                 ListItem *item = [[ListItem alloc] initWithName:aName imagePath:aFile];
                 
 				// Add the item object to the animals Array
-				[items addObject:item];
-                
+				[tempReturnArray addObject:item];
 			}
+            
+            return tempReturnArray;
 		}
+
+        
 		// Release the compiled statement from memory
 		sqlite3_finalize(compiledStatement);
-        //NSLog(@"Database Released");
-        
-//        for (ListItem *l in items )
-//        {
-//            NSLog(@"%@", l.name);
-//        }
         
 	}
 	sqlite3_close(database);
-    
 }
-
 
 @end
