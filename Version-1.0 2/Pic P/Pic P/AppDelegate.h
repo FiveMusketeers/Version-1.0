@@ -20,10 +20,14 @@
     
     // Array to store lists.
     NSMutableArray *lists;
+    
+    // Dictionary to store lists. They will be keyed with their name.
+    NSMutableDictionary *listDictionary;
 }
 
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) NSMutableArray *lists;
+@property (strong, nonatomic) NSMutableDictionary *listDictionary;
 
 @end

@@ -22,7 +22,7 @@
 
 @implementation CategoryViewController
 
-@synthesize Category_Num, Title, PicturePosition, LowerBound, UpperBound;
+@synthesize Category_Num, Title, PicturePosition, LowerBound, UpperBound, isCreating;
 @synthesize image0, image1, image2, image3, image4, image5, image6, image7, image8;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

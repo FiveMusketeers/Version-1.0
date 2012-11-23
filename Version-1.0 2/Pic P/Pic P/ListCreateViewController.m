@@ -7,11 +7,12 @@
 //
 
 #import "ListCreateViewController.h"
+#import "PictureAllViewController.h"
 
 
 @implementation ListCreateViewController
 
-@synthesize textField1, label1, items;
+@synthesize textField1;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,9 +41,16 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction) goToViewPictures:(id)sender{
+    PictureAllViewController *pavc = [[PictureAllViewController alloc]initWithNibName:@"PictureAllViewController" bundle:nil];
+    
+    pavc.isCreating = true;
+    
+    [self presentModalViewController:pavc animated:YES];
+}
+
 - (IBAction) textFieldReturn:(id)sender
 {
-    label1.text = textField1.text;
     [sender resignFirstResponder];
 }
 

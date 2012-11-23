@@ -15,7 +15,7 @@
 
 @implementation PictureAllViewController
 
-@synthesize button1, button2, button3, button4, button5;
+@synthesize button1, button2, button3, button4, button5, isCreating;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -34,6 +34,12 @@
     button3.tag = 3;
     button4.tag = 4;
     button5.tag = 5;
+    if (isCreating){
+        NSLog(@"We are in picture view: creating");
+    }
+    else{
+        NSLog(@"We are in picture view: viewing");
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -55,6 +61,7 @@
     CategoryViewController *cvc = [[CategoryViewController alloc]initWithNibName:@"CategoryViewController_iPhone" bundle:nil];
     
     cvc.Category_Num = parameter;
+    cvc.isCreating = self.isCreating;
     
     [self presentModalViewController:cvc animated:YES];
     

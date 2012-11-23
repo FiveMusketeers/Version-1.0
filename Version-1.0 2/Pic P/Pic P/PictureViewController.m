@@ -44,6 +44,7 @@
 
 - (IBAction)pictureView {
         PictureAllViewController *pictureView = [[PictureAllViewController alloc]initWithNibName:@"PictureAllViewController" bundle:nil];
+        pictureView.isCreating = false;
         [self presentModalViewController:pictureView animated:YES];
 }
 

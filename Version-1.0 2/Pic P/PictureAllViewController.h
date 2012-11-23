@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PictureAllViewController : UIViewController{
-
+    BOOL isCreating;
     IBOutlet UIButton *button1;
     IBOutlet UIButton *button2;
     IBOutlet UIButton *button3;
@@ -17,7 +17,7 @@
     IBOutlet UIButton *button5;
 }
 
-
+@property(nonatomic, assign) BOOL isCreating;
 @property(nonatomic, retain) IBOutlet UIButton *button1;
 @property(nonatomic, retain) IBOutlet UIButton *button2;
 @property(nonatomic, retain) IBOutlet UIButton *button3;

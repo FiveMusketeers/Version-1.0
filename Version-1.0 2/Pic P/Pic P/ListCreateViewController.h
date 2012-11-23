@@ -10,16 +10,12 @@
 
 @interface ListCreateViewController : UIViewController{
     IBOutlet UITextField *textField1;
-    IBOutlet UILabel *label1;
-    IBOutlet UIImageView *items;
 }
 
 @property(nonatomic, retain) IBOutlet UITextField *textField1;
-@property(nonatomic, retain) IBOutlet UILabel *label1;
-@property(nonatomic, retain) IBOutlet UIImageView *items;
 
 - (IBAction) textFieldReturn:(id)sender;
-
+- (IBAction) goToViewPictures:(id) sender;
 - (IBAction)PreviousMenu:(id)sender;
 
 @end

@@ -11,6 +11,7 @@
 
 @interface CategoryViewController : UIViewController <UITableViewDataSource>
 {
+    BOOL isCreating;
     IBOutlet UILabel *Title;
     IBOutlet UIButton *image0;
     IBOutlet UIButton *image1;
@@ -27,6 +28,7 @@
     NSInteger UpperBound;
 }
 
+@property(nonatomic, assign) BOOL isCreating;
 @property(nonatomic, retain) IBOutlet UILabel *Title;
 @property(nonatomic, retain) IBOutlet UIButton *image0;
 @property(nonatomic, retain) IBOutlet UIButton *image1;
