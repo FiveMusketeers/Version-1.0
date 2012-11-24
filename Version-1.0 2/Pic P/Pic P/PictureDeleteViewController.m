@@ -34,22 +34,12 @@
     
     //NSLog( @"ImagePath: %@", imagePath );
     
-    NSDictionary *dictionary=delegate.imageList;
-    id d;
-    for (d in dictionary)
-    {
-        ListItem *object = d;
-        NSString *theName=object.name;
-        NSString *thePath=object.imagePath;
-        NSLog(@"%@",theName);
-        NSLog(@"%@",thePath);
-        //NSData *data = [NSData dataWithContentsOfURL:[dictionary objectForKey:@"UIImagePickerControllerReferenceURL"]];
+           //NSData *data = [NSData dataWithContentsOfURL:[dictionary objectForKey:@"UIImagePickerControllerReferenceURL"]];
         //NSLog(@"length %d",[data length]);
         //NSLog(@"data %@",[data description]);
         
        //NSString *imageName = [imagePath lastPathComponent];
         //textOfImage.text=imageName;
-    }
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
@@ -70,7 +60,6 @@
 
 - (IBAction)pickImage:(id)sender {
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSDictionary *dictionary=delegate.imageList;
 }
 
 - (IBAction)getText:(id)sender {

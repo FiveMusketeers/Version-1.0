@@ -27,9 +27,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
 	{
-<<<<<<< HEAD:Version-1.0 2/Pic P/Pic P/ListViewViewController.m
+//<<<<<<< HEAD:Version-1.0 2/Pic P/Pic P/ListViewViewController.m
 
-=======
+//=======
 		// This will need to be an SQL query, or some other call where we generate our list of items.
 		// Constructs an item.
 		ListItem *objectOne = [[ListItem alloc] initWithName:@"scissors" imagePath:@"scissors.jpg"];
@@ -40,7 +40,7 @@
 		ListItem *objectSix = [[ListItem alloc] initWithName:@"icon" imagePath:@"icon.png"];
 		// Creates an array of staticly called objects (for now)
 		tableData = [[NSArray alloc] initWithObjects: objectOne, objectTwo, objectThree, objectFour, objectFive, objectSix, nil];
->>>>>>> SQL:Pic P/Pic P/ListViewViewController.m
+//>>>>>>> SQL:Pic P/Pic P/ListViewViewController.m
     }
     return self;
 }

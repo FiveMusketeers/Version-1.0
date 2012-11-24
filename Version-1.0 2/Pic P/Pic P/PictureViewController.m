@@ -21,14 +21,15 @@
 - (void)viewDidLoad
 {
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSDictionary *dictionary=delegate.imageList;
-    NSEnumerator *e=[dictionary objectEnumerator];
-    id value;
-    id object;
-    for (object in [dictionary allKeys])
-    {
-        value=[dictionary objectForKey:object];
-    }
+    
+    //NSDictionary *dictionary=delegate.imageList;
+    //NSEnumerator *e=[dictionary objectEnumerator];
+    //id value;
+    //id object;
+    //for (object in [dictionary allKeys])
+    //{
+        //value=[dictionary objectForKey:object];
+    //}
     //while (object=[e nextObject]) {
        // NSString *str = [object valueForKey:@"\"@od\""];
         //NSLog(@"key=%@ value=%@", object, [dictionary objectForKey:object]);

@@ -143,21 +143,42 @@
 //    UIImage *theImage=pickenImage.image; // UI image from the iPhone gallery.
     
     NSString *filePath = self.imagePath; // Whatever image the user picked, this is the assets/filepath.
-    ListItem *object = [[ListItem alloc] initWithName:textOfImage imagePath:imagePath];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
+    ListItem *object = [[ListItem alloc] initWithName:textOfImage imagePath:self.imagePath];
+    NSLog(@"Item Name : %@ Item Path : %@", textOfImage, self.imagePath);
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    NSMutableArray *array = delegate.items;
+    NSLog(@"1");
+    [array addObject: object];
+    NSLog(@"2");
     //NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
     
     // Grab the imageList from the delegate.
-    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [delegate.imageList setObject:object forKey:textOfImage];
+    //[delegate.items setObject:object.imagePath forKey:textOfImage];
     
-    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
-    [defaults setObject:delegate.imageList forKey:@"imageList"];
-    
-    [defaults synchronize];
-    
+    //NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    //[defaults setObject:delegate.imageList forKey:@"imageList"];
+
     NSLog(@"data saved");
     NSLog(@"%@",textOfImage);
     NSLog(@"%@",filePath);
+    for (ListItem *item in delegate.items) {
+        NSLog(@"%@",item.imagePath);
+    }
+    
+    //SQL Command
+    
+    NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO items VALUES('%@','%@')", object.name, object.imagePath];
+    
+    //Open Connection
+    
+    //Create Statement
+    
+    //Execute Statement
+    
+    //Close Connection
+    
     
     //[self saveImage:theImage :textOfImage];
     

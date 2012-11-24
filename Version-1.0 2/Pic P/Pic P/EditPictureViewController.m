@@ -46,7 +46,7 @@
 }
 - (IBAction)chooseImageFromData:(id)sender {
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSDictionary *dictionary=delegate.imageList;
+    //NSDictionary *dictionary=delegate.imageList;
 }
 
 - (IBAction)editText:(id)sender {
