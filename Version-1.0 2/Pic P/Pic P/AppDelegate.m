@@ -7,9 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
 #import "FirstViewController.h"
-
 #import "ListItem.h"
 
 @implementation AppDelegate{
@@ -45,7 +43,7 @@
     for ( ListItem *s in self.lists )
     {
         NSMutableArray *array = [self readItemsFromDatabase: s.name];
-        NSLog(@"Expected table name: %@", s.name);
+ //       NSLog(@"Expected table name: %@", s.name);
         for ( ListItem *thing in array )
         {
  //           NSLog(@"Item Name: %@ Image Path: %@", thing.name, thing.imagePath);

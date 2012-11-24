@@ -9,6 +9,7 @@
 #import "ListViewViewController.h"
 #import "ListCell.h"
 #import "ListItem.h"
+#import "AppDelegate.h"
 
 @interface ListViewViewController ()
 
@@ -40,19 +41,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Populate list for the scroll view
-//    AppDelegate *delegate= (AppDelegate*)[[[UIApplication sharedApplication] delegate]];
-//    self.tableData = delegate.lists;
+    //Populate list for the scroll view. We grab the values from the delegate.
+    AppDelegate *delegate = (AppDelegate*)[ [ UIApplication sharedApplication ] delegate ];
+    self.tableData = delegate.lists;
     
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
-	[self setListTable:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -89,11 +88,9 @@
 	ListCell *cell = nil;
 	
 	// We've built and called our custom tableView cell.
-
 	cell = (ListCell *)[ self.ListTable dequeueReusableCellWithIdentifier: identifier ];
 	
 	// We want to populate the cell with a listItem.
-	
 	ListItem *listItem = [ self.tableData objectAtIndex: indexPath.row ];
 	
 	if( cell == nil ) // It always is...unless there's some kind of caching going on.
@@ -102,7 +99,6 @@
 		NSArray *objects = [ [ NSBundle mainBundle ] loadNibNamed: @"ListCell_iPhone" owner:nil options:nil ];
 		
 		// Iterate through each object.
-		
 		for ( id currentObject in objects )
 		{
 			if ( [ currentObject isKindOfClass:[ ListCell class ] ] ) // If the object is suitable...
@@ -113,7 +109,6 @@
 		}
 		
 		// Assign all the object attributes to the cell attributes here.
-		
 		cell.nameLabel.text = listItem.name; // The cell takes on the name of the object.
 		cell.image.image = listItem.getImage; // Cell's image grabs the listItem's image.
 		
