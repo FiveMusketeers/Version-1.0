@@ -38,9 +38,12 @@
     // Override point for customization after application launch.
     
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
     NSDictionary *imageDictionary = [[NSDictionary alloc]initWithDictionary:[defaults dictionaryForKey:@"imageList"]];
+    
     imageList=[[NSMutableDictionary alloc]initWithDictionary:imageDictionary];
-    NSLog(@"imageList sixe:%d", [imageList count]);
+    
+    NSLog(@"imageList size:%d", [imageList count]);
     
     UIViewController *viewController1;
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)

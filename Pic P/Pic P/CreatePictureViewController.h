@@ -23,6 +23,7 @@
 
 @property (nonatomic, retain) IBOutlet UITextField *imageText;
 @property (strong, nonatomic) IBOutlet UITextField *textField1;//I don't know why, but every time I delete it, the program crashes. So, before we figure out why, just keep it.
+@property (strong, nonatomic) NSString *imagePath;
 
 //@property (strong, nonatomic)IBOutlet UILabel *loaded;
 

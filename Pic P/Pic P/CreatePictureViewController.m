@@ -8,15 +8,21 @@
 
 #import "CreatePictureViewController.h"
 #import "AppDelegate.h"
+#import "ListItem.h"
+
 @interface CreatePictureViewController ()
 
 @end
 
 @implementation CreatePictureViewController
 @synthesize pickenImage;
-@synthesize imageText;
+
 @synthesize textField1;
 @synthesize imgPicker;
+// List Item Properties that need to be filled out
+@synthesize imageText;
+@synthesize imagePath;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,10 +41,15 @@
     */
     
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
     NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
+    
     NSData *imageData=[defaults dataForKey:@"image"];
+    
     UIImage *theImage=[UIImage imageWithData:imageData];
+    
     imageText.text=textOfImage;
+    
     pickenImage.image=theImage;
     
     
@@ -81,12 +92,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
--(void)dealloc{
-  //Doesn't allow me to release, cause error if has release code
-    //[pickenImage release];
-    //[imageText release];
-    //[textField1 release];
-}
+
 - (void)viewDidUnload
 {
     button = nil;
@@ -117,7 +123,8 @@
 
 }
 
-- (IBAction)grabSavedImage:(id)sender {
+- (IBAction)grabSavedImage:(id)sender
+{
     self.imgPicker=[[UIImagePickerController alloc]init];
     imgPicker.delegate=self;
     self.imgPicker.allowsImageEditing=YES;
@@ -126,104 +133,50 @@
 }
 
 - (IBAction)save:(id)sender {
-    
-        /*sqlite3_stmt    *statement;
-        
-        const char *dbpath = [databasePath UTF8String];
-        
-        if (sqlite3_open(dbpath, &contactDB) == SQLITE_OK)
-        {
-            NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO CONTACTS (itemName, itemFile) VALUES (\"%@\", \"%@\")", itemName.text, itemFile.png];
-            
-            const char *insert_stmt = [insertSQL UTF8String];
-            
-            sqlite3_prepare_v2(contactDB, insert_stmt, -1, &statement, NULL);
-            if (sqlite3_step(statement) == SQLITE_DONE)
-            {
-                textField1.text = @"Contact added";
-                //name.text = @"";
-                //address.text = @"";
-                //phone.text = @"";
-            } else {
-                status.text = @"Failed to add picture";
-            }
-            sqlite3_finalize(statement);
-            sqlite3_close(contactDB);
-        }
-*/
+ 
     [imageText resignFirstResponder];
-    NSString *textOfImage=[imageText text];
-    UIImage *theImage=pickenImage.image;
-    NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
+    
+    NSLog(@"imageText %@", [imageText text]);
+    
+    NSString *textOfImage = [imageText text];
+    
+//    UIImage *theImage=pickenImage.image; // UI image from the iPhone gallery.
+    
+    NSString *filePath = self.imagePath; // Whatever image the user picked, this is the assets/filepath.
+    NSLog(textOfImage);
+    NSLog(filePath);
+    ListItem *object = [[ListItem alloc] initWithName:textOfImage imagePath:imagePath];
+    //NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
+    
+    // Grab the imageList from the delegate.
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    [delegate.imageList setObject:imageData forKey:textOfImage];
+    [delegate.imageList setObject:object forKey:textOfImage];
     
     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
     [defaults setObject:delegate.imageList forKey:@"imageList"];
+    
     [defaults synchronize];
+    
     NSLog(@"data saved");
+    
+    
     //[self saveImage:theImage :textOfImage];
     
 }
--(void) saveTheImage
+
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    /*UIImage *theImage=pickenImage.image;
-    NSData *pictureData=UIImagePNGRepresentation(theImage);
-    sqlite3_stmt    *statement;
-    
-    const char *dbpath = [databasePath UTF8String];
-    
-    if (sqlite3_open(dbpath, &imageDB) == SQLITE_OK)
-    {
-        NSString *insertSQL = [NSString stringWithFormat: @"INSERT INTO IMAGES (imageText, pickenImage) VALUES (\"%@\", \"%@\")", [imageText.text, pickenImage.png];//,.png]; need to figure out what to put in front of .png
-                        
-    
-        const char *insert_stmt = [insertSQL UTF8String];
-        
-        sqlite3_prepare_v2(imageDB, insert_stmt, -1, &statement, NULL);
-        if (sqlite3_step(statement) == SQLITE_DONE)
-        {
-            textField1.text = @"Image added";
-            //name.text = @"";
-            //address.text = @"";
-            //phone.text = @"";
-        } else {
-            loaded.text = @"Failed to add picture";
-        }
-        sqlite3_finalize(statement);
-        sqlite3_close(imageDB);
-    }
-     */
-
-}
-
-//the code below may not be correct or needed. need to deal later
--(void)saveImage:(UIImage*)theImage: (NSString*)textOfImage{
-
-    //INSERT INTO items VALUES(whatever the name of the image, name of the file)
-    NSData *pictureData=UIImagePNGRepresentation(theImage);
-    //NSUserDefaults *defaults=
-    //NSFileManager *fileManager=[NSFileManager defaultManager];
-    //NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
-    
-    //NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
-    
-    //NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", textOfImage]]; //add our image to the path
-    
-    //[fileManager createFileAtPath:fullPath contents:pictureData attributes:nil]; //finally save the path (image)
-    
-    NSLog(@"image saved");
-    /*http://www.friendlydeveloper.com/2010/02/using-nsfilemanager-to-save-an-image-to-or-loadremove-an-image-from-documents-directory-coding/
-     */
-
-}
-
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
     [picker dismissModalViewControllerAnimated:YES];
     
     pickenImage.image = [info objectForKey:UIImagePickerControllerEditedImage];
     
+    NSURL *url = [info objectForKey:@"UIImagePickerControllerReferenceURL"];
+    
+    self.imagePath = [url absoluteString];
+    
+   
     /*UIImage *takenImage=[info objectForKey:UIImagePickerControllerEditedImage];
     [self dismissModalViewControllerAnimated:YES];
      */
