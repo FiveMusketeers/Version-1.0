@@ -13,7 +13,6 @@
 
 @interface ListViewViewController ()
 
-
 @end
 
 @implementation ListViewViewController
@@ -21,7 +20,7 @@
     NSMutableArray *tableData;
 }
 
-@synthesize tableData; // The array with the items.
+@synthesize tableData, displayLists; // The array with the items.
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -42,43 +41,51 @@
 {
     [super viewDidLoad];
     //Populate list for the scroll view. We grab the values from the delegate.
-    AppDelegate *delegate = (AppDelegate*)[ [ UIApplication sharedApplication ] delegate ];
-    self.tableData = delegate.lists;
-    
+    // If we are in the list item view context, we want to load all the items given a list name.
+    if ( displayLists )
+    {
+        // DISPLAY LIST CONTEXT
+        AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
+        self.tableData = delegate.lists;
+        // END DISPLAY LIST CONTEXT
+    }
+    else
+    {
+        // DISPLAY LIST ITEMS CONTEXT
+        
+        //self.tableData = something.else
+        
+        // END DISPLAY LIST ITEMS CONTEXT
+    }
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
 // Switch to listview.
 - (IBAction)listView
 {
-        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
-        [self presentModalViewController:listView animated:YES];
+    ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
+    [self presentModalViewController:listView animated:YES];
 }
 
 - (IBAction)PreviousMenu:(id)sender
 {
     [self dismissModalViewControllerAnimated:YES];
 }
-
-// Determines how many rows the table view will contain. We can artificially inflate or limit this
-// as we please.
+// Determines how many rows the table view will contain.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 	// Pretty simple here.
 	return [tableData count];
 }
-
 // Returns the data of a single row cell.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -86,14 +93,12 @@
 	
 	// Simply initialize the local variable.
 	ListCell *cell = nil;
-	
 	// We've built and called our custom tableView cell.
 	cell = (ListCell *)[ self.ListTable dequeueReusableCellWithIdentifier: identifier ];
-	
 	// We want to populate the cell with a listItem.
 	ListItem *listItem = [ self.tableData objectAtIndex: indexPath.row ];
 	
-	if( cell == nil ) // It always is...unless there's some kind of caching going on.
+	if( cell == nil )
 	{
 		// Load all of.....these things.
 		NSArray *objects = [ [ NSBundle mainBundle ] loadNibNamed: @"ListCell_iPhone" owner:nil options:nil ];

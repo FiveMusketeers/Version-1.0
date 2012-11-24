@@ -10,7 +10,9 @@
 #import "FirstViewController.h"
 #import "ListItem.h"
 
-@implementation AppDelegate{
+@implementation AppDelegate
+{
+
 }
 
 // Both NSMutableArray
@@ -37,12 +39,12 @@
     
 	// Query the database for all pictures and lists.
     
-    self.lists = [self readItemsFromDatabase: @"lists"];
+    self.lists = [ self readItemsFromDatabase: @"lists" ];
     
     // Creates the items that belong to each list.
     for ( ListItem *s in self.lists )
     {
-        NSMutableArray *array = [self readItemsFromDatabase: s.name];
+        NSMutableArray *array = [ self readItemsFromDatabase: s.name ];
  //       NSLog(@"Expected table name: %@", s.name);
         for ( ListItem *thing in array )
         {
@@ -54,17 +56,17 @@
         }
         else
         {
-            NSLog(@"You suck.");
+            NSLog( @"Nil array caught. Not passed to dictionary." );
         }
     }
     
     // Loads all items.
-	self.items = [self readItemsFromDatabase: @"items"];
+	self.items = [ self readItemsFromDatabase: @"items" ];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     UIViewController *viewController1;
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
+    if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
     {
         viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
         self.window.rootViewController = viewController1;
@@ -91,7 +93,8 @@
 	success = [fileManager fileExistsAtPath:databasePath];
     
 	// If the database already exists then return without doing anything
-	if(success) {
+	if(success)
+    {
  //       NSLog(@"Database Found. at %@,", databasePath);
         return;
     }
@@ -143,11 +146,11 @@
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-				NSString *aFile = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
+				NSString *aName = [ NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0) ];
+				NSString *aFile = [ NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1) ];
                
                 //Create an item object
-                ListItem *item = [[ListItem alloc] initWithName:aName imagePath:aFile];
+                ListItem *item = [ [ListItem alloc] initWithName:aName imagePath:aFile ];
                 // NSLog(@"Name: %@ ImagePath: %@", item.name, item.imagePath);
 				// Add the item object to the animals Array
 				[tempReturnArray addObject:item];
@@ -169,12 +172,13 @@
         }
         else
         {
-            NSLog(@"Nil array passed.");
+            NSLog( @"Nil array passed." );
             return Nil;
         }
         
     }
-    else{
+    else
+    {
         return Nil;
     }
 

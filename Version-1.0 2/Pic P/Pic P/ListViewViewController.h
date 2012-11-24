@@ -18,5 +18,6 @@
 
 @property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) IBOutlet UITableView *ListTable;
+@property (nonatomic, assign) BOOL * displayLists;
 
 @end
