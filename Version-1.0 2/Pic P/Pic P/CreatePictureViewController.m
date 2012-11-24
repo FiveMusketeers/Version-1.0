@@ -7,6 +7,8 @@
 //
 
 #import "CreatePictureViewController.h"
+#import "AppDelegate.h"
+#import "ListItem.h"
 
 @interface CreatePictureViewController ()
 
@@ -14,8 +16,13 @@
 
 @implementation CreatePictureViewController
 @synthesize pickenImage;
-@synthesize imgPicker;
+
 @synthesize textField1;
+@synthesize imgPicker;
+// List Item Properties that need to be filled out
+@synthesize imageText;
+@synthesize imagePath;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,12 +34,62 @@
 
 - (void)viewDidLoad
 {
-    self.imgPicker=[[UIImagePickerController alloc]init];
+    /*self.imgPicker=[[UIImagePickerController alloc]init];
     self.imgPicker.allowsImageEditing=YES;
-    self.imgPicker.delegate=self;
-    self.imgPicker.sourceType=UIImagePickerControllerSourceTypePhotoLibrary;
+    self.imgPicker.delegate = self;
+    self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    */
     
-    //[super viewDidLoad];
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    
+    NSString *textOfImage=[defaults objectForKey:@"textOfImage"];
+    
+    NSData *imageData=[defaults dataForKey:@"image"];
+    
+    UIImage *theImage=[UIImage imageWithData:imageData];
+    
+    imageText.text=textOfImage;
+    
+    pickenImage.image=theImage;
+    
+    
+    
+    /*NSString *docsDir;
+    NSArray *dirPaths;
+    
+    // Get the documents directory
+    dirPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    docsDir = [dirPaths objectAtIndex:0];
+    
+    // Build the path to the database file
+    databasePath = [[NSString alloc] initWithString: [docsDir stringByAppendingPathComponent: @"image.db"]];
+    
+    NSFileManager *filemgr = [NSFileManager defaultManager];
+    
+    if ([filemgr fileExistsAtPath: databasePath ] == NO)
+    {
+		const char *dbpath = [databasePath UTF8String];
+        
+        if (sqlite3_open(dbpath, &imageDB) == SQLITE_OK)
+        {
+            char *errMsg;
+            const char *sql_stmt = "CREATE TABLE IF NOT EXISTS IMAGE)";
+            
+            if (sqlite3_exec(imageDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
+            {
+                loaded.text = @"Failed to create table";
+            }
+            
+            sqlite3_close(imageDB);
+            
+        } else {
+            loaded.text = @"Failed to open/create database";
+        }
+    }
+   */
+    //[filemgr release];
+    [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -40,6 +97,8 @@
 {
     button = nil;
     [self setPickenImage:nil];
+    [self setImageText:nil];
+    [self setTextField1:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -55,38 +114,79 @@
 
     //return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
+
 - (IBAction)pickenImage:(id)sender {
+    
+    
     [self dismissModalViewControllerAnimated:YES];
+
 }
 
-- (IBAction)grabSavedImage:(id)sender {
+- (IBAction)grabSavedImage:(id)sender
+{
+    self.imgPicker=[[UIImagePickerController alloc]init];
+    imgPicker.delegate=self;
+    self.imgPicker.allowsImageEditing=YES;
+    self.imgPicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     [self presentModalViewController:self.imgPicker animated:YES];
 }
 
-- (IBAction)takePictures:(id)sender {
-}
--(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(NSDictionary *)editingInfo {
-    pickenImage.image = imgPicker;
-    [[picker parentViewController]dismissModalViewControllerAnimated:YES];
+- (IBAction)save:(id)sender {
+ 
+    [imageText resignFirstResponder];
+    
+    NSLog(@"imageText %@", [imageText text]);
+    
+    NSString *textOfImage = [imageText text];
+    
+//    UIImage *theImage=pickenImage.image; // UI image from the iPhone gallery.
+    
+    NSString *filePath = self.imagePath; // Whatever image the user picked, this is the assets/filepath.
+    ListItem *object = [[ListItem alloc] initWithName:textOfImage imagePath:imagePath];
+    //NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
+    
+    // Grab the imageList from the delegate.
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    [delegate.imageList setObject:object forKey:textOfImage];
+    
+    NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
+    [defaults setObject:delegate.imageList forKey:@"imageList"];
+    
+    [defaults synchronize];
+    
+    NSLog(@"data saved");
+    NSLog(@"%@",textOfImage);
+    NSLog(@"%@",filePath);
+    
+    //[self saveImage:theImage :textOfImage];
     
 }
 
-//I am not sure if below is what I am supposed to do
-- (void)imageTakerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+
+-(void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
     
-    imagePicker = [[UIImagePickerController alloc] init];
-    imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
-    imagePicker.delegate = self;
-    [self presentModalViewController:imagePicker animated:YES];
+    [picker dismissModalViewControllerAnimated:YES];
     
-    UIImage * image = [info objectForKey:UIImagePickerControllerEditedImage];
+    pickenImage.image = [info objectForKey:UIImagePickerControllerEditedImage];
     
-    // You have the image. You can use this to present the image in the next view like you require in `#3`.
+    NSURL *url = [info objectForKey:@"UIImagePickerControllerReferenceURL"];
     
+    self.imagePath = [url absoluteString];
+    
+   
+    /*UIImage *takenImage=[info objectForKey:UIImagePickerControllerEditedImage];
+    [self dismissModalViewControllerAnimated:YES];
+     */
+}
+-(void)imagePickerControllerDidCancel:
+(UIImagePickerController *)picker
+{
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (IBAction) textFieldReturn:(id)sender
+- (IBAction)textFieldReturn:(id)sender
 {
 	//Possible to assign textField1.text to some NSString here
     [sender resignFirstResponder];
@@ -95,4 +195,49 @@
 - (IBAction)PreviousMenu:(id)sender {
     [self dismissModalViewControllerAnimated:YES];
 }
+
+- (IBAction)camera:(id)sender {
+    imgPicker=[[UIImagePickerController alloc] init];
+    imgPicker.sourceType=UIImagePickerControllerSourceTypeCamera;
+    imgPicker.delegate=self;
+    //[self view bringSubviewToFront:imgPicker.view];
+    [self presentModalViewController:imgPicker animated:YES];
+    //
+}
+
+/*- (IBAction)findImage:(id)sender {
+    const char *dbpath = [databasePath UTF8String];
+    sqlite3_stmt    *statement;
+    
+    if (sqlite3_open(dbpath, &imageDB) == SQLITE_OK)
+    {
+        NSString *querySQL = [NSString stringWithFormat: @"SELECT address, phone FROM contacts WHERE name=\"%@\"", imageText.text];
+        
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(imageDB, query_stmt, -1, &statement, NULL) == SQLITE_OK)
+        {
+            if (sqlite3_step(statement) == SQLITE_ROW)
+            {
+                //NSString *addressField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 0)];
+                //address.text = addressField;
+                
+               // NSString *phoneField = [[NSString alloc] initWithUTF8String:(const char *) sqlite3_column_text(statement, 1)];
+                //phone.text = phoneField;
+                
+                loaded.text = @"Match found";
+                
+                //[addressField release];
+                //[phoneField release];
+            } else {
+                loaded.text = @"Match not found";
+                //address.text = @"";
+                //phone.text = @"";
+            }
+            sqlite3_finalize(statement);
+        }
+        sqlite3_close(imageDB);
+    }
+}
+*/
 @end

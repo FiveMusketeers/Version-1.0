@@ -7,21 +7,39 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "/usr/include/sqlite3.h"
 
-@interface CreatePictureViewController : UIViewController{
-    UIImagePickerController *imgPicker;
+@interface CreatePictureViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     IBOutlet UIImageView *button;
-    IBOutlet UITextField *textField1;
-    UIImagePickerController *imagePicker;
+    IBOutlet UITextField *imageText;
+    IBOutlet UILabel *loaded;
+    //sqlite3 *imageDB;
+    NSString *databasePath;
     
 }
-@property (nonatomic, retain)UIImagePickerController *imgPicker;
+
+@property (nonatomic, strong) UIImagePickerController *imgPicker;
 @property (strong, nonatomic) IBOutlet UIImageView *pickenImage;
-@property (nonatomic, retain) UIImagePickerController *imagePicker;
-@property (strong, nonatomic) IBOutlet UITextField *textField1;
+
+@property (nonatomic, retain) IBOutlet UITextField *imageText;
+@property (strong, nonatomic) IBOutlet UITextField *textField1;//I don't know why, but every time I delete it, the program crashes. So, before we figure out why, just keep it.
+@property (strong, nonatomic) NSString *imagePath;
+
+//@property (strong, nonatomic)IBOutlet UILabel *loaded;
 
 - (IBAction)textFieldReturn:(id)sender;
 - (IBAction)grabSavedImage:(id)sender;
-- (IBAction)takePictures:(id)sender;
+- (IBAction)save:(id)sender;
+
 - (IBAction)PreviousMenu:(id)sender;
+- (IBAction)camera:(id)sender;
+
+//- (IBAction)findImage:(id)sender;
+
+
+//database action
+
+//- (IBAction)load:(id)sender;
+//- (IBAction)dismiss:(id)sender;
+//- (IBAction)textFieldReturn:(id)sender;
 @end

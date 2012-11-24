@@ -8,7 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PictureDeleteViewController : UIViewController
+@interface PictureDeleteViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+
+
+@property (nonatomic, strong) UIImagePickerController *deleteImagePicker;
+
+@property (strong, nonatomic) IBOutlet UITextField *textOfImage;
+@property (strong, nonatomic) IBOutlet UIImageView *chosenImage;
+- (IBAction)pickImage:(id)sender;
+- (IBAction)getText:(id)sender;
+
+- (IBAction)deleteImage:(id)sender;
 
 - (IBAction)PreviousMenu:(id)sender;
 @end
