@@ -143,8 +143,6 @@
 //    UIImage *theImage=pickenImage.image; // UI image from the iPhone gallery.
     
     NSString *filePath = self.imagePath; // Whatever image the user picked, this is the assets/filepath.
-    NSLog(textOfImage);
-    NSLog(filePath);
     ListItem *object = [[ListItem alloc] initWithName:textOfImage imagePath:imagePath];
     //NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
     
@@ -158,7 +156,8 @@
     [defaults synchronize];
     
     NSLog(@"data saved");
-    
+    NSLog(@"%@",textOfImage);
+    NSLog(@"%@",filePath);
     
     //[self saveImage:theImage :textOfImage];
     

@@ -40,8 +40,8 @@
     {
         ListItem *object = d;
         NSString *theName=object.name;
-        NSLog(theName);
-        NSLog(object.imagePath);
+        NSLog(@"%@",theName);
+        NSLog(@"%@",object.imagePath);
         //NSData *data = [NSData dataWithContentsOfURL:[dictionary objectForKey:@"UIImagePickerControllerReferenceURL"]];
         //NSLog(@"length %d",[data length]);
         //NSLog(@"data %@",[data description]);
