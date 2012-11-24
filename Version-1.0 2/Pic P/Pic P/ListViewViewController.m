@@ -34,13 +34,16 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Remove the row from data model
     [tableData removeObjectAtIndex:indexPath.row];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //Populate list for the scroll view
+//    AppDelegate *delegate= (AppDelegate*)[[[UIApplication sharedApplication] delegate]];
+//    self.tableData = delegate.lists;
+    
     // Do any additional setup after loading the view from its nib.
 }
 

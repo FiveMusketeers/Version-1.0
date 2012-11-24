@@ -39,23 +39,20 @@
     
 	// Query the database for all pictures and lists.
     
-//    NSLog(@"Now we're loading lists.");
-    
-    [self readListsFromDatabase];
-    //NSMutableDictionary *listDictionary = [[NSMutableDictionary alloc] init];
+    self.lists = [self readItemsFromDatabase: @"lists"];
     
     // Creates the items that belong to each list.
-    for ( NSString *s in self.lists )
+    for ( ListItem *s in self.lists )
     {
-        NSMutableArray *array = [self readItemsFromDatabase: s];
-        //NSLog(@"Expected table name: %@", s);
+        NSMutableArray *array = [self readItemsFromDatabase: s.name];
+        NSLog(@"Expected table name: %@", s.name);
         for ( ListItem *thing in array )
         {
  //           NSLog(@"Item Name: %@ Image Path: %@", thing.name, thing.imagePath);
         }
         if ( array != nil )
         {
-            [ listDictionary setObject:array forKey:s ];
+            [ listDictionary setObject:array forKey:s.name ];
         }
         else
         {
@@ -107,53 +104,6 @@
 	// Copy the database from the package to the users filesystem
 	[fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
     
-}
-
-// This will pass an array of names.
-// These names are the names of tables in the SQLite database.
--(void)readListsFromDatabase
-{    
-	// Setup the database object
-    // NSLog(@"ReadItemsFromDatabase called. Path: %@", databasePath);
-	sqlite3 *database;
-    
-	// Open the database from the users filessytem
-    //NSLog(@"%d", sqlite3_open([databasePath UTF8String], &database));
-	if( sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK )
-    {
-		// Setup the SQL Statement and compile it for faster access
-		const char *sqlStatement = "select * from lists";
-        
-		sqlite3_stmt *compiledStatement;
-        
-        // Result of database query
-        int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
-        
-        // Error checking and variable dumps
-        if( result != SQLITE_OK)
-        {
-            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
-        }
-        
-		if( result == SQLITE_OK )
-        {
-			// Loop through the results and add them to the feeds array
-			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
-            {
-				NSString *aName = [NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
-                
-				// Add the list name to lists
-				[lists addObject:aName];
-                
-			}
-		}
-        
-        
-		// Release the compiled statement from memory
-		sqlite3_finalize(compiledStatement);
-        
-	}
-	sqlite3_close(database);
 }
 
 -(NSMutableArray *) readItemsFromDatabase: (NSString *)tableName

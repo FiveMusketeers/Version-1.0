@@ -16,7 +16,7 @@
 - (IBAction)PreviousMenu:(id)sender;
 
 
-@property (strong, nonatomic) NSArray *tableData;
+@property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) IBOutlet UITableView *ListTable;
 
 @end
