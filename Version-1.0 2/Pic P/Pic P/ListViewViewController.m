@@ -32,19 +32,21 @@
     return self;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    [tableData removeObjectAtIndex:indexPath.row];
-}
+//- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    [tableData removeObjectAtIndex:indexPath.row];
+//}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     //Populate list for the scroll view. We grab the values from the delegate.
     // If we are in the list item view context, we want to load all the items given a list name.
-    if ( displayLists )
+    if ( self.displayLists )
     {
         // DISPLAY LIST CONTEXT
+        NSLog(@"Context: Displaying all lists.");
+        
         AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
         self.tableData = delegate.lists;
         // END DISPLAY LIST CONTEXT
@@ -52,12 +54,23 @@
     else
     {
         // DISPLAY LIST ITEMS CONTEXT
-        
-        //self.tableData = something.else
-        
+        NSLog(@"Context: Display all items from a list.");
+        // Here we only want to display all the items from a single list.
+        // we dont want to load table data here. ListCell will now load it before calling presentModelViewController.
+        // In other words, we want another class to pass the data before this view is loaded.
+        if( tableData != nil )
+        {
+            for ( ListItem *item in self.tableData )
+            {
+                NSLog( @"List Item FilePath: %@", item.imagePath );
+            }
+        }
+        else
+        {
+            NSLog(@"self.tableData is empty. Cannot load.");
+        }
         // END DISPLAY LIST ITEMS CONTEXT
     }
-    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewDidUnload
@@ -86,7 +99,13 @@
 	// Pretty simple here.
 	return [tableData count];
 }
-// Returns the data of a single row cell.
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Cell Selected");
+}
+
+// Generates the data of a single row cell.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *identifier = @"ListCell";
@@ -116,10 +135,15 @@
 		// Assign all the object attributes to the cell attributes here.
 		cell.nameLabel.text = listItem.name; // The cell takes on the name of the object.
 		cell.image.image = listItem.getImage; // Cell's image grabs the listItem's image.
+        
+        // This grabs the context of the controller.
+        cell.controllerContext = self.displayLists;
 		
 		// End of plugging object attributes into the cellview.
 	}
 	
+//    NSLog(@"Cell Generated.");
+    
 	return cell;
 }
 // End generating tableviewcell

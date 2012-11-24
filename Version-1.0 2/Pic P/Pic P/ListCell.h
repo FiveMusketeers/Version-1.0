@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *image;
 @property (strong, nonatomic) FliteController *fliteController;
 @property (strong, nonatomic) Slt *slt;
+@property (nonatomic, assign) BOOL * controllerContext;
 
 -(IBAction) Act_voice: (id) sender;
 

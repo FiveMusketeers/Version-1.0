@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ListViewViewController : UIViewController <UITableViewDataSource>
+@interface ListViewViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {
 	
 }

@@ -55,9 +55,12 @@
 
 - (IBAction)listView{
     ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+    
+    // Since this is the first time this loaded, we want to display only lists as opposed list items.
+    listView.displayLists = TRUE;
+    
     [self presentModalViewController:listView animated:YES];
 }
-
 
 //Goes to the previous menu
 - (IBAction)goBack{

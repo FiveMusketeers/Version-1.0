@@ -29,5 +29,7 @@
 @property (strong, nonatomic) NSMutableArray *items;
 @property (strong, nonatomic) NSMutableArray *lists;
 @property (strong, nonatomic) NSMutableDictionary *listDictionary;
+// I made this so I can call a view change via a tableCell
+@property (strong, nonatomic) UIViewController *viewControllerOne;
 
 @end

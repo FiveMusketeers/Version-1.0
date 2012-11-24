@@ -17,7 +17,7 @@
 
 // Both NSMutableArray
 
-@synthesize items, lists, listDictionary;
+@synthesize items, lists, listDictionary, viewControllerOne;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -65,11 +65,10 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    UIViewController *viewController1;
     if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
     {
-        viewController1 = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
-        self.window.rootViewController = viewController1;
+        self.viewControllerOne = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
+        self.window.rootViewController = self.viewControllerOne;
         [self.window makeKeyAndVisible];
         return YES;
     }
