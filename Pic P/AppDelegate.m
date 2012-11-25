@@ -19,6 +19,9 @@
 
 @synthesize items, lists, listDictionary, viewControllerOne;
 
+//PERTAINS TO CREATE LIST
+@synthesize listToAdd, databasePath;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //Setup Picture Database for use
@@ -28,6 +31,9 @@
     items = [[NSMutableArray alloc] init];
     lists = [[NSMutableArray alloc] init];
     listDictionary = [[NSMutableDictionary alloc] init];
+    
+    //PERTAINS TO CREATE LIST
+    listToAdd = [[NSMutableArray alloc] init];
     
 	// Get the path to the documents directory and append the databaseName
 	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -124,8 +130,9 @@
 		// Setup the SQL Statement and compile it for faster access
         //const char *sqlStatement = [command cStringUsingEncoding:@"ASCIIEncoding"];
         
-        NSString *sqlString = @"select * from ";
-        sqlString = [sqlString stringByAppendingString:tableName];
+        
+        //Modified to allow for tables/lists with spaces in their names
+        NSString *sqlString = [NSString stringWithFormat:@"select * from '%@'", tableName];
         const char *sqlStatement = [sqlString UTF8String];
         
 		sqlite3_stmt *compiledStatement;
@@ -147,8 +154,8 @@
 			// Loop through the results and add them to the feeds array
 			while(sqlite3_step(compiledStatement) == SQLITE_ROW)
             {
-				NSString *aName = [ NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0) ];
-				NSString *aFile = [ NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1) ];
+				NSString *aName = [ NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 0)];
+				NSString *aFile = [ NSString stringWithUTF8String:(char *)sqlite3_column_text(compiledStatement, 1)];
                
                 //Create an item object
                 ListItem *item = [ [ListItem alloc] initWithName:aName imagePath:aFile ];

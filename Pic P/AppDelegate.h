@@ -32,4 +32,8 @@
 // I made this so I can call a view change via a tableCell
 @property (strong, nonatomic) UIViewController *viewControllerOne;
 
+//Stuff Steven Needs
+@property (strong, nonatomic) NSMutableArray *listToAdd;
+@property (strong, nonatomic) NSString *databasePath;
+
 @end

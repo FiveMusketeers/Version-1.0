@@ -6,6 +6,12 @@
 //  Copyright (c) 2012 Five Musketeers. All rights reserved.
 //
 
+
+/*READDDDDD #######################
+/We need to make it so it reads lists that were created.
+ /We can try to do this by just dropping the view lists commands in the ViewDidLoad
+ */
+
 #import <UIKit/UIKit.h>
 #import <Slt/Slt.h>
 #import <OpenEars/FliteController.h>

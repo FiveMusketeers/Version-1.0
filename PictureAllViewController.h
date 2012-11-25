@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 Five Musketeers. All rights reserved.
 //
 
+//Overwritten by Steven's Version
+
 #import <UIKit/UIKit.h>
 
 @interface PictureAllViewController : UIViewController{
@@ -28,5 +30,6 @@
 -(IBAction)FindCategory:(UIButton*)sender;
 
 -(IBAction)goBack:(id)sender;
+
 
 @end

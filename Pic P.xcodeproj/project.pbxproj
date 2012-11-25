@@ -57,6 +57,8 @@
 		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
 		51B115671635F51C00F9934D /* hanger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115631635F51C00F9934D /* hanger.jpg */; };
 		51B115681635F51C00F9934D /* hat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115641635F51C00F9934D /* hat.jpg */; };
+		51C84EC71662BDD1001F9487 /* OurButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C84EC61662BDD1001F9487 /* OurButton.m */; };
+		51C84EC91662BFC1001F9487 /* OurButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C84EC61662BDD1001F9487 /* OurButton.m */; };
 		51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
 		51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD571630C6BF007DA5C4 /* ShareViewController.m */; };
 		51E2AD601630C6CE007DA5C4 /* PictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */; };
@@ -160,6 +162,8 @@
 		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
 		51B115631635F51C00F9934D /* hanger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hanger.jpg; sourceTree = "<group>"; };
 		51B115641635F51C00F9934D /* hat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hat.jpg; sourceTree = "<group>"; };
+		51C84EC51662BDD1001F9487 /* OurButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurButton.h; sourceTree = "<group>"; };
+		51C84EC61662BDD1001F9487 /* OurButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurButton.m; sourceTree = "<group>"; };
 		51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD561630C6BF007DA5C4 /* ShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareViewController.h; sourceTree = "<group>"; };
 		51E2AD571630C6BF007DA5C4 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
@@ -244,6 +248,7 @@
 		5119FE95163204B600CFCD33 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				51C84EC61662BDD1001F9487 /* OurButton.m */,
 				76BA2B141630977D00DAE149 /* SecondViewController.m */,
 				51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */,
 				51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */,
@@ -289,6 +294,7 @@
 		5119FE9E1632054B00CFCD33 /* List */ = {
 			isa = PBXGroup;
 			children = (
+				51C84EC51662BDD1001F9487 /* OurButton.h */,
 				6C9C006716350D3A00CB30C3 /* ListCell.h */,
 				51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */,
 				51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */,
@@ -700,6 +706,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51C84EC91662BFC1001F9487 /* OurButton.m in Sources */,
 				A10DE6C51634A03200E2380A /* ListViewViewController.m in Sources */,
 				76BA2B071630977D00DAE149 /* main.m in Sources */,
 				76BA2B0B1630977D00DAE149 /* AppDelegate.m in Sources */,
@@ -729,6 +736,7 @@
 			files = (
 				76BA2B3A1630977D00DAE149 /* Pic_PTests.m in Sources */,
 				51E2AD711630CAED007DA5C4 /* ListViewViewController.m in Sources */,
+				51C84EC71662BDD1001F9487 /* OurButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
