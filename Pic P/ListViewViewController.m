@@ -52,7 +52,7 @@
     if ( self.displayLists )
     {
         // DISPLAY LIST CONTEXT
-        NSLog( @"Context: Displaying all lists." );
+        //NSLog( @"Context: Displaying all lists." );
         
         AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
         self.tableData = delegate.lists;
@@ -113,46 +113,44 @@
 // This also calls the text to speech framework.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Cell Selected");
+//    NSLog(@"Cell Selected");
     
     // Get the selected cell.
     ListCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath]; // Ignore the warning. It's giving us what we want.
 
     NSString *cellLabel = selectedCell.nameLabel.text;
     
-    NSLog( @"Label: %@", cellLabel );
-
-//  [self.fliteController say:cellLabel withVoice:self.slt];
+//    NSLog( @"Label: %@", cellLabel );
     
     // Now we want to check the controller context.
 
     if( self.displayLists == TRUE )
     {
-        NSLog(@"Switching to a ListItem display.");
+//        NSLog(@"Switching to a ListItem display.");
         
         AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
         NSDictionary *listDictionary = delegate.listDictionary;
         
-        if( listDictionary != nil)
-        {
-            NSLog(@"Displaying all keys in the listDictionary.");
-            for ( NSString *key in listDictionary.allKeys )
-            {
-                NSLog(@"Key: %@", key);
-            }
-            NSLog(@"End displaying all keys in the listDictionary.");
-        }
-        else
-        {
-            NSLog(@"listDictionary is nil.");
-        }
+//        if( listDictionary != nil)
+//        {
+//            NSLog(@"Displaying all keys in the listDictionary.");
+//            for ( NSString *key in listDictionary.allKeys )
+//            {
+//                NSLog(@"Key: %@", key);
+//            }
+//            NSLog(@"End displaying all keys in the listDictionary.");
+//        }
+//        else
+//        {
+//            NSLog(@"listDictionary is nil.");
+//        }
         
-        NSMutableArray *array = [listDictionary objectForKey: cellLabel ];
-        
-        for ( ListItem *item in array )
-        {
-            NSLog( @"ImagePath: %@", item.imagePath );
-        }
+//        NSMutableArray *array = [listDictionary objectForKey: cellLabel ];
+//        
+//        for ( ListItem *item in array )
+//        {
+//            NSLog( @"ImagePath: %@", item.imagePath );
+//        }
 
         // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
 
@@ -169,7 +167,8 @@
     }
     else
     {
-        NSLog(@"ListItem selected.");
+        //NSLog(@"ListItem selected.");
+        [self.fliteController say:cellLabel withVoice:self.slt];
     }
 }
 

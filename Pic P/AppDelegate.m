@@ -27,6 +27,7 @@
     
     items = [[NSMutableArray alloc] init];
     lists = [[NSMutableArray alloc] init];
+    listDictionary = [[NSMutableDictionary alloc] init];
     
 	// Get the path to the documents directory and append the databaseName
 	NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
@@ -45,20 +46,22 @@
     for ( ListItem *s in self.lists )
     {
         NSMutableArray *array = [ self readItemsFromDatabase: s.name ];
- //       NSLog(@"Expected table name: %@", s.name);
-        for ( ListItem *thing in array )
-        {
- //           NSLog(@"Item Name: %@ Image Path: %@", thing.name, thing.imagePath);
-        }
+        NSLog(@"Expected table name: %@", s.name);
         if ( array != nil )
         {
-            [ listDictionary setObject:array forKey:s.name ];
-        }
-        else
-        {
-            NSLog( @"Nil array caught. Not passed to dictionary." );
+            // Display the items if the array is not nil.
+            for ( ListItem *thing in array )
+            {
+                //NSLog(@"Item Name: %@ Image Path: %@", thing.name, thing.imagePath);
+            }
+            
+             // This is an array of ListItems being added.
+            [ self.listDictionary setObject:array forKey:s.name ];
         }
     }
+    
+    NSArray *keyArray = self.listDictionary.allKeys;
+    NSLog(@"Number of Keys: %d", [keyArray count]);
     
     // Loads all items.
 	self.items = [ self readItemsFromDatabase: @"items" ];
@@ -76,7 +79,6 @@
     {
         return NO;
     }
-
 }
 
 -(void) checkAndCreateDatabase
