@@ -19,28 +19,17 @@
 {
     NSMutableArray *tableData;
 }
-
-@synthesize tableData, displayLists; // The array with the items.
+// The array with the items.
+@synthesize tableData;
+// The context of the controller. This affects what didSelect will do.
+@synthesize displayLists;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
 	{
-//<<<<<<< HEAD:Version-1.0 2/Pic P/Pic P/ListViewViewController.m
-
-//=======
-		// This will need to be an SQL query, or some other call where we generate our list of items.
-		// Constructs an item.
-		ListItem *objectOne = [[ListItem alloc] initWithName:@"scissors" imagePath:@"scissors.jpg"];
-		ListItem *objectTwo = [[ListItem alloc] initWithName:@"brush" imagePath:@"brush.jpg"];
-		ListItem *objectThree = [[ListItem alloc] initWithName:@"socks" imagePath:@"socks.jpg"];
-		ListItem *objectFour = [[ListItem alloc] initWithName:@"hanger" imagePath:@"hanger.jpg"];
-		ListItem *objectFive = [[ListItem alloc] initWithName:@"hat" imagePath:@"hat.jpg"];
-		ListItem *objectSix = [[ListItem alloc] initWithName:@"icon" imagePath:@"icon.png"];
-		// Creates an array of staticly called objects (for now)
-		tableData = [[NSArray alloc] initWithObjects: objectOne, objectTwo, objectThree, objectFour, objectFive, objectSix, nil];
-//>>>>>>> SQL:Pic P/Pic P/ListViewViewController.m
+        // Removed old, static call of ListItems into tableData
     }
     return self;
 }
@@ -113,6 +102,8 @@
 	return [tableData count];
 }
 
+// This gets called whenever a row is selected.
+// There appears to be some kind of a delegate / UI issue, as this is not getting called.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Cell Selected");
@@ -144,7 +135,6 @@
 				break;
 			}
 		}
-		
 		// Assign all the object attributes to the cell attributes here.
 		cell.nameLabel.text = listItem.name; // The cell takes on the name of the object.
 		cell.image.image = listItem.getImage; // Cell's image grabs the listItem's image.
@@ -154,8 +144,6 @@
 		
 		// End of plugging object attributes into the cellview.
 	}
-	
-//    NSLog(@"Cell Generated.");
     
 	return cell;
 }
