@@ -38,11 +38,6 @@
     }
 }
 
--(void)renderListItemsFromCell
-{
-    // This presentsModalViewController.
-}
-
 - (IBAction)manageList{
         SecondViewController *secondView = [[SecondViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
         [self presentModalViewController:secondView animated:YES];  
