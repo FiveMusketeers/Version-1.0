@@ -9,7 +9,7 @@
 
 /*READDDDDD #######################
 /We need to make it so it reads lists that were created.
- /We can try to do this by just dropping the view lists commands in the ViewDidLoad
+ /We should do this by modifying the create list methods, so that they affect the dictionary
  */
 
 #import <UIKit/UIKit.h>
