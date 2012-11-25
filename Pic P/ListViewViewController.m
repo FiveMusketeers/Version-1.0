@@ -46,6 +46,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //NSLog(@"ListViewViewController is first responder? %@", self.isFirstResponder);
+    NSLog(@"ListTable's delegate: %@", self.ListTable.delegate );
+    NSLog(@"Gestures Attached to ListTable: %@", self.ListTable.gestureRecognizers);
+    
+    
     //Populate list for the scroll view. We grab the values from the delegate.
     // If we are in the list item view context, we want to load all the items given a list name.
     if ( self.displayLists )
@@ -106,11 +111,6 @@
 	return [tableData count];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{    
-    return 1;
-}
-
 // This gets called whenever a row is selected.
 // There appears to be some kind of a delegate / UI issue, as this is not getting called.
 
@@ -125,30 +125,30 @@
     NSString *cellLabel = selectedCell.nameLabel.text;
     
     NSLog( @"Label: %@", cellLabel );
-
-    [self.fliteController say:cellLabel withVoice:self.slt];
-    
-    // Now we want to check the controller context.
-
-    if( self.displayLists == false )
-    {
-        AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-        NSDictionary *listDictionary = delegate.listDictionary;
-
-        // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
-
-        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
-
-        // Pass the array with the list items to the controller.
-        listView.tableData = [ listDictionary objectForKey:cellLabel ];
-
-        [self presentModalViewController:listView animated:YES];
-        
-    }
-    else
-    {
-        NSLog(@"ListItem selected.");
-    }
+//
+//    [self.fliteController say:cellLabel withVoice:self.slt];
+//    
+//    // Now we want to check the controller context.
+//
+//    if( self.displayLists == false )
+//    {
+//        AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+//        NSDictionary *listDictionary = delegate.listDictionary;
+//
+//        // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
+//
+//        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+//
+//        // Pass the array with the list items to the controller.
+//        listView.tableData = [ listDictionary objectForKey:cellLabel ];
+//
+//        [self presentModalViewController:listView animated:YES];
+//        
+//    }
+//    else
+//    {
+//        NSLog(@"ListItem selected.");
+//    }
 }
 
 // Generates the data of a single row cell.

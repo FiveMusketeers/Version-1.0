@@ -10,7 +10,6 @@
 
 @implementation ListCell
 
-
 @synthesize nameLabel;
 @synthesize image;
 
