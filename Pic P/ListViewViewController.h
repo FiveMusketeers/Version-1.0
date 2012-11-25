@@ -7,14 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Slt/Slt.h>
+#import <OpenEars/FliteController.h>
 
 @interface ListViewViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 {
-	
+	FliteController *fliteController;
+    Slt *slt;
 }
 
 - (IBAction)PreviousMenu:(id)sender;
 
+// Text to speech framework.
+@property (strong, nonatomic) FliteController *fliteController;
+@property (strong, nonatomic) Slt *slt;
+// End of text to speech framework.
 
 @property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) IBOutlet UITableView *ListTable;

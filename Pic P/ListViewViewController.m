@@ -23,6 +23,10 @@
 @synthesize tableData;
 // The context of the controller. This affects what didSelect will do.
 @synthesize displayLists;
+// Text to speech variables
+@synthesize fliteController;
+@synthesize slt;
+// End text to speech variables
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -102,22 +106,53 @@
 	return [tableData count];
 }
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{    
     return 1;
 }
 
 // This gets called whenever a row is selected.
 // There appears to be some kind of a delegate / UI issue, as this is not getting called.
+
+// This also calls the text to speech framework.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Cell Selected");
     
-    // Add all voice commands here.
+    // Get the selected cell.
+    ListCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+
+    NSString *cellLabel = selectedCell.nameLabel.text;
+    
+    NSLog( @"Label: %@", cellLabel );
+
+    [self.fliteController say:cellLabel withVoice:self.slt];
+    
+    // Now we want to check the controller context.
+
+    if( self.displayLists == false )
+    {
+        AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        NSDictionary *listDictionary = delegate.listDictionary;
+
+        // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
+
+        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+
+        // Pass the array with the list items to the controller.
+        listView.tableData = [ listDictionary objectForKey:cellLabel ];
+
+        [self presentModalViewController:listView animated:YES];
+        
+    }
+    else
+    {
+        NSLog(@"ListItem selected.");
+    }
 }
 
 // Generates the data of a single row cell.
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (ListCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	NSString *identifier = @"ListCell";
 	
@@ -145,9 +180,6 @@
 		// Assign all the object attributes to the cell attributes here.
 		cell.nameLabel.text = listItem.name; // The cell takes on the name of the object.
 		cell.image.image = listItem.getImage; // Cell's image grabs the listItem's image.
-        
-        // This grabs the context of the controller.
-        cell.controllerContext = self.displayLists;
 		
 		// End of plugging object attributes into the cellview.
 	}
@@ -155,5 +187,25 @@
 	return cell;
 }
 // End generating tableviewcell
+
+// Text to speech framework
+- (FliteController *)fliteController
+{
+	if (fliteController == nil)
+    {
+		fliteController = [[FliteController alloc] init];
+	}
+	return fliteController;
+}
+
+- (Slt *)slt
+{
+	if (slt == nil)
+    {
+		slt = [[Slt alloc] init];
+	}
+	return slt;
+}
+// End text to speech framework
 
 @end
