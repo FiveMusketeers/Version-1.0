@@ -58,6 +58,7 @@
     
     // Since this is the first time this loaded, we want to display only lists as opposed list items.
     listView.displayLists = TRUE;
+    listView.shareLists = FALSE;
     
     [self presentModalViewController:listView animated:YES];
 }

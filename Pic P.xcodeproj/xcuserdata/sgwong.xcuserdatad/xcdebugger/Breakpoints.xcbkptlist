@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Pic P/ShareViewController.m"
-         timestampString = "372382922.822606"
+         timestampString = "375577932.372937"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "37"
-         endingLineNumber = "37"
+         startingLineNumber = "35"
+         endingLineNumber = "35"
          landmarkName = "-shouldAutorotateToInterfaceOrientation:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -181,9 +181,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "24"
-         endingLineNumber = "24"
-         landmarkName = "-Act_voice:"
-         landmarkType = "4">
+         endingLineNumber = "24">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -207,9 +205,7 @@
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "54"
-         endingLineNumber = "54"
-         landmarkName = "-Act_voice:"
-         landmarkType = "5">
+         endingLineNumber = "54">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -463,6 +459,45 @@
          startingLineNumber = "97"
          endingLineNumber = "97"
          landmarkName = "-save"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Pic P/ListViewViewController.h"
+         timestampString = "375577932.372937"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "38"
+         endingLineNumber = "38"
+         landmarkName = "title"
+         landmarkType = "19">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Pic P/ListViewViewController.m"
+         timestampString = "375577698.140581"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "181"
+         endingLineNumber = "181"
+         landmarkName = "-tableView:didSelectRowAtIndexPath:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "Pic P/ShareViewController.m"
+         timestampString = "375577885.097375"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
+         landmarkName = "-shareLists"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

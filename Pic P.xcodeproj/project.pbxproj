@@ -11,10 +11,7 @@
 		5115485E165F180000CDE209 /* PictureDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5115485D165F180000CDE209 /* PictureDatabase.sql */; };
 		51154860165F21FF00CDE209 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5115485F165F21FF00CDE209 /* apple.png */; };
 		51154862165F222E00CDE209 /* milk.png in Resources */ = {isa = PBXBuildFile; fileRef = 51154861165F222E00CDE209 /* milk.png */; };
-		5119FE7B1632036D00CFCD33 /* ShareListsViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE781632036D00CFCD33 /* ShareListsViewController_iPhone.xib */; };
 		5119FE7C1632036D00CFCD33 /* SharePicturesViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE791632036D00CFCD33 /* SharePicturesViewController_iPhone.xib */; };
-		5119FE811632039200CFCD33 /* ShareListsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE7E1632039200CFCD33 /* ShareListsViewController.m */; };
-		5119FE821632039200CFCD33 /* ShareCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE7F1632039200CFCD33 /* ShareCategoriesViewController.m */; };
 		5119FE831632039200CFCD33 /* SharePicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE801632039200CFCD33 /* SharePicturesViewController.m */; };
 		5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE891632046F00CFCD33 /* CreatePictureViewController.m */; };
 		5119FE8C1632046F00CFCD33 /* EditPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */; };
@@ -111,14 +108,9 @@
 		5115485D165F180000CDE209 /* PictureDatabase.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictureDatabase.sql; sourceTree = "<group>"; };
 		5115485F165F21FF00CDE209 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 		51154861165F222E00CDE209 /* milk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = milk.png; sourceTree = "<group>"; };
-		5119FE781632036D00CFCD33 /* ShareListsViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareListsViewController_iPhone.xib; sourceTree = "<group>"; };
 		5119FE791632036D00CFCD33 /* SharePicturesViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharePicturesViewController_iPhone.xib; sourceTree = "<group>"; };
-		5119FE7E1632039200CFCD33 /* ShareListsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareListsViewController.m; sourceTree = "<group>"; };
-		5119FE7F1632039200CFCD33 /* ShareCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareCategoriesViewController.m; sourceTree = "<group>"; };
 		5119FE801632039200CFCD33 /* SharePicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharePicturesViewController.m; sourceTree = "<group>"; };
-		5119FE84163203BA00CFCD33 /* ShareCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareCategoriesViewController.h; sourceTree = "<group>"; };
 		5119FE85163203BA00CFCD33 /* SharePicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePicturesViewController.h; sourceTree = "<group>"; };
-		5119FE86163203BA00CFCD33 /* ShareListsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareListsViewController.h; sourceTree = "<group>"; };
 		5119FE881632046500CFCD33 /* CreatePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePictureViewController.h; sourceTree = "<group>"; };
 		5119FE891632046F00CFCD33 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CreatePictureViewController.m; sourceTree = "<group>"; };
 		5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EditPictureViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -272,8 +264,6 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD571630C6BF007DA5C4 /* ShareViewController.m */,
-				5119FE7E1632039200CFCD33 /* ShareListsViewController.m */,
-				5119FE7F1632039200CFCD33 /* ShareCategoriesViewController.m */,
 				5119FE801632039200CFCD33 /* SharePicturesViewController.m */,
 			);
 			name = Share;
@@ -317,9 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD561630C6BF007DA5C4 /* ShareViewController.h */,
-				5119FE84163203BA00CFCD33 /* ShareCategoriesViewController.h */,
 				5119FE85163203BA00CFCD33 /* SharePicturesViewController.h */,
-				5119FE86163203BA00CFCD33 /* ShareListsViewController.h */,
 			);
 			name = Share;
 			sourceTree = "<group>";
@@ -352,7 +340,6 @@
 			isa = PBXGroup;
 			children = (
 				51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */,
-				5119FE781632036D00CFCD33 /* ShareListsViewController_iPhone.xib */,
 				5119FE791632036D00CFCD33 /* SharePicturesViewController_iPhone.xib */,
 			);
 			name = Share;
@@ -630,7 +617,6 @@
 				51E2AD601630C6CE007DA5C4 /* PictureViewController_iPhone.xib in Resources */,
 				51E2AD791630CCC1007DA5C4 /* ListEditViewController_iPhone.xib in Resources */,
 				51E2AD7E1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib in Resources */,
-				5119FE7B1632036D00CFCD33 /* ShareListsViewController_iPhone.xib in Resources */,
 				5119FE7C1632036D00CFCD33 /* SharePicturesViewController_iPhone.xib in Resources */,
 				5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */,
 				5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */,
@@ -717,8 +703,6 @@
 				51E2AD681630C6E3007DA5C4 /* CategoryViewController.m in Sources */,
 				51E2AD781630CCC1007DA5C4 /* ListEditViewController.m in Sources */,
 				51E2AD7D1630CCD7007DA5C4 /* ListCreateViewController.m in Sources */,
-				5119FE811632039200CFCD33 /* ShareListsViewController.m in Sources */,
-				5119FE821632039200CFCD33 /* ShareCategoriesViewController.m in Sources */,
 				5119FE831632039200CFCD33 /* SharePicturesViewController.m in Sources */,
 				5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */,
 				5119FE8C1632046F00CFCD33 /* EditPictureViewController.m in Sources */,

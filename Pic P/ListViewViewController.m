@@ -19,14 +19,19 @@
 {
     NSMutableArray *tableData;
 }
+
 // The array with the items.
 @synthesize tableData;
+@synthesize tableName;
 // The context of the controller. This affects what didSelect will do.
 @synthesize displayLists;
 // Text to speech variables
 @synthesize fliteController;
 @synthesize slt;
 // End text to speech variables
+
+//The Views Title
+@synthesize title;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -47,10 +52,14 @@
 {
     [super viewDidLoad];
     
+
     //Populate list for the scroll view. We grab the values from the delegate.
     // If we are in the list item view context, we want to load all the items given a list name.
     if ( self.displayLists )
     {
+        //CHANGE TITLE LABEL
+        title.text = @"Lists";
+        
         // DISPLAY LIST CONTEXT
         //NSLog( @"Context: Displaying all lists." );
         
@@ -60,6 +69,9 @@
     }
     else
     {
+        //CHANGE TITLE LABEL
+        title.text = tableName;
+        
         // DISPLAY LIST ITEMS CONTEXT
         NSLog( @"Context: Display all items from a list." );
         // Here we only want to display all the items from a single list.
@@ -89,6 +101,7 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
+
 // Switch to listview.
 - (IBAction)listView
 {
@@ -152,17 +165,62 @@
 //            NSLog( @"ImagePath: %@", item.imagePath );
 //        }
 
-        // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
 
-        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+        //SHARE CONTEXT
+        if (self.shareLists){
+            //get the documents directory:
+            NSArray *paths = NSSearchPathForDirectoriesInDomains
+            (NSDocumentDirectory, NSUserDomainMask, YES);
+            NSString *documentsDirectory = [paths objectAtIndex:0];
+            
+            
+            //make a file name to write the data to using the documents directory:
+            NSString *fileName = [NSString stringWithFormat:@"%@/%@.txt",
+                                  documentsDirectory, cellLabel];
+            
+            NSMutableArray *listToShare = [listDictionary objectForKey:cellLabel];
+            
+            //create content
+            NSString *content = [NSString stringWithFormat:@"%@ contents: \n", cellLabel];
+            int item_counter = 1;
+            for(ListItem *itemRead in listToShare){
+                content = [content stringByAppendingString: [NSString stringWithFormat:@"Item %d: %@ \n", item_counter, itemRead.name]];
+                item_counter++;
+            }
+            
+            //save content to the documents directory
+            [content writeToFile:fileName
+                      atomically:NO
+                        encoding:NSStringEncodingConversionAllowLossy
+                           error:nil];
+            
+            // Send the textfile to website
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                            message:@"Sharing Complete"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
 
-        // Pass the array with the list items to the controller.
-        listView.tableData = [ listDictionary objectForKey:cellLabel ];
-        listView.displayLists = false;
-        // Render the view.
+            NSLog(@"It saved to: %@", documentsDirectory);
+        }
+        else{
+            // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
+            //VIEW LIST CONTEXT
+            ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+
+            
+            // Pass the array with the list items to the controller.
+            listView.tableData = [ listDictionary objectForKey:cellLabel ];
+            listView.tableName = cellLabel;
+            
+            listView.displayLists = false;
+            // Render the view.
+            // This allows the back to return to the list view.
+            [self presentModalViewController:listView animated:YES];
+        }
         
-        // This allows the back to return to the list view.
-        [self presentModalViewController:listView animated:YES];
         
     }
     else
@@ -209,6 +267,7 @@
 }
 // End generating tableviewcell
 
+
 // Text to speech framework
 - (FliteController *)fliteController
 {
@@ -228,5 +287,8 @@
 	return slt;
 }
 // End text to speech framework
+
+
+
 
 @end

@@ -32,6 +32,6 @@
 - (IBAction) textFieldReturn:(id)sender;
 - (IBAction) goToViewPictures:(id) sender;
 - (IBAction) save;
-- (IBAction)PreviousMenu:(id)sender;
+- (IBAction) PreviousMenu:(id)sender;
 
 @end

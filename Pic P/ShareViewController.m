@@ -7,10 +7,8 @@
 //
 
 #import "ShareViewController.h"
-
-#import "ShareCategoriesViewController.h"
+#import "ListViewViewController.h"
 #import "SharePicturesViewController.h"
-#import "ShareListsViewController.h"
 
 
 
@@ -44,7 +42,12 @@
 }
 
 - (IBAction)shareLists {
-        ShareListsViewController *shareLists = [[ShareListsViewController alloc]initWithNibName:@"ShareListsViewController_iPhone" bundle:nil];
+        ListViewViewController *shareLists = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+        
+        shareLists.displayLists = TRUE;
+        shareLists.shareLists = TRUE;
+    
+    
         [self presentModalViewController:shareLists animated:YES];
 }
 

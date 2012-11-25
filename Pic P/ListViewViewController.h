@@ -20,6 +20,7 @@
 {
 	FliteController *fliteController;
     Slt *slt;
+    IBOutlet UILabel *title;
 }
 
 - (IBAction)PreviousMenu:(id)sender;
@@ -32,5 +33,8 @@
 @property (strong, nonatomic) NSMutableArray *tableData;
 @property (strong, nonatomic) IBOutlet UITableView *ListTable;
 @property (nonatomic, assign) BOOL * displayLists;
+@property (nonatomic, assign) BOOL * shareLists;
+@property (nonatomic, assign) NSString *tableName;
+@property (nonatomic, retain) IBOutlet UILabel *title;
 
 @end

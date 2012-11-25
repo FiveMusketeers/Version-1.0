@@ -143,6 +143,12 @@
                             }
                             
                             if (alldone){
+                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                                                message:@"List Created"
+                                                                               delegate:nil
+                                                                      cancelButtonTitle:@"OK"
+                                                                      otherButtonTitles:nil];
+                                [alert show];
                                 [self.lists addObject:theList];
                                 [self.listDictionary setObject:listToAdd forKey:listName];
                             }
