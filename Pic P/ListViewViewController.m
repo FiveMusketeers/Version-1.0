@@ -102,11 +102,18 @@
 	return [tableData count];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return 1;
+}
+
 // This gets called whenever a row is selected.
 // There appears to be some kind of a delegate / UI issue, as this is not getting called.
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Cell Selected");
+    
+    // Add all voice commands here.
 }
 
 // Generates the data of a single row cell.

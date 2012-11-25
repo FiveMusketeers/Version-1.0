@@ -12,8 +12,8 @@
 
 @interface ListCell : UITableViewCell
 {
-	FliteController *fliteController;
-    Slt *slt;
+//	FliteController *fliteController;
+//    Slt *slt;
 }
 
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -22,7 +22,7 @@
 @property (strong, nonatomic) Slt *slt;
 @property (nonatomic, assign) BOOL * controllerContext;
 
--(IBAction) Act_voice: (id) sender;
+//-(IBAction) Act_voice: (id) sender;
 
 @end
 
