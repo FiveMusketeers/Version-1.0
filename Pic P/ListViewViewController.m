@@ -46,17 +46,13 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //NSLog(@"ListViewViewController is first responder? %@", self.isFirstResponder);
-    NSLog(@"ListTable's delegate: %@", self.ListTable.delegate );
-    NSLog(@"Gestures Attached to ListTable: %@", self.ListTable.gestureRecognizers);
-    
     
     //Populate list for the scroll view. We grab the values from the delegate.
     // If we are in the list item view context, we want to load all the items given a list name.
     if ( self.displayLists )
     {
         // DISPLAY LIST CONTEXT
-        NSLog(@"Context: Displaying all lists.");
+        NSLog( @"Context: Displaying all lists." );
         
         AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
         self.tableData = delegate.lists;
@@ -65,7 +61,7 @@
     else
     {
         // DISPLAY LIST ITEMS CONTEXT
-        NSLog(@"Context: Display all items from a list.");
+        NSLog( @"Context: Display all items from a list." );
         // Here we only want to display all the items from a single list.
         // we dont want to load table data here. ListCell will now load it before calling presentModelViewController.
         // In other words, we want another class to pass the data before this view is loaded.
@@ -78,7 +74,7 @@
         }
         else
         {
-            NSLog(@"self.tableData is empty. Cannot load.");
+            NSLog( @"self.tableData is empty." );
         }
         // END DISPLAY LIST ITEMS CONTEXT
     }
@@ -120,35 +116,61 @@
     NSLog(@"Cell Selected");
     
     // Get the selected cell.
-    ListCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath];
+    ListCell *selectedCell = [tableView cellForRowAtIndexPath:indexPath]; // Ignore the warning. It's giving us what we want.
 
     NSString *cellLabel = selectedCell.nameLabel.text;
     
     NSLog( @"Label: %@", cellLabel );
-//
-//    [self.fliteController say:cellLabel withVoice:self.slt];
-//    
-//    // Now we want to check the controller context.
-//
-//    if( self.displayLists == false )
-//    {
-//        AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-//        NSDictionary *listDictionary = delegate.listDictionary;
-//
-//        // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
-//
-//        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
-//
-//        // Pass the array with the list items to the controller.
-//        listView.tableData = [ listDictionary objectForKey:cellLabel ];
-//
-//        [self presentModalViewController:listView animated:YES];
-//        
-//    }
-//    else
-//    {
-//        NSLog(@"ListItem selected.");
-//    }
+
+//  [self.fliteController say:cellLabel withVoice:self.slt];
+    
+    // Now we want to check the controller context.
+
+    if( self.displayLists == TRUE )
+    {
+        NSLog(@"Switching to a ListItem display.");
+        
+        AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        NSDictionary *listDictionary = delegate.listDictionary;
+        
+        if( listDictionary != nil)
+        {
+            NSLog(@"Displaying all keys in the listDictionary.");
+            for ( NSString *key in listDictionary.allKeys )
+            {
+                NSLog(@"Key: %@", key);
+            }
+            NSLog(@"End displaying all keys in the listDictionary.");
+        }
+        else
+        {
+            NSLog(@"listDictionary is nil.");
+        }
+        
+        NSMutableArray *array = [listDictionary objectForKey: cellLabel ];
+        
+        for ( ListItem *item in array )
+        {
+            NSLog( @"ImagePath: %@", item.imagePath );
+        }
+
+        // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.
+
+        ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];
+
+        // Pass the array with the list items to the controller.
+        listView.tableData = [ listDictionary objectForKey:cellLabel ];
+        listView.displayLists = false;
+        // Render the view.
+        
+        // This allows the back to return to the list view.
+        [self presentModalViewController:listView animated:YES];
+        
+    }
+    else
+    {
+        NSLog(@"ListItem selected.");
+    }
 }
 
 // Generates the data of a single row cell.
