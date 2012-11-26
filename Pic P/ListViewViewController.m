@@ -295,7 +295,18 @@
 		}
 		// Assign all the object attributes to the cell attributes here.
 		cell.nameLabel.text = listItem.name; // The cell takes on the name of the object.
-		cell.image.image = listItem.getImage; // Cell's image grabs the listItem's image.
+        NSString *path = [[NSBundle mainBundle]
+                          pathForResource: listItem.imagePath
+                          ofType:nil];
+        UIImage *image;
+        if (!path){
+            NSString* fullPath = [self FindPath:listItem.imagePath];
+            image = [UIImage imageWithContentsOfFile: fullPath];
+        }
+        else{
+            image = [UIImage imageNamed: listItem.imagePath];
+        }
+		cell.image.image = image; // Cell's image grabs the listItem's image.
 		
 		// End of plugging object attributes into the cellview.
 	}
@@ -304,6 +315,13 @@
 }
 // End generating tableviewcell
 
+//Finds path to picture in document
+-(NSString*)FindPath: (NSString*)fileName{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent: fileName];
+    return fullPath;
+}
 
 // Text to speech framework
 - (FliteController *)fliteController

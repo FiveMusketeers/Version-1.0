@@ -39,8 +39,18 @@
     return self;
 }
 
--(void)viewDidAppear:(BOOL)animated{
+//- (void)viewWillAppear:(BOOL)animated;
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear: animated];
+    
+    PicturePosition = LowerBound;
+    
     [self LoadPictures];
+    
+    
+    
 }
 
 - (void)viewDidLoad
@@ -88,6 +98,9 @@
 }
 
 -(void)LoadPictures{
+    
+ //   NSLog(@"Loading Pictures.");
+ //   NSLog(@"Upper Bound: %d Lower Bound: %d Picture Position: %d", UpperBound, LowerBound, PicturePosition);
     
     self.items = delegate.items;
     
