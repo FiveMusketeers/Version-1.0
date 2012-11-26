@@ -63,11 +63,11 @@
 
 
 - (IBAction)update:(id)sender {
-   NSString *sqlCommand = @"DELETE FROM items ()";
+   //NSString *sqlCommand = @"DELETE FROM items ()";
 }
 
 - (IBAction)Delete:(id)sender {
-    NSString *sqlCommand = @"Delete FROM items ()";
+    //NSString *sqlCommand = @"Delete FROM items ()";
 }
 
 @end

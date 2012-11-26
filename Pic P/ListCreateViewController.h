@@ -17,12 +17,10 @@
 
 @interface ListCreateViewController : UIViewController{
     IBOutlet UITextField *textField1;
-    IBOutlet OurButton *listPicture;
     AppDelegate *delegate;
 }
 
 @property(nonatomic, retain) IBOutlet UITextField *textField1;
-@property(nonatomic, retain) IBOutlet OurButton *listPicture;
 @property(nonatomic, retain) AppDelegate *delegate;
 @property(nonatomic, retain) NSMutableArray *listToAdd;
 @property(nonatomic, retain) NSMutableArray *lists;
@@ -33,5 +31,6 @@
 - (IBAction) goToViewPictures:(id) sender;
 - (IBAction) save;
 - (IBAction) PreviousMenu:(id)sender;
+- (IBAction) pickImage;
 
 @end

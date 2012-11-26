@@ -10,6 +10,7 @@
 
 #import "ListCreateViewController.h"
 #import "PictureAllViewController.h"
+#import "ListPicturesViewController.h"
 #import "ListItem.h"
 #import "AppDelegate.h"
 
@@ -19,7 +20,7 @@
 
 
 ///Components to create a list
-@synthesize textField1, delegate, listPicture, listToAdd;
+@synthesize textField1, delegate, listToAdd;
 
 //Componenets to update lists array and dictionary
 @synthesize lists, listDictionary;
@@ -78,9 +79,19 @@
     //Information on list being added
     //Grabs list name and picture file name
     NSString *listName = textField1.text;
-    NSString *listPictureFile = listPicture.getImageFile;
-    if (listPictureFile == Nil){
+    
+    NSString *listPictureFile;
+    if (delegate.listPicChosen == 1){
         listPictureFile = @"list.png";
+    }
+    else if (delegate.listPicChosen == 2){
+        listPictureFile = @"urgent.png";
+    }
+    else if (delegate.listPicChosen == 3){
+        listPictureFile = @"shoppingCart.png";
+    }
+    else if (delegate.listPicChosen == 4){
+        listPictureFile = @"happy.png";
     }
 
     ListItem *theList = [ [ListItem alloc] initWithName:listName imagePath:listPictureFile ];
@@ -170,6 +181,11 @@
         sqlite3_finalize(compiledStatement);
         sqlite3_close(database);
     }
+}
+
+- (IBAction) pickImage{
+    ListPicturesViewController *lpvc = [[ListPicturesViewController alloc] init];
+    [self presentModalViewController:lpvc animated:TRUE];
 }
 
 - (IBAction)PreviousMenu:(id)sender {

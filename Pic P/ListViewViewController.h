@@ -35,6 +35,6 @@
 @property (nonatomic, assign) BOOL * displayLists;
 @property (nonatomic, assign) BOOL * shareLists;
 @property (nonatomic, assign) NSString *tableName;
-@property (nonatomic, retain) IBOutlet UILabel *title;
+@property (strong, nonatomic) IBOutlet UILabel *title;
 
 @end

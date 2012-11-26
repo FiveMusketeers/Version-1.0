@@ -35,5 +35,6 @@
 //Stuff Steven Needs
 @property (strong, nonatomic) NSMutableArray *listToAdd;
 @property (strong, nonatomic) NSString *databasePath;
+@property (nonatomic, assign) int listPicChosen;
 
 @end

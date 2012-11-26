@@ -29,6 +29,8 @@
 
 -(IBAction)FindCategory:(UIButton*)sender;
 
+-(IBAction)NotReady:(UIButton*)sender;
+
 -(IBAction)goBack:(id)sender;
 
 

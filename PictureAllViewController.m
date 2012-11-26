@@ -69,6 +69,15 @@
     
 }
 
+-(IBAction)NotReady:(UIButton *)sender{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Sorry"
+                                                    message:@"Category Not Ready"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
+
 - (IBAction)goBack:(id)sender{
     [self dismissModalViewControllerAnimated:YES];
 }

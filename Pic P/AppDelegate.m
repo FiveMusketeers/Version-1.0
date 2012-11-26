@@ -17,7 +17,7 @@
 
 // Both NSMutableArray
 
-@synthesize items, lists, listDictionary, viewControllerOne;
+@synthesize items, lists, listDictionary, viewControllerOne, listPicChosen;
 
 //PERTAINS TO CREATE LIST
 @synthesize listToAdd, databasePath;
@@ -31,6 +31,7 @@
     items = [[NSMutableArray alloc] init];
     lists = [[NSMutableArray alloc] init];
     listDictionary = [[NSMutableDictionary alloc] init];
+    listPicChosen = 1;
     
     //PERTAINS TO CREATE LIST
     listToAdd = [[NSMutableArray alloc] init];
