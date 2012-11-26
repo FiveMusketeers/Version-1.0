@@ -16,8 +16,6 @@
 		5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE891632046F00CFCD33 /* CreatePictureViewController.m */; };
 		5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */; };
 		5151BD5D165EB15400C9AB14 /* CategoryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151BD59165EB15400C9AB14 /* CategoryViewController_iPhone.xib */; };
-		5151BD68165EB37D00C9AB14 /* PictureAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151BD66165EB37D00C9AB14 /* PictureAllViewController.m */; };
-		5151BD69165EB37D00C9AB14 /* PictureAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151BD67165EB37D00C9AB14 /* PictureAllViewController.xib */; };
 		518B6EA7164DAC2000D5FD6E /* hammer.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EA6164DAC2000D5FD6E /* hammer.png */; };
 		518B6EAA164DACDD00D5FD6E /* Fix.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EA9164DACDD00D5FD6E /* Fix.png */; };
 		518B6EAC164DADD100D5FD6E /* Eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAB164DADD100D5FD6E /* Eye.png */; };
@@ -53,6 +51,57 @@
 		51B0468F16631543001B353D /* EditPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0468D1663138F001B353D /* EditPictureViewController.m */; };
 		51B0469316631D77001B353D /* ListPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0469116631D77001B353D /* ListPicturesViewController.m */; };
 		51B0469416631D77001B353D /* ListPicturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0469216631D77001B353D /* ListPicturesViewController.xib */; };
+		51B0469C16632672001B353D /* PictureAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0469B16632672001B353D /* PictureAllViewController.m */; };
+		51B0469E16632679001B353D /* PictureAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0469D16632679001B353D /* PictureAllViewController.xib */; };
+		51B0469F16632688001B353D /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0467816630B15001B353D /* AuthenticationViewController.m */; };
+		51B046A01663268F001B353D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B141630977D00DAE149 /* SecondViewController.m */; };
+		51B046A116632694001B353D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0467D16630B2F001B353D /* SignUpViewController.m */; };
+		51B046A21663269D001B353D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B0A1630977D00DAE149 /* AppDelegate.m */; };
+		51B046A31663269D001B353D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B0D1630977D00DAE149 /* FirstViewController.m */; };
+		51B046A41663269D001B353D /* ListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */; };
+		51B046A51663269D001B353D /* ListCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */; };
+		51B046A61663269D001B353D /* ListPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0469116631D77001B353D /* ListPicturesViewController.m */; };
+		51B046A71663269D001B353D /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C006816350D3A00CB30C3 /* ListCell.m */; };
+		51B046A81663269D001B353D /* ListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C006E1635141800CB30C3 /* ListItem.m */; };
+		51B046A91663269D001B353D /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */; };
+		51B046AA1663269D001B353D /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D4CA316352C7D007F8DE1 /* Category.m */; };
+		51B046AB1663269D001B353D /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD571630C6BF007DA5C4 /* ShareViewController.m */; };
+		51B046AC1663269D001B353D /* SharePicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE801632039200CFCD33 /* SharePicturesViewController.m */; };
+		51B046AD1663269D001B353D /* PictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */; };
+		51B046AE1663269D001B353D /* PictureAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0469B16632672001B353D /* PictureAllViewController.m */; };
+		51B046AF1663269D001B353D /* CreatePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE891632046F00CFCD33 /* CreatePictureViewController.m */; };
+		51B046B01663269D001B353D /* EditPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0468D1663138F001B353D /* EditPictureViewController.m */; };
+		51B046B1166326A7001B353D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = A16E882E1634BFE80094C978 /* icon.png */; };
+		51B046B2166326A7001B353D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
+		51B046B3166326A7001B353D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
+		51B046B4166326A7001B353D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
+		51B046B5166326A7001B353D /* hanger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115631635F51C00F9934D /* hanger.jpg */; };
+		51B046B6166326A7001B353D /* hat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115641635F51C00F9934D /* hat.jpg */; };
+		51B046B7166326A7001B353D /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5115485F165F21FF00CDE209 /* apple.png */; };
+		51B046B8166326A7001B353D /* milk.png in Resources */ = {isa = PBXBuildFile; fileRef = 51154861165F222E00CDE209 /* milk.png */; };
+		51B046B9166326A7001B353D /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF51649A66900001603 /* List.png */; };
+		51B046BA166326A7001B353D /* Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF91649A7DB00001603 /* Category.png */; };
+		51B046BB166326A7001B353D /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFB1649A97C00001603 /* Picture.png */; };
+		51B046BC166326A7001B353D /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFD1649A9B700001603 /* Share.png */; };
+		51B046BD166326A7001B353D /* BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFF1649AF3000001603 /* BackArrow.png */; };
+		51B046BE166326A7001B353D /* hammer.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EA6164DAC2000D5FD6E /* hammer.png */; };
+		51B046BF166326A7001B353D /* Fix.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EA9164DACDD00D5FD6E /* Fix.png */; };
+		51B046C0166326A7001B353D /* Eye.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAB164DADD100D5FD6E /* Eye.png */; };
+		51B046C1166326A7001B353D /* delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAD164DB35500D5FD6E /* delete.png */; };
+		51B046C2166326A7001B353D /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAF164DB3B100D5FD6E /* add.png */; };
+		51B046C3166326B3001B353D /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */; };
+		51B046C4166326B3001B353D /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */; };
+		51B046C5166326B3001B353D /* ListEditViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */; };
+		51B046C6166326B3001B353D /* ListCreateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */; };
+		51B046C7166326B3001B353D /* ListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9C006B16350E6700CB30C3 /* ListCell_iPhone.xib */; };
+		51B046C8166326B3001B353D /* CategoryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151BD59165EB15400C9AB14 /* CategoryViewController_iPhone.xib */; };
+		51B046C9166326B3001B353D /* ShareViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD551630C6BF007DA5C4 /* ShareViewController_iPhone.xib */; };
+		51B046CA166326B3001B353D /* SharePicturesViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE791632036D00CFCD33 /* SharePicturesViewController_iPhone.xib */; };
+		51B046CB166326B3001B353D /* PictureAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0469D16632679001B353D /* PictureAllViewController.xib */; };
+		51B046CC166326B3001B353D /* ListPicturesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0469216631D77001B353D /* ListPicturesViewController.xib */; };
+		51B046CD166326B3001B353D /* PictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */; };
+		51B046CE166326B3001B353D /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */; };
+		51B046CF166326B3001B353D /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0468A16631359001B353D /* EditPictureViewController_iPhone.xib */; };
 		51B1155E1635F50600F9934D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
 		51B115611635F50F00F9934D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
 		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
@@ -119,9 +168,6 @@
 		5119FE891632046F00CFCD33 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CreatePictureViewController.m; sourceTree = "<group>"; };
 		5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPhone.xib; sourceTree = "<group>"; };
 		5151BD59165EB15400C9AB14 /* CategoryViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPhone.xib; sourceTree = "<group>"; };
-		5151BD65165EB37D00C9AB14 /* PictureAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureAllViewController.h; path = ../PictureAllViewController.h; sourceTree = "<group>"; };
-		5151BD66165EB37D00C9AB14 /* PictureAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureAllViewController.m; path = ../PictureAllViewController.m; sourceTree = "<group>"; };
-		5151BD67165EB37D00C9AB14 /* PictureAllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PictureAllViewController.xib; path = ../PictureAllViewController.xib; sourceTree = "<group>"; };
 		518B6EA6164DAC2000D5FD6E /* hammer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hammer.png; sourceTree = "<group>"; };
 		518B6EA9164DACDD00D5FD6E /* Fix.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fix.png; sourceTree = "<group>"; };
 		518B6EAB164DADD100D5FD6E /* Eye.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Eye.png; sourceTree = "<group>"; };
@@ -161,6 +207,9 @@
 		51B0469016631D77001B353D /* ListPicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPicturesViewController.h; sourceTree = "<group>"; };
 		51B0469116631D77001B353D /* ListPicturesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPicturesViewController.m; sourceTree = "<group>"; };
 		51B0469216631D77001B353D /* ListPicturesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListPicturesViewController.xib; sourceTree = "<group>"; };
+		51B0469A1663266A001B353D /* PictureAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureAllViewController.h; sourceTree = "<group>"; };
+		51B0469B16632672001B353D /* PictureAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureAllViewController.m; sourceTree = "<group>"; };
+		51B0469D16632679001B353D /* PictureAllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureAllViewController.xib; sourceTree = "<group>"; };
 		51B1155D1635F50600F9934D /* scissors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpg; sourceTree = "<group>"; };
 		51B115601635F50F00F9934D /* brush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brush.jpg; sourceTree = "<group>"; };
 		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
@@ -283,8 +332,8 @@
 		5119FE98163204D100CFCD33 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
-				5151BD66165EB37D00C9AB14 /* PictureAllViewController.m */,
 				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
+				51B0469B16632672001B353D /* PictureAllViewController.m */,
 				5119FE891632046F00CFCD33 /* CreatePictureViewController.m */,
 				51B0468D1663138F001B353D /* EditPictureViewController.m */,
 			);
@@ -326,8 +375,8 @@
 		5119FEA11632056200CFCD33 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				51B0469A1663266A001B353D /* PictureAllViewController.h */,
 				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
-				5151BD65165EB37D00C9AB14 /* PictureAllViewController.h */,
 				51B0468C16631372001B353D /* EditPictureViewController.h */,
 				5119FE881632046500CFCD33 /* CreatePictureViewController.h */,
 			);
@@ -358,9 +407,9 @@
 		5119FEA9163205A400CFCD33 /* Picture */ = {
 			isa = PBXGroup;
 			children = (
+				51B0469D16632679001B353D /* PictureAllViewController.xib */,
 				51B0469216631D77001B353D /* ListPicturesViewController.xib */,
 				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
-				5151BD67165EB37D00C9AB14 /* PictureAllViewController.xib */,
 				5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */,
 				51B0468A16631359001B353D /* EditPictureViewController_iPhone.xib */,
 			);
@@ -675,13 +724,13 @@
 				518B6EFB164DBFC300D5FD6E /* OpenEars2.gram in Resources */,
 				518B6EFC164DBFC300D5FD6E /* OpenEarsCorpus.txt in Resources */,
 				5151BD5D165EB15400C9AB14 /* CategoryViewController_iPhone.xib in Resources */,
-				5151BD69165EB37D00C9AB14 /* PictureAllViewController.xib in Resources */,
 				51154860165F21FF00CDE209 /* apple.png in Resources */,
 				51154862165F222E00CDE209 /* milk.png in Resources */,
 				51B0467B16630B15001B353D /* AuthenticationViewController.xib in Resources */,
 				51B0468016630B2F001B353D /* SignUpViewController.xib in Resources */,
 				51B0468B16631359001B353D /* EditPictureViewController_iPhone.xib in Resources */,
 				51B0469416631D77001B353D /* ListPicturesViewController.xib in Resources */,
+				51B0469E16632679001B353D /* PictureAllViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -689,6 +738,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B046C3166326B3001B353D /* FirstViewController_iPhone.xib in Resources */,
+				51B046C4166326B3001B353D /* SecondViewController_iPhone.xib in Resources */,
+				51B046C5166326B3001B353D /* ListEditViewController_iPhone.xib in Resources */,
+				51B046C6166326B3001B353D /* ListCreateViewController_iPhone.xib in Resources */,
+				51B046C7166326B3001B353D /* ListCell_iPhone.xib in Resources */,
+				51B046C8166326B3001B353D /* CategoryViewController_iPhone.xib in Resources */,
+				51B046C9166326B3001B353D /* ShareViewController_iPhone.xib in Resources */,
+				51B046CA166326B3001B353D /* SharePicturesViewController_iPhone.xib in Resources */,
+				51B046CB166326B3001B353D /* PictureAllViewController.xib in Resources */,
+				51B046CC166326B3001B353D /* ListPicturesViewController.xib in Resources */,
+				51B046CD166326B3001B353D /* PictureViewController_iPhone.xib in Resources */,
+				51B046CE166326B3001B353D /* CreatePictureViewController_iPhone.xib in Resources */,
+				51B046CF166326B3001B353D /* EditPictureViewController_iPhone.xib in Resources */,
+				51B046B1166326A7001B353D /* icon.png in Resources */,
+				51B046B2166326A7001B353D /* scissors.jpg in Resources */,
+				51B046B3166326A7001B353D /* brush.jpg in Resources */,
+				51B046B4166326A7001B353D /* socks.jpg in Resources */,
+				51B046B5166326A7001B353D /* hanger.jpg in Resources */,
+				51B046B6166326A7001B353D /* hat.jpg in Resources */,
+				51B046B7166326A7001B353D /* apple.png in Resources */,
+				51B046B8166326A7001B353D /* milk.png in Resources */,
+				51B046B9166326A7001B353D /* List.png in Resources */,
+				51B046BA166326A7001B353D /* Category.png in Resources */,
+				51B046BB166326A7001B353D /* Picture.png in Resources */,
+				51B046BC166326A7001B353D /* Share.png in Resources */,
+				51B046BD166326A7001B353D /* BackArrow.png in Resources */,
+				51B046BE166326A7001B353D /* hammer.png in Resources */,
+				51B046BF166326A7001B353D /* Fix.png in Resources */,
+				51B046C0166326A7001B353D /* Eye.png in Resources */,
+				51B046C1166326A7001B353D /* delete.png in Resources */,
+				51B046C2166326A7001B353D /* add.png in Resources */,
 				76BA2B371630977D00DAE149 /* InfoPlist.strings in Resources */,
 				51E2AD721630CAED007DA5C4 /* ListViewViewController_iPhone.xib in Resources */,
 				5115485E165F180000CDE209 /* PictureDatabase.sql in Resources */,
@@ -735,10 +815,10 @@
 				6C9C006916350D3A00CB30C3 /* ListCell.m in Sources */,
 				6C9C006F1635141800CB30C3 /* ListItem.m in Sources */,
 				6C2D4CA416352C7D007F8DE1 /* Category.m in Sources */,
-				5151BD68165EB37D00C9AB14 /* PictureAllViewController.m in Sources */,
 				51B0467A16630B15001B353D /* AuthenticationViewController.m in Sources */,
 				51B0467F16630B2F001B353D /* SignUpViewController.m in Sources */,
 				51B0469316631D77001B353D /* ListPicturesViewController.m in Sources */,
+				51B0469C16632672001B353D /* PictureAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,6 +826,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B046A21663269D001B353D /* AppDelegate.m in Sources */,
+				51B046A31663269D001B353D /* FirstViewController.m in Sources */,
+				51B046A41663269D001B353D /* ListEditViewController.m in Sources */,
+				51B046A51663269D001B353D /* ListCreateViewController.m in Sources */,
+				51B046A61663269D001B353D /* ListPicturesViewController.m in Sources */,
+				51B046A71663269D001B353D /* ListCell.m in Sources */,
+				51B046A81663269D001B353D /* ListItem.m in Sources */,
+				51B046A91663269D001B353D /* CategoryViewController.m in Sources */,
+				51B046AA1663269D001B353D /* Category.m in Sources */,
+				51B046AB1663269D001B353D /* ShareViewController.m in Sources */,
+				51B046AC1663269D001B353D /* SharePicturesViewController.m in Sources */,
+				51B046AD1663269D001B353D /* PictureViewController.m in Sources */,
+				51B046AE1663269D001B353D /* PictureAllViewController.m in Sources */,
+				51B046AF1663269D001B353D /* CreatePictureViewController.m in Sources */,
+				51B046B01663269D001B353D /* EditPictureViewController.m in Sources */,
+				51B046A116632694001B353D /* SignUpViewController.m in Sources */,
+				51B046A01663268F001B353D /* SecondViewController.m in Sources */,
+				51B0469F16632688001B353D /* AuthenticationViewController.m in Sources */,
 				76BA2B3A1630977D00DAE149 /* Pic_PTests.m in Sources */,
 				51E2AD711630CAED007DA5C4 /* ListViewViewController.m in Sources */,
 				51C84EC71662BDD1001F9487 /* OurButton.m in Sources */,
