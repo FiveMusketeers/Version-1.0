@@ -14,11 +14,7 @@
 		5119FE7C1632036D00CFCD33 /* SharePicturesViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE791632036D00CFCD33 /* SharePicturesViewController_iPhone.xib */; };
 		5119FE831632039200CFCD33 /* SharePicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE801632039200CFCD33 /* SharePicturesViewController.m */; };
 		5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE891632046F00CFCD33 /* CreatePictureViewController.m */; };
-		5119FE8C1632046F00CFCD33 /* EditPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */; };
 		5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */; };
-		5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */; };
-		512DD2431649951E00662F15 /* PictureDeleteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 512DD2411649951E00662F15 /* PictureDeleteViewController.m */; };
-		512DD2441649951E00662F15 /* PictureDeleteViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */; };
 		5151BD5D165EB15400C9AB14 /* CategoryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151BD59165EB15400C9AB14 /* CategoryViewController_iPhone.xib */; };
 		5151BD68165EB37D00C9AB14 /* PictureAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5151BD66165EB37D00C9AB14 /* PictureAllViewController.m */; };
 		5151BD69165EB37D00C9AB14 /* PictureAllViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151BD67165EB37D00C9AB14 /* PictureAllViewController.xib */; };
@@ -53,6 +49,8 @@
 		51B0467B16630B15001B353D /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0467916630B15001B353D /* AuthenticationViewController.xib */; };
 		51B0467F16630B2F001B353D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0467D16630B2F001B353D /* SignUpViewController.m */; };
 		51B0468016630B2F001B353D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0467E16630B2F001B353D /* SignUpViewController.xib */; };
+		51B0468B16631359001B353D /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0468A16631359001B353D /* EditPictureViewController_iPhone.xib */; };
+		51B0468F16631543001B353D /* EditPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0468D1663138F001B353D /* EditPictureViewController.m */; };
 		51B1155E1635F50600F9934D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
 		51B115611635F50F00F9934D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
 		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
@@ -117,11 +115,7 @@
 		5119FE85163203BA00CFCD33 /* SharePicturesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharePicturesViewController.h; sourceTree = "<group>"; };
 		5119FE881632046500CFCD33 /* CreatePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreatePictureViewController.h; sourceTree = "<group>"; };
 		5119FE891632046F00CFCD33 /* CreatePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CreatePictureViewController.m; sourceTree = "<group>"; };
-		5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = EditPictureViewController.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreatePictureViewController_iPhone.xib; sourceTree = "<group>"; };
-		5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
-		512DD2411649951E00662F15 /* PictureDeleteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureDeleteViewController.m; sourceTree = "<group>"; };
-		512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureDeleteViewController_iPhone.xib; sourceTree = "<group>"; };
 		5151BD59165EB15400C9AB14 /* CategoryViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryViewController_iPhone.xib; sourceTree = "<group>"; };
 		5151BD65165EB37D00C9AB14 /* PictureAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PictureAllViewController.h; path = ../PictureAllViewController.h; sourceTree = "<group>"; };
 		5151BD66165EB37D00C9AB14 /* PictureAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PictureAllViewController.m; path = ../PictureAllViewController.m; sourceTree = "<group>"; };
@@ -159,6 +153,9 @@
 		51B0467C16630B2F001B353D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		51B0467D16630B2F001B353D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
 		51B0467E16630B2F001B353D /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		51B0468A16631359001B353D /* EditPictureViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditPictureViewController_iPhone.xib; sourceTree = "<group>"; };
+		51B0468C16631372001B353D /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
+		51B0468D1663138F001B353D /* EditPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditPictureViewController.m; sourceTree = "<group>"; };
 		51B1155D1635F50600F9934D /* scissors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpg; sourceTree = "<group>"; };
 		51B115601635F50F00F9934D /* brush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brush.jpg; sourceTree = "<group>"; };
 		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
@@ -212,10 +209,8 @@
 		76BA2B361630977D00DAE149 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76BA2B381630977D00DAE149 /* Pic_PTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pic_PTests.h; sourceTree = "<group>"; };
 		76BA2B391630977D00DAE149 /* Pic_PTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pic_PTests.m; sourceTree = "<group>"; };
-		A16E881D1634B4290094C978 /* EditPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditPictureViewController.h; sourceTree = "<group>"; };
 		A16E882E1634BFE80094C978 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		A16E88301634BFF50094C978 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		A1B417F51634854C00E9D17B /* PictureDeleteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureDeleteViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,9 +279,8 @@
 			children = (
 				5151BD66165EB37D00C9AB14 /* PictureAllViewController.m */,
 				51E2AD5E1630C6CE007DA5C4 /* PictureViewController.m */,
-				512DD2411649951E00662F15 /* PictureDeleteViewController.m */,
 				5119FE891632046F00CFCD33 /* CreatePictureViewController.m */,
-				5119FE8A1632046F00CFCD33 /* EditPictureViewController.m */,
+				51B0468D1663138F001B353D /* EditPictureViewController.m */,
 			);
 			name = Picture;
 			sourceTree = "<group>";
@@ -327,8 +321,7 @@
 			children = (
 				51E2AD5D1630C6CE007DA5C4 /* PictureViewController.h */,
 				5151BD65165EB37D00C9AB14 /* PictureAllViewController.h */,
-				A1B417F51634854C00E9D17B /* PictureDeleteViewController.h */,
-				A16E881D1634B4290094C978 /* EditPictureViewController.h */,
+				51B0468C16631372001B353D /* EditPictureViewController.h */,
 				5119FE881632046500CFCD33 /* CreatePictureViewController.h */,
 			);
 			name = Picture;
@@ -361,8 +354,7 @@
 				51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */,
 				5151BD67165EB37D00C9AB14 /* PictureAllViewController.xib */,
 				5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */,
-				5119FE921632049B00CFCD33 /* EditPictureViewController_iPhone.xib */,
-				512DD2421649951E00662F15 /* PictureDeleteViewController_iPhone.xib */,
+				51B0468A16631359001B353D /* EditPictureViewController_iPhone.xib */,
 			);
 			name = Picture;
 			sourceTree = "<group>";
@@ -643,7 +635,6 @@
 				51E2AD7E1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib in Resources */,
 				5119FE7C1632036D00CFCD33 /* SharePicturesViewController_iPhone.xib in Resources */,
 				5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */,
-				5119FE941632049B00CFCD33 /* EditPictureViewController_iPhone.xib in Resources */,
 				A16E882F1634BFE80094C978 /* icon.png in Resources */,
 				A16E88311634BFF50094C978 /* icon.png in Resources */,
 				6C9C006C16350E6700CB30C3 /* ListCell_iPhone.xib in Resources */,
@@ -652,7 +643,6 @@
 				51B115661635F51C00F9934D /* socks.jpg in Resources */,
 				51B115671635F51C00F9934D /* hanger.jpg in Resources */,
 				51B115681635F51C00F9934D /* hat.jpg in Resources */,
-				512DD2441649951E00662F15 /* PictureDeleteViewController_iPhone.xib in Resources */,
 				51ACCBF61649A66900001603 /* List.png in Resources */,
 				51ACCBFA1649A7DB00001603 /* Category.png in Resources */,
 				51ACCBFC1649A97C00001603 /* Picture.png in Resources */,
@@ -682,6 +672,7 @@
 				51154862165F222E00CDE209 /* milk.png in Resources */,
 				51B0467B16630B15001B353D /* AuthenticationViewController.xib in Resources */,
 				51B0468016630B2F001B353D /* SignUpViewController.xib in Resources */,
+				51B0468B16631359001B353D /* EditPictureViewController_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,6 +709,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51B0468F16631543001B353D /* EditPictureViewController.m in Sources */,
 				51C84EC91662BFC1001F9487 /* OurButton.m in Sources */,
 				A10DE6C51634A03200E2380A /* ListViewViewController.m in Sources */,
 				76BA2B071630977D00DAE149 /* main.m in Sources */,
@@ -731,11 +723,9 @@
 				51E2AD7D1630CCD7007DA5C4 /* ListCreateViewController.m in Sources */,
 				5119FE831632039200CFCD33 /* SharePicturesViewController.m in Sources */,
 				5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */,
-				5119FE8C1632046F00CFCD33 /* EditPictureViewController.m in Sources */,
 				6C9C006916350D3A00CB30C3 /* ListCell.m in Sources */,
 				6C9C006F1635141800CB30C3 /* ListItem.m in Sources */,
 				6C2D4CA416352C7D007F8DE1 /* Category.m in Sources */,
-				512DD2431649951E00662F15 /* PictureDeleteViewController.m in Sources */,
 				5151BD68165EB37D00C9AB14 /* PictureAllViewController.m in Sources */,
 				51B0467A16630B15001B353D /* AuthenticationViewController.m in Sources */,
 				51B0467F16630B2F001B353D /* SignUpViewController.m in Sources */,

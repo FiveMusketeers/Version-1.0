@@ -9,7 +9,6 @@
 #import "PictureViewController.h"
 #import "CreatePictureViewController.h"
 #import "PictureAllViewController.h"
-#import "PictureDeleteViewController.h"
 #import "AppDelegate.h"
 
 @interface PictureViewController ()
@@ -65,10 +64,6 @@
         [self presentModalViewController:pictureView animated:YES];
 }
 
-- (IBAction)pictureDelete {
-    PictureDeleteViewController *pictureDelete = [[PictureDeleteViewController alloc]initWithNibName:@"PictureDeleteViewController_iPhone" bundle:nil];
-    [self presentModalViewController:pictureDelete animated:YES];
-}
 
 - (IBAction)goBack{
     [self dismissModalViewControllerAnimated:YES];

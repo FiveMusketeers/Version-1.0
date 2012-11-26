@@ -8,6 +8,8 @@
 
 #import "EditPictureViewController.h"
 #import "AppDelegate.h"
+#import "ListItem.h"
+#import "AppDelegate.h"
 @interface EditPictureViewController ()
 
 @end
@@ -15,12 +17,13 @@
 @implementation EditPictureViewController
 @synthesize textOfImage;
 @synthesize imageFromData;
+@synthesize pickenItem;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-
+    
     }
     return self;
 }
@@ -28,6 +31,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    textOfImage.text = self.pickenItem.name;
+    ListItem *item=self.pickenItem;
+    imageFromData.image=[UIImage imageNamed:item.name];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -58,6 +65,13 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-- (IBAction)Save:(id)sender {
+
+- (IBAction)update:(id)sender {
+
 }
+
+- (IBAction)Delete:(id)sender {
+
+}
+
 @end

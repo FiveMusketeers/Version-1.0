@@ -12,6 +12,8 @@
 
 #import "ListItem.h"
 
+#import "EditPictureViewController.h"
+
 #define path1 @""
 #define path2 @""
 #define path3 @""
@@ -113,7 +115,7 @@
         UIImage *image;
         if (!path){
             NSString* fullPath = [self FindPath:itemRead.imagePath];
-            image = [UIImage imageNamed: fullPath];
+            image = [UIImage imageWithContentsOfFile: fullPath];
         }
         else{
             image = [UIImage imageNamed: itemRead.imagePath];
@@ -179,17 +181,19 @@
 {
     if (buttonSelected.getImageFile != Nil && buttonSelected.getImageName != Nil)
     {
+        ListItem *itemSelected= [[ListItem alloc] initWithName:buttonSelected.getImageName imagePath:buttonSelected.getImageFile];
+
+        
         if (isCreating){
-            NSString *nameToAdd = buttonSelected.getImageName;
-            NSString *fileToAdd = buttonSelected.getImageFile;
-            
-            ListItem *itemToAdd = [[ListItem alloc] initWithName:nameToAdd imagePath:fileToAdd];
-            
-            NSLog(@"We are adding an item with name %@, and path %@", itemToAdd.name, itemToAdd.imagePath);
-            [self.listToAdd addObject:itemToAdd];
+            [self.listToAdd addObject:itemSelected];
         }
         else{
             //Enlarge
+            EditPictureViewController *epvc = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPhone" bundle:nil];
+            
+            epvc.pickenItem = itemSelected;
+            
+            [self presentModalViewController:epvc animated:TRUE];
         }
     }
     else{
@@ -233,10 +237,7 @@
     {
         NSLog(@"Cannot go any further.");
     }
-    //    NSLog(@"Lowerbound: %d", LowerBound);
-    //    NSLog(@"Upperbound: %d", UpperBound);
-    //    NSLog(@"Check: %d", (UpperBound + 9));
-    //    NSLog(@"Final array position: %d", [self.items count] -1 );
+
 }
 
 -(void)clearPictures
