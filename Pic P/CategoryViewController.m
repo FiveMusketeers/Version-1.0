@@ -74,6 +74,13 @@
     [self LoadPictures];
 }
 
+-(NSString*)FindPath: (NSString*)fileName{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent: fileName];
+    return fullPath;
+}
+
 -(void)LoadPictures{
     /*NSString *categoryPath;
      
@@ -100,8 +107,18 @@
     while (UpperBound >= PicturePosition)
     {
         ListItem *itemRead = [self.items objectAtIndex:PicturePosition];
+        NSString *path = [[NSBundle mainBundle]
+                          pathForResource: itemRead.imagePath
+                          ofType:nil];
+        UIImage *image;
+        if (!path){
+            NSString* fullPath = [self FindPath:itemRead.imagePath];
+            image = [UIImage imageNamed: fullPath];
+        }
+        else{
+            image = [UIImage imageNamed: itemRead.imagePath];
+        }
         
-        UIImage *image = [UIImage imageNamed: itemRead.imagePath];
         if (LowerBound == PicturePosition){
             [image0 setImage:image forState:UIButtonTypeCustom];
             [image0 setImageName: itemRead.name];
