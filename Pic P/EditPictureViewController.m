@@ -9,7 +9,7 @@
 #import "EditPictureViewController.h"
 #import "AppDelegate.h"
 #import "ListItem.h"
-#import "AppDelegate.h"
+
 @interface EditPictureViewController ()
 
 @end
@@ -51,10 +51,6 @@
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-- (IBAction)chooseImageFromData:(id)sender {
-    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    //NSDictionary *dictionary=delegate.imageList;
-}
 
 - (IBAction)editText:(id)sender {
         //Possible to assign textField1.text to some NSString here
@@ -67,11 +63,11 @@
 
 
 - (IBAction)update:(id)sender {
-
+   NSString *sqlCommand = @"DELETE FROM items ()";
 }
 
 - (IBAction)Delete:(id)sender {
-
+    NSString *sqlCommand = @"Delete FROM items ()";
 }
 
 @end

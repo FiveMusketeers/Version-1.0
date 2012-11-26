@@ -20,12 +20,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *imageFromData;
 @property(nonatomic, assign) ListItem *pickenItem;
 
-
-
-- (IBAction)chooseImageFromData:(id)sender;
 - (IBAction)editText:(id)sender;
 - (IBAction)PreviousMenu:(id)sender;
-
 
 - (IBAction)update:(id)sender;
 - (IBAction)Delete:(id)sender;
