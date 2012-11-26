@@ -7,12 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 #import "AuthenticationViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate, UITabBarControllerDelegate>{
+    // Database variables
+    NSString *databaseName;
+    NSString *databasePath;
+    
+    // Array to store the animal objects
+    NSMutableArray *items;
+}
+
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) NSMutableDictionary *imageList;
 @property (strong, nonatomic) UITabBarController *tabBarController;
 
 @end

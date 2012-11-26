@@ -88,11 +88,11 @@
         if ([userName.text isEqualToString: responseString]){
             FirstViewController *firstView = [[FirstViewController alloc]initWithNibName:@"FirstViewController_iPhone" bundle:nil];
             [self presentModalViewController:firstView animated:YES];
-            feedback.text = @"Login sucessful";
+            feedback.text = @"Login succed.";
             
         }
         else{
-            feedback.text = @"Login failed";
+            feedback.text = @"Login failed! Check your password. Or New user? Sign up now.";
         }
         
 //        NSString *urlstr = [[NSString alloc] initWithFormat: @"http://picsp.0fees.net/username=%@&password=%@",self.userName.text, self.password.text];
