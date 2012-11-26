@@ -52,7 +52,7 @@
 @property(nonatomic, assign) NSMutableArray *listToAdd;
 @property(nonatomic, assign) AppDelegate *delegate;
 
-
+- (void)loadPictures;
 - (IBAction)select:(OurButton*) buttonSelected;
 - (IBAction)next;
 - (IBAction)previous;

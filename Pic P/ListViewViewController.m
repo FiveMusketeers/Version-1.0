@@ -34,6 +34,7 @@
 @synthesize title;
 @synthesize listName;
 @synthesize saveButton;
+@synthesize deleteButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -75,6 +76,7 @@
         [title setHidden:YES];
         [listName setHidden:NO];
         [saveButton setHidden:NO];
+        [deleteButton setHidden:NO];
         listName.text = tableName;
         
         
@@ -329,20 +331,27 @@
 }
 
 - (IBAction)saveName:(id)sender{
-    AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
-    NSString *newListName = listName.text;
-    [delegate.listDictionary setObject:tableData forKey:newListName ];
-    [delegate.listDictionary removeObjectForKey: tableName];
-    
+//    AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
+//    NSString *newListName = listName.text;
+//    [delegate.listDictionary setObject:tableData forKey:newListName ];
+//    [delegate.listDictionary removeObjectForKey: tableName];
+//    
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:@"List Saved"
+                                                    message:@"Editing list name is currently unavailable"
                                                    delegate:nil
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
-    [self dismissModalViewControllerAnimated:TRUE];
 }
 
+- (IBAction)deleteList:(id)sender{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:@"Deleting currently unavailable"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}
 
 
 @end

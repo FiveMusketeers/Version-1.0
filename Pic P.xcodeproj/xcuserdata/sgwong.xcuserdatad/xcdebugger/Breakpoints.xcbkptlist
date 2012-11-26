@@ -464,11 +464,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Pic P/ListViewViewController.h"
-         timestampString = "375601439.552166"
+         timestampString = "375653247.214034"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44"
+         startingLineNumber = "47"
+         endingLineNumber = "47"
          landmarkName = "@interface ListViewViewController"
          landmarkType = "2">
       </FileBreakpoint>
@@ -477,11 +477,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Pic P/ListViewViewController.m"
-         timestampString = "375600123.20599"
+         timestampString = "375653247.214034"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "165"
-         endingLineNumber = "165"
+         startingLineNumber = "167"
+         endingLineNumber = "167"
          landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -496,32 +496,6 @@
          startingLineNumber = "47"
          endingLineNumber = "47"
          landmarkName = "-shareLists"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Pic P/CategoryViewController.m"
-         timestampString = "375592398.18871"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "194"
-         endingLineNumber = "194"
-         landmarkName = "-select:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "Pic P/EditPictureViewController.m"
-         timestampString = "375592892.190582"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
-         landmarkName = "-update:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint

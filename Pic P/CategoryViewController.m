@@ -20,6 +20,7 @@
 #define path4 @""
 #define path5 @""
 
+
 @interface CategoryViewController ()
 
 @end
@@ -36,6 +37,10 @@
 	{
     }
     return self;
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self LoadPictures];
 }
 
 - (void)viewDidLoad
@@ -73,7 +78,6 @@
         Title.text = @"Other";
     }
     
-    [self LoadPictures];
 }
 
 -(NSString*)FindPath: (NSString*)fileName{
@@ -84,25 +88,6 @@
 }
 
 -(void)LoadPictures{
-    /*NSString *categoryPath;
-     
-     //Find category path
-     if (Category_Num == 1){
-     NSString *categoryPath = path1;
-     }
-     else if (Category_Num == 2){
-     NSString *categoryPath = path2;
-     }
-     else if (Category_Num == 3){
-     NSString *categoryPath = path3;
-     }
-     else if (Category_Num == 4){
-     NSString *categoryPath = path4;
-     }
-     else if (Category_Num == 5){
-     NSString *categoryPath = path5;
-     }
-     */
     
     self.items = delegate.items;
     
@@ -190,9 +175,9 @@
         else{
             //Enlarge
             EditPictureViewController *epvc = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPhone" bundle:nil];
-            
             epvc.pickenItem = itemSelected;
-            
+            epvc.parent = self;
+            [self clearPictures];
             [self presentModalViewController:epvc animated:TRUE];
         }
     }

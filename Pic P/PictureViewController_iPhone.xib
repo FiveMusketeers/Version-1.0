@@ -40,10 +40,9 @@
 					<object class="IBUIButton" id="1019006556">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{59, 175}, {210, 60}}</string>
+						<string key="NSFrame">{{55, 122}, {210, 60}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -137,7 +136,7 @@
 					<object class="IBUIButton" id="229212987">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{59, 100}, {210, 60}}</string>
+						<string key="NSFrame">{{59, 251}, {210, 60}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1019006556"/>
@@ -243,9 +242,9 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="66324701"/>
-							<reference ref="229212987"/>
 							<reference ref="389833720"/>
 							<reference ref="418915377"/>
+							<reference ref="229212987"/>
 							<reference ref="1019006556"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -315,7 +314,6 @@
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="goBack">id</string>
 						<string key="pictureCreate">id</string>
-						<string key="pictureDelete">id</string>
 						<string key="pictureView">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
@@ -325,10 +323,6 @@
 						</object>
 						<object class="IBActionInfo" key="pictureCreate">
 							<string key="name">pictureCreate</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="pictureDelete">
-							<string key="name">pictureDelete</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="pictureView">

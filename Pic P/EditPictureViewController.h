@@ -8,22 +8,32 @@
 
 #import <UIKit/UIKit.h>
 #import "ListItem.h"
+#import "/usr/include/sqlite3.h"
+#import "CategoryViewController.h"
 
-@interface EditPictureViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate> 
+@interface EditPictureViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
     IBOutlet UIImageView *imageFromData;
     IBOutlet UITextField *textOfImage;
+    NSString *databasePath;
 }
 
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) IBOutlet UITextField *textOfImage;
 @property (strong, nonatomic) IBOutlet UIImageView *imageFromData;
-@property(nonatomic, assign) ListItem *pickenItem;
+@property(strong, nonatomic) ListItem *pickenItem;
+@property (nonatomic, assign) NSString *databasePath;
+@property (nonatomic, assign) CategoryViewController* parent;
 
+
+- (IBAction)chooseImageFromData:(id)sender;
 - (IBAction)editText:(id)sender;
 - (IBAction)PreviousMenu:(id)sender;
+
 
 - (IBAction)update:(id)sender;
 - (IBAction)Delete:(id)sender;
 
+
 @end
+

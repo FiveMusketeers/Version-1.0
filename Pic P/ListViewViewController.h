@@ -28,6 +28,7 @@
 - (IBAction) PreviousMenu:(id)sender;
 - (IBAction) textFieldReturn:(id)sender;
 - (IBAction) saveName:(id)sender;
+- (IBAction) deleteList:(id)sender;
 
 // Text to speech framework.
 @property (strong, nonatomic) FliteController *fliteController;
@@ -41,6 +42,8 @@
 @property (nonatomic, assign) BOOL * shareLists;
 @property (nonatomic, assign) NSString *tableName;
 @property (strong, nonatomic) IBOutlet UIButton *saveButton;
+@property (strong, nonatomic) IBOutlet UIButton *deleteButton;
+
 
 
 @end
