@@ -168,6 +168,13 @@
             }
             sqlite3_finalize(compiledStatement);
             sqlite3_close(database);
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                            message:@"Saved"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            [self dismissModalViewControllerAnimated:YES];
         }
     }
     

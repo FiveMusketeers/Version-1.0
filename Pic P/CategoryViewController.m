@@ -104,6 +104,7 @@
     
     self.items = delegate.items;
     
+    
     while (UpperBound >= PicturePosition)
     {
         ListItem *itemRead = [self.items objectAtIndex:PicturePosition];

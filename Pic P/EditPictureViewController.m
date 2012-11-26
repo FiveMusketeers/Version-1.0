@@ -271,6 +271,9 @@
                                           cancelButtonTitle:@"OK"
                                           otherButtonTitles:nil];
     [alert show];
+    if ( parent.UpperBound > [parent.items count] - 1 ){
+        parent.UpperBound--;
+    }
     [self dismissModalViewControllerAnimated:YES];
 }
 
