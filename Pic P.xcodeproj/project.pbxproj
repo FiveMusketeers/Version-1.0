@@ -16,6 +16,10 @@
 		3DBB91F8166338C300A1E5A5 /* 48x48-save_as.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB91F7166338C300A1E5A5 /* 48x48-save_as.png */; };
 		3DBB91FA1663394D00A1E5A5 /* previous.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB91F91663394D00A1E5A5 /* previous.png */; };
 		3DBB91FC1663395000A1E5A5 /* next.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB91FB1663395000A1E5A5 /* next.png */; };
+		3DBB920516633A3100A1E5A5 /* pepsi.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB920116633A3100A1E5A5 /* pepsi.jpg */; };
+		3DBB920616633A3100A1E5A5 /* coke.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB920216633A3100A1E5A5 /* coke.jpg */; };
+		3DBB920716633A3100A1E5A5 /* teabags.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB920316633A3100A1E5A5 /* teabags.jpg */; };
+		3DBB920816633A3100A1E5A5 /* coffee.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3DBB920416633A3100A1E5A5 /* coffee.jpg */; };
 		51154847165EF1EF00CDE209 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 51154846165EF1EF00CDE209 /* libsqlite3.0.dylib */; };
 		5115485E165F180000CDE209 /* PictureDatabase.sql in Resources */ = {isa = PBXBuildFile; fileRef = 5115485D165F180000CDE209 /* PictureDatabase.sql */; };
 		51154860165F21FF00CDE209 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5115485F165F21FF00CDE209 /* apple.png */; };
@@ -122,6 +126,10 @@
 		3DBB91F7166338C300A1E5A5 /* 48x48-save_as.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "48x48-save_as.png"; sourceTree = "<group>"; };
 		3DBB91F91663394D00A1E5A5 /* previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = previous.png; sourceTree = "<group>"; };
 		3DBB91FB1663395000A1E5A5 /* next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = next.png; sourceTree = "<group>"; };
+		3DBB920116633A3100A1E5A5 /* pepsi.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pepsi.jpg; sourceTree = "<group>"; };
+		3DBB920216633A3100A1E5A5 /* coke.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coke.jpg; sourceTree = "<group>"; };
+		3DBB920316633A3100A1E5A5 /* teabags.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teabags.jpg; sourceTree = "<group>"; };
+		3DBB920416633A3100A1E5A5 /* coffee.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coffee.jpg; sourceTree = "<group>"; };
 		51154846165EF1EF00CDE209 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		5115485D165F180000CDE209 /* PictureDatabase.sql */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictureDatabase.sql; sourceTree = "<group>"; };
 		5115485F165F21FF00CDE209 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
@@ -261,6 +269,10 @@
 				5115485F165F21FF00CDE209 /* apple.png */,
 				51B1155D1635F50600F9934D /* scissors.jpg */,
 				51B115601635F50F00F9934D /* brush.jpg */,
+				3DBB920116633A3100A1E5A5 /* pepsi.jpg */,
+				3DBB920216633A3100A1E5A5 /* coke.jpg */,
+				3DBB920316633A3100A1E5A5 /* teabags.jpg */,
+				3DBB920416633A3100A1E5A5 /* coffee.jpg */,
 				51B115621635F51C00F9934D /* socks.jpg */,
 				3DBB91E61663316200A1E5A5 /* clothing.jpg */,
 				3DBB91E71663316200A1E5A5 /* food.jpg */,
@@ -700,6 +712,10 @@
 				3DBB91F8166338C300A1E5A5 /* 48x48-save_as.png in Resources */,
 				3DBB91FA1663394D00A1E5A5 /* previous.png in Resources */,
 				3DBB91FC1663395000A1E5A5 /* next.png in Resources */,
+				3DBB920516633A3100A1E5A5 /* pepsi.jpg in Resources */,
+				3DBB920616633A3100A1E5A5 /* coke.jpg in Resources */,
+				3DBB920716633A3100A1E5A5 /* teabags.jpg in Resources */,
+				3DBB920816633A3100A1E5A5 /* coffee.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
