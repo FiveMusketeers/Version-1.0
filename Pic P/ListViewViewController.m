@@ -277,8 +277,19 @@
     [sender resignFirstResponder];
 }
 
-- (IBAction)saveButton{
+- (IBAction)saveName:(id)sender{
+    AppDelegate *delegate = ( AppDelegate * )[ [ UIApplication sharedApplication ] delegate ];
+    NSString *newListName = listName.text;
+    [delegate.listDictionary setObject:tableData forKey:newListName ];
+    [delegate.listDictionary removeObjectForKey: tableName];
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                    message:@"List Saved"
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    [self dismissModalViewControllerAnimated:TRUE];
 }
 
 

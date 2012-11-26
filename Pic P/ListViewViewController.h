@@ -27,7 +27,7 @@
 
 - (IBAction) PreviousMenu:(id)sender;
 - (IBAction) textFieldReturn:(id)sender;
-- (IBAction) saveName;
+- (IBAction) saveName:(id)sender;
 
 // Text to speech framework.
 @property (strong, nonatomic) FliteController *fliteController;
