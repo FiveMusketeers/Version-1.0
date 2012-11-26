@@ -8,18 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import "ListItem.h"
+#import "/usr/include/sqlite3.h"
 
 @interface EditPictureViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate> 
 {
     IBOutlet UIImageView *imageFromData;
     IBOutlet UITextField *textOfImage;
+    NSString *databasePath;
 }
 
 @property (strong, nonatomic) UIImagePickerController *imagePicker;
 @property (strong, nonatomic) IBOutlet UITextField *textOfImage;
 @property (strong, nonatomic) IBOutlet UIImageView *imageFromData;
 @property(strong, nonatomic) ListItem *pickenItem;
-
+@property (nonatomic, assign) NSString *databasePath;
 
 
 - (IBAction)chooseImageFromData:(id)sender;

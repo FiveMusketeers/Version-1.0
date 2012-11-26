@@ -29,7 +29,7 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated{
-    NSLog(@"%@", self.pickenItem.name);
+    //NSLog(@"%@", self.pickenItem.name);
     textOfImage.text = self.pickenItem.name;
 }
 
@@ -77,36 +77,63 @@
     NSString *newText=textOfImage.text;
     //pickenItem.name=newText;
     NSString *path=pickenItem.imagePath;
-    NSLog(@"1");
-     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSArray *array=delegate.items;
+    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+    //NSMutableArray *array=delegate.items;
     
     NSString *originalPath=pickenItem.imagePath;
-    NSLog(@"2");
+
     //[array delete:pickenItem];
-    [array cut:pickenItem];
-    NSLog(@"3");
+
+    [delegate.items removeObject:pickenItem];
     ListItem *object = [[ListItem alloc] initWithName:newText imagePath: originalPath];
+    NSLog(@"%@",object.name);
     //[array setValue:pickenItem.name forKey:pickenItem.imagePath];
+    [delegate.items addObject:object];
     NSLog(@"data updated");
+    [self saveImage:imageFromData.image withImageName:newText];
     
     for (ListItem *item in delegate.items) {
         NSLog(@"%@",item.name);
-        NSLog(@"%@",item.imagePath);
     }
     
     //SQL Command
     
-    NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO items VALUES('%@','%@')", pickenItem.name, pickenItem.imagePath];
-    
-
+   
 }
+- (void)saveImage:(UIImage*)image withImageName:(NSString*)imageName {
+    
+    NSData *imageData = UIImagePNGRepresentation(image); //convert image into .png format.
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];//create instance of NSFileManager
+    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES); //create an array and store result of our search for the documents directory in it
+    
+    NSString *documentsDirectory = [paths objectAtIndex:0]; //create NSString object, that holds our exact path to the documents directory
+    
+    NSString *fullPath = [documentsDirectory stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png", imageName]]; //add our image to the path
+    
+    [fileManager createFileAtPath:fullPath contents:imageData attributes:nil]; //finally save the path (image)
+    
+    NSLog(@"image saved at: %@", fullPath);
+    
+}
+
 
 - (IBAction)Delete:(id)sender {
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    NSArray *array=delegate.items;
-    [array delete:pickenItem];
 
+    NSLog(@"Delegate Count: %d Deleting: %@", [delegate.items count], pickenItem.name);
+    [delegate.items removeObject:pickenItem];
+    NSLog(@"Delegate Count After Deletion: %d", [delegate.items count]);
+    //ListItem *object = [[ListItem alloc] initWithName:nil imagePath: nil];
+    //[array addObject:object];
+    
+    NSLog(@"DATA DELETED");
+    
+    for(ListItem *itemCheck in delegate.items)
+    {
+        NSLog(@"Is Still in the delegate: %@", itemCheck.name);
+    }
 }
 
 @end

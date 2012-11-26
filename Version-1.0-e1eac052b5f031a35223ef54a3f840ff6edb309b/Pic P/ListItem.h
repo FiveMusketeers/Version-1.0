@@ -22,4 +22,6 @@
 // imagePath merely contains the name.
 -(UIImage *)getImage;
 
+- (BOOL)isEqual:(id)anObject;
+
 @end

@@ -29,4 +29,21 @@
 	
 	return [UIImage imageNamed: self.imagePath ];
 }
+
+- (BOOL)isEqual:(ListItem *)anObject
+{
+
+    NSLog( @"Comparing %@ to %@", self.name, anObject.name );
+    
+    if ( self.name == anObject.name )
+    {
+        NSLog(@"Match found.");
+        return YES;
+    }
+    else
+    {
+        NSLog(@"No match.");
+        return NO;
+    }
+}
 @end

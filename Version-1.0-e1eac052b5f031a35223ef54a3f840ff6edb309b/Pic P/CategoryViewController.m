@@ -38,6 +38,10 @@
     return self;
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [self LoadPictures];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -72,8 +76,6 @@
     else if (Category_Num == 5){
         Title.text = @"Other";
     }
-    
-    [self LoadPictures];
 }
 
 -(NSString*)FindPath: (NSString*)fileName{
@@ -107,7 +109,6 @@
     self.items = delegate.items;
     
     for (ListItem *check in self.items){
-        
         NSLog(@"%@, %@", check.name, check.imagePath);
     }
     
@@ -204,13 +205,14 @@
             //Enlarge
             EditPictureViewController *epvc = [[EditPictureViewController alloc]initWithNibName:@"EditPictureViewController_iPhone" bundle:nil];
             epvc.pickenItem = itemSelected;
-            
+            [self clearPictures];
             [self presentModalViewController:epvc animated:TRUE];
         }
     }
     else{
         
     }
+   
 }
 
 -(IBAction)previous
