@@ -49,6 +49,10 @@
 		51ACCBFC1649A97C00001603 /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFB1649A97C00001603 /* Picture.png */; };
 		51ACCBFE1649A9B700001603 /* Share.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFD1649A9B700001603 /* Share.png */; };
 		51ACCC001649AF3000001603 /* BackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFF1649AF3000001603 /* BackArrow.png */; };
+		51B0467A16630B15001B353D /* AuthenticationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0467816630B15001B353D /* AuthenticationViewController.m */; };
+		51B0467B16630B15001B353D /* AuthenticationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0467916630B15001B353D /* AuthenticationViewController.xib */; };
+		51B0467F16630B2F001B353D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0467D16630B2F001B353D /* SignUpViewController.m */; };
+		51B0468016630B2F001B353D /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0467E16630B2F001B353D /* SignUpViewController.xib */; };
 		51B1155E1635F50600F9934D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
 		51B115611635F50F00F9934D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
 		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
@@ -149,6 +153,12 @@
 		51ACCBFB1649A97C00001603 /* Picture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Picture.png; sourceTree = "<group>"; };
 		51ACCBFD1649A9B700001603 /* Share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Share.png; sourceTree = "<group>"; };
 		51ACCBFF1649AF3000001603 /* BackArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackArrow.png; sourceTree = "<group>"; };
+		51B0467716630B15001B353D /* AuthenticationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AuthenticationViewController.h; sourceTree = "<group>"; };
+		51B0467816630B15001B353D /* AuthenticationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AuthenticationViewController.m; sourceTree = "<group>"; };
+		51B0467916630B15001B353D /* AuthenticationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthenticationViewController.xib; sourceTree = "<group>"; };
+		51B0467C16630B2F001B353D /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		51B0467D16630B2F001B353D /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		51B0467E16630B2F001B353D /* SignUpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		51B1155D1635F50600F9934D /* scissors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpg; sourceTree = "<group>"; };
 		51B115601635F50F00F9934D /* brush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brush.jpg; sourceTree = "<group>"; };
 		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
@@ -414,6 +424,19 @@
 			name = "Menu Pictures";
 			sourceTree = "<group>";
 		};
+		51B0467516630B05001B353D /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				51B0467716630B15001B353D /* AuthenticationViewController.h */,
+				51B0467816630B15001B353D /* AuthenticationViewController.m */,
+				51B0467916630B15001B353D /* AuthenticationViewController.xib */,
+				51B0467C16630B2F001B353D /* SignUpViewController.h */,
+				51B0467D16630B2F001B353D /* SignUpViewController.m */,
+				51B0467E16630B2F001B353D /* SignUpViewController.xib */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
 		51E2AD691630C88C007DA5C4 /* Iphone Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -491,6 +514,7 @@
 		76BA2B001630977D00DAE149 /* Pic P */ = {
 			isa = PBXGroup;
 			children = (
+				51B0467516630B05001B353D /* Authentication */,
 				A16E882E1634BFE80094C978 /* icon.png */,
 				51B1155D1635F50600F9934D /* scissors.jpg */,
 				51B115601635F50F00F9934D /* brush.jpg */,
@@ -656,6 +680,8 @@
 				5151BD69165EB37D00C9AB14 /* PictureAllViewController.xib in Resources */,
 				51154860165F21FF00CDE209 /* apple.png in Resources */,
 				51154862165F222E00CDE209 /* milk.png in Resources */,
+				51B0467B16630B15001B353D /* AuthenticationViewController.xib in Resources */,
+				51B0468016630B2F001B353D /* SignUpViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -711,6 +737,8 @@
 				6C2D4CA416352C7D007F8DE1 /* Category.m in Sources */,
 				512DD2431649951E00662F15 /* PictureDeleteViewController.m in Sources */,
 				5151BD68165EB37D00C9AB14 /* PictureAllViewController.m in Sources */,
+				51B0467A16630B15001B353D /* AuthenticationViewController.m in Sources */,
+				51B0467F16630B2F001B353D /* SignUpViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

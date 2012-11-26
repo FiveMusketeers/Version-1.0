@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "FirstViewController.h"
+#import "AuthenticationViewController.h"
 #import "ListItem.h"
 
 @implementation AppDelegate
@@ -70,13 +70,13 @@
     NSLog(@"Number of Keys: %d", [keyArray count]);
     
     // Loads all items.
-	self.items = [ self readItemsFromDatabase: @"items" ];
+	self.items = [ self readItemsFromDatabase: @"food" ];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     if ( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
     {
-        self.viewControllerOne = [[FirstViewController alloc] initWithNibName:@"FirstViewController_iPhone" bundle:nil];
+        self.viewControllerOne = [[AuthenticationViewController alloc] initWithNibName:@"AuthenticationViewController" bundle:nil];
         self.window.rootViewController = self.viewControllerOne;
         [self.window makeKeyAndVisible];
         return YES;
