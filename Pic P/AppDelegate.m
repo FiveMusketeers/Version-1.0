@@ -53,7 +53,7 @@
     for ( ListItem *s in self.lists )
     {
         NSMutableArray *array = [ self readItemsFromDatabase: s.name ];
-        NSLog(@"Expected table name: %@", s.name);
+        //NSLog(@"Expected table name: %@", s.name);
         if ( array != nil )
         {
             // Display the items if the array is not nil.
@@ -68,7 +68,7 @@
     }
     
     NSArray *keyArray = self.listDictionary.allKeys;
-    NSLog(@"Number of Keys: %d", [keyArray count]);
+    //NSLog(@"Number of Keys: %d", [keyArray count]);
     
     // Loads all items.
 	self.items = [ self readItemsFromDatabase: @"food" ];

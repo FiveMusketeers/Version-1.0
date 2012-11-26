@@ -108,13 +108,6 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-//// Switch to listview.
-//- (IBAction)listView
-//{
-//    ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
-//    [self presentModalViewController:listView animated:YES];
-//}
-
 - (IBAction)PreviousMenu:(id)sender
 {
     [self dismissModalViewControllerAnimated:YES];
@@ -143,7 +136,7 @@
     
     // Now we want to check the controller context.
 
-    if( self.displayLists == TRUE )
+    if( self.displayLists == TRUE ) // Again, this works, so ignore the warning.
     {
 //        NSLog(@"Switching to a ListItem display.");
         
@@ -151,7 +144,8 @@
         NSDictionary *listDictionary = delegate.listDictionary;
         
         //SHARE CONTEXT
-        if (self.shareLists){
+        if ( self.shareLists )
+		{
             //get the documents directory:
             NSArray *paths = NSSearchPathForDirectoriesInDomains
             (NSDocumentDirectory, NSUserDomainMask, YES);
@@ -166,8 +160,11 @@
             
             //create content
             NSString *content = [NSString stringWithFormat:@"%@ contents: \n", cellLabel];
+			
             int item_counter = 1;
-            for(ListItem *itemRead in listToShare){
+			
+            for(ListItem *itemRead in listToShare)
+			{
                 content = [content stringByAppendingString: [NSString stringWithFormat:@"Item %d: %@ \n", item_counter, itemRead.name]];
                 item_counter++;
             }
@@ -177,8 +174,62 @@
                       atomically:NO
                         encoding:NSStringEncodingConversionAllowLossy
                            error:nil];
-            
-            // Send the textfile to website
+			
+			// We have to create an HTTP request.
+			
+			// Grab the file we just created and encode it.
+			
+			NSError *error = [[NSError alloc] init];
+
+			// We should have the file represented as an encoded string.
+			
+			NSData *postData = [NSData dataWithContentsOfFile:fileName];
+			
+			NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+			[request setURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://picsp.0fees.net/upload.php"]]];
+			// POST is how we send the file
+			[request setHTTPMethod:@"POST"];
+			
+			NSString *boundary = @"---------------------------14737809831466499882746641449";
+			NSString *contentType = [NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary];
+			[request addValue:contentType forHTTPHeaderField: @"Content-Type"];
+
+			// This creates the body of the HTTP Request
+			// All of this is essential
+			NSMutableData *body = [NSMutableData data];
+			[body appendData:[[NSString stringWithFormat:@"\r\n--%@\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+
+			[body appendData:[[NSString stringWithFormat:@"Content-Disposition: form-data; name=\"file\"; filename=\"%@.txt\"\r\n", cellLabel] dataUsingEncoding:NSUTF8StringEncoding]];
+			[body appendData:[@"Content-Type: application/octet-stream\r\n\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+			// This is the file put into a string
+			[body appendData:postData];
+			[body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+			[body appendData:[[NSString stringWithFormat:@"\r\n--%@--\r\n",boundary] dataUsingEncoding:NSUTF8StringEncoding]];
+			
+			[request setHTTPBody:body];
+			[request addValue:[NSString stringWithFormat:@"%d", [body length]] forHTTPHeaderField:@"Content-Length"];
+			
+			
+			//NSLog(@"Data: %@",[[NSString alloc] initWithData:request.HTTPBody encoding:NSUTF8StringEncoding]);
+			//NSLog(@"%@",request.allHTTPHeaderFields);
+			
+			// This code listens for a reponse from the site:
+			
+			// Initialize the response variable
+			NSHTTPURLResponse* urlResponse = nil;
+			
+			// This sends the request and takes in any reponse from the server.
+			NSData *responseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&error];
+			
+			NSString *result = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
+			//NSLog(@"Response Code: %d", [urlResponse statusCode]);
+			 
+			if ([urlResponse statusCode] >= 200 && [urlResponse statusCode] < 300)
+			{
+				NSLog(@"Response: %@", result);
+			}
+			
+			// End of HTTP request code.
             
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
                                                             message:@"Sharing Complete"
@@ -187,7 +238,7 @@
                                                   otherButtonTitles:nil];
             [alert show];
 
-            NSLog(@"It saved to: %@", documentsDirectory);
+            //NSLog(@"It saved to: %@", documentsDirectory);
         }
         else{
             // Now we want to get the items specific to the list. We will search the dictionary with the key we have: the nameLabel.text.

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "/usr/include/sqlite3.h"
+//#import "/usr/include/sqlite3.h"
 
 @interface CreatePictureViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     IBOutlet UIImageView *button;
