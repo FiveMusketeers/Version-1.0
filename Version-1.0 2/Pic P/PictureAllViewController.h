@@ -29,4 +29,6 @@
 
 -(IBAction)goBack:(id)sender;
 
+- (IBAction)editDeletePicture:(id)sender;
+
 @end

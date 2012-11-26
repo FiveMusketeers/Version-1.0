@@ -17,7 +17,7 @@
 
 // Both NSMutableArray
 
-@synthesize items, lists, listDictionary, viewControllerOne;
+@synthesize items, lists, listDictionary, viewControllerOne, databasePath;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

@@ -20,6 +20,7 @@
 
 @property (nonatomic, strong) UIImagePickerController *imgPicker;
 @property (strong, nonatomic) IBOutlet UIImageView *pickenImage;
+@property (nonatomic, retain) NSString *databasePath;
 
 @property (nonatomic, retain) IBOutlet UITextField *imageText;
 @property (strong, nonatomic) IBOutlet UITextField *textField1;//I don't know why, but every time I delete it, the program crashes. So, before we figure out why, just keep it.

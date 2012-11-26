@@ -8,6 +8,7 @@
 
 #import "PictureAllViewController.h"
 #import "CategoryViewController.h"
+#import "EditDeletePictureViewController.h"
 
 @interface PictureAllViewController ()
 
@@ -69,6 +70,12 @@
 
 - (IBAction)goBack:(id)sender{
     [self dismissModalViewControllerAnimated:YES];
+}
+
+- (IBAction)editDeletePicture:(id)sender {
+    //EditDeletePictureViewController *secondView = [[EditDeletePictureViewController alloc]initWithNibName:@"EditDeletePictureViewController_iPhone" bundle:nil];
+    //[self dismissModalViewControllerAnimated:YES];
+    
 }
 
 @end

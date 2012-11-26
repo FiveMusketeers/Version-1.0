@@ -32,4 +32,6 @@
 // I made this so I can call a view change via a tableCell
 @property (strong, nonatomic) UIViewController *viewControllerOne;
 
+@property (strong, nonatomic) NSString *databasePath;
+
 @end

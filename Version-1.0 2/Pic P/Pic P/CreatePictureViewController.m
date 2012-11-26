@@ -23,6 +23,8 @@
 @synthesize imageText;
 @synthesize imagePath;
 
+@synthesize databasePath;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -149,9 +151,9 @@
     NSLog(@"Item Name : %@ Item Path : %@", textOfImage, self.imagePath);
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
     NSMutableArray *array = delegate.items;
-    NSLog(@"1");
+    //NSLog(@"1");
     [array addObject: object];
-    NSLog(@"2");
+    //NSLog(@"2");
     //NSData *imageData=UIImageJPEGRepresentation(theImage, 150);
     
     // Grab the imageList from the delegate.
@@ -163,21 +165,46 @@
     NSLog(@"data saved");
     NSLog(@"%@",textOfImage);
     NSLog(@"%@",filePath);
+    
     for (ListItem *item in delegate.items) {
         NSLog(@"%@",item.imagePath);
     }
     
-    //SQL Command
+
+    //Define Database
+    sqlite3 *database;
     
-    NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO items VALUES('%@','%@')", object.name, object.imagePath];
+    //Create command and statement for SQL
+    NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO items VALUES ('%@', '%@')", textOfImage, self.imagePath];
+    const char *sqlStatement = [sqlCommand UTF8String];
+    sqlite3_stmt *compiledStatement;
+    
+    //Copy Database path from delegate
+    self.databasePath = delegate.databasePath;
     
     //Open Connection
-    
-    //Create Statement
-    
-    //Execute Statement
-    
-    //Close Connection
+    if( sqlite3_open([delegate.databasePath UTF8String], &database) == SQLITE_OK )
+    {
+        
+        //Prepare Statement for execution
+        int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+        NSLog(@"%s", sqlStatement);
+        if (result == SQLITE_OK)
+        {
+			//Execute Step
+            if (sqlite3_step(compiledStatement) == SQLITE_DONE){
+                NSLog(@"value inserted into items");
+			}
+		}
+        
+		//Check for error
+		else
+        {
+            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+        }
+        sqlite3_finalize(compiledStatement);
+        sqlite3_close(database);
+    }
     
     
     //[self saveImage:theImage :textOfImage];

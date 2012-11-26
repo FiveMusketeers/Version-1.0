@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ListItem.h"
+@interface EditPictureViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate> ListItem
 
-@interface EditPictureViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
-{
-    
-}
+@property (strong, nonatomic)ListItem *pickenItem;
 @property (strong, nonatomic)UIImagePickerController *imagePicker;
 @property (strong, nonatomic) IBOutlet UITextField *textOfImage;
+@property (nonatomic, assign) ListItem *pickAnItem;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageFromData;
 - (IBAction)chooseImageFromData:(id)sender;
