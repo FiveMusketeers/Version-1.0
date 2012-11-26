@@ -32,6 +32,8 @@
 
 //The Views Title
 @synthesize title;
+@synthesize listName;
+@synthesize saveButton;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,7 +72,11 @@
     else
     {
         //CHANGE TITLE LABEL
-        title.text = tableName;
+        [title setHidden:YES];
+        [listName setHidden:NO];
+        [saveButton setHidden:NO];
+        listName.text = tableName;
+        
         
         // DISPLAY LIST ITEMS CONTEXT
         NSLog( @"Context: Display all items from a list." );
@@ -102,12 +108,12 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
-// Switch to listview.
-- (IBAction)listView
-{
-    ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
-    [self presentModalViewController:listView animated:YES];
-}
+//// Switch to listview.
+//- (IBAction)listView
+//{
+//    ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"SecondViewController_iPhone" bundle:nil];
+//    [self presentModalViewController:listView animated:YES];
+//}
 
 - (IBAction)PreviousMenu:(id)sender
 {
@@ -144,28 +150,6 @@
         AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
         NSDictionary *listDictionary = delegate.listDictionary;
         
-//        if( listDictionary != nil)
-//        {
-//            NSLog(@"Displaying all keys in the listDictionary.");
-//            for ( NSString *key in listDictionary.allKeys )
-//            {
-//                NSLog(@"Key: %@", key);
-//            }
-//            NSLog(@"End displaying all keys in the listDictionary.");
-//        }
-//        else
-//        {
-//            NSLog(@"listDictionary is nil.");
-//        }
-        
-//        NSMutableArray *array = [listDictionary objectForKey: cellLabel ];
-//        
-//        for ( ListItem *item in array )
-//        {
-//            NSLog( @"ImagePath: %@", item.imagePath );
-//        }
-
-
         //SHARE CONTEXT
         if (self.shareLists){
             //get the documents directory:
@@ -288,6 +272,14 @@
 }
 // End text to speech framework
 
+- (IBAction) textFieldReturn:(id)sender
+{
+    [sender resignFirstResponder];
+}
+
+- (IBAction)saveButton{
+    
+}
 
 
 

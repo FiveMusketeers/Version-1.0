@@ -9,7 +9,6 @@
 #import "SecondViewController.h"
 #import "ListCreateViewController.h"
 #import "ListViewViewController.h"
-#import "ListEditViewController.h"
 #import "CategoryViewController.h"
 
 
@@ -47,11 +46,7 @@
         [self presentModalViewController:listView animated:YES];
 }
 
-- (IBAction)listEdit {
-    ListEditViewController *ListEditView = [[ListEditViewController alloc]initWithNibName:@"ListEditViewController_iPhone" bundle:nil];
-    [self presentModalViewController:ListEditView animated:YES];
 
-}
 
 - (IBAction)listView{
     ListViewViewController *listView = [[ListViewViewController alloc]initWithNibName:@"ListViewViewController_iPhone" bundle:nil];

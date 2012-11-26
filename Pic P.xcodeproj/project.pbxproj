@@ -58,7 +58,6 @@
 		51B046A116632694001B353D /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0467D16630B2F001B353D /* SignUpViewController.m */; };
 		51B046A21663269D001B353D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B0A1630977D00DAE149 /* AppDelegate.m */; };
 		51B046A31663269D001B353D /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76BA2B0D1630977D00DAE149 /* FirstViewController.m */; };
-		51B046A41663269D001B353D /* ListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */; };
 		51B046A51663269D001B353D /* ListCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */; };
 		51B046A61663269D001B353D /* ListPicturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51B0469116631D77001B353D /* ListPicturesViewController.m */; };
 		51B046A71663269D001B353D /* ListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C006816350D3A00CB30C3 /* ListCell.m */; };
@@ -77,8 +76,6 @@
 		51B046B4166326A7001B353D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
 		51B046B5166326A7001B353D /* hanger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115631635F51C00F9934D /* hanger.jpg */; };
 		51B046B6166326A7001B353D /* hat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115641635F51C00F9934D /* hat.jpg */; };
-		51B046B7166326A7001B353D /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 5115485F165F21FF00CDE209 /* apple.png */; };
-		51B046B8166326A7001B353D /* milk.png in Resources */ = {isa = PBXBuildFile; fileRef = 51154861165F222E00CDE209 /* milk.png */; };
 		51B046B9166326A7001B353D /* List.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF51649A66900001603 /* List.png */; };
 		51B046BA166326A7001B353D /* Category.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBF91649A7DB00001603 /* Category.png */; };
 		51B046BB166326A7001B353D /* Picture.png in Resources */ = {isa = PBXBuildFile; fileRef = 51ACCBFB1649A97C00001603 /* Picture.png */; };
@@ -91,7 +88,6 @@
 		51B046C2166326A7001B353D /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 518B6EAF164DB3B100D5FD6E /* add.png */; };
 		51B046C3166326B3001B353D /* FirstViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B1A1630977D00DAE149 /* FirstViewController_iPhone.xib */; };
 		51B046C4166326B3001B353D /* SecondViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */; };
-		51B046C5166326B3001B353D /* ListEditViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */; };
 		51B046C6166326B3001B353D /* ListCreateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */; };
 		51B046C7166326B3001B353D /* ListCell_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C9C006B16350E6700CB30C3 /* ListCell_iPhone.xib */; };
 		51B046C8166326B3001B353D /* CategoryViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5151BD59165EB15400C9AB14 /* CategoryViewController_iPhone.xib */; };
@@ -102,6 +98,19 @@
 		51B046CD166326B3001B353D /* PictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD5C1630C6CE007DA5C4 /* PictureViewController_iPhone.xib */; };
 		51B046CE166326B3001B353D /* CreatePictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5119FE911632049B00CFCD33 /* CreatePictureViewController_iPhone.xib */; };
 		51B046CF166326B3001B353D /* EditPictureViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51B0468A16631359001B353D /* EditPictureViewController_iPhone.xib */; };
+		51B0471016632D02001B353D /* blueberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470316632D02001B353D /* blueberry.png */; };
+		51B0471116632D02001B353D /* bread.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470416632D02001B353D /* bread.png */; };
+		51B0471216632D02001B353D /* carrots.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470516632D02001B353D /* carrots.png */; };
+		51B0471316632D02001B353D /* cereal.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470616632D02001B353D /* cereal.png */; };
+		51B0471416632D02001B353D /* cookie.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470716632D02001B353D /* cookie.png */; };
+		51B0471516632D02001B353D /* eggs.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470816632D02001B353D /* eggs.png */; };
+		51B0471616632D02001B353D /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470916632D02001B353D /* happy.png */; };
+		51B0471716632D02001B353D /* juice.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470A16632D02001B353D /* juice.png */; };
+		51B0471816632D02001B353D /* orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470B16632D02001B353D /* orange.png */; };
+		51B0471916632D02001B353D /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470C16632D02001B353D /* shoppingCart.png */; };
+		51B0471A16632D02001B353D /* strawberry.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470D16632D02001B353D /* strawberry.png */; };
+		51B0471B16632D02001B353D /* urgent.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470E16632D02001B353D /* urgent.png */; };
+		51B0471C16632D02001B353D /* watermelon.png in Resources */ = {isa = PBXBuildFile; fileRef = 51B0470F16632D02001B353D /* watermelon.png */; };
 		51B1155E1635F50600F9934D /* scissors.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B1155D1635F50600F9934D /* scissors.jpg */; };
 		51B115611635F50F00F9934D /* brush.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115601635F50F00F9934D /* brush.jpg */; };
 		51B115661635F51C00F9934D /* socks.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51B115621635F51C00F9934D /* socks.jpg */; };
@@ -116,8 +125,6 @@
 		51E2AD681630C6E3007DA5C4 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD651630C6E3007DA5C4 /* CategoryViewController.m */; };
 		51E2AD711630CAED007DA5C4 /* ListViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */; };
 		51E2AD721630CAED007DA5C4 /* ListViewViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */; };
-		51E2AD781630CCC1007DA5C4 /* ListEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */; };
-		51E2AD791630CCC1007DA5C4 /* ListEditViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */; };
 		51E2AD7D1630CCD7007DA5C4 /* ListCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */; };
 		51E2AD7E1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */; };
 		6C2D4CA416352C7D007F8DE1 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D4CA316352C7D007F8DE1 /* Category.m */; };
@@ -210,6 +217,19 @@
 		51B0469A1663266A001B353D /* PictureAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureAllViewController.h; sourceTree = "<group>"; };
 		51B0469B16632672001B353D /* PictureAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureAllViewController.m; sourceTree = "<group>"; };
 		51B0469D16632679001B353D /* PictureAllViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PictureAllViewController.xib; sourceTree = "<group>"; };
+		51B0470316632D02001B353D /* blueberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueberry.png; sourceTree = "<group>"; };
+		51B0470416632D02001B353D /* bread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bread.png; sourceTree = "<group>"; };
+		51B0470516632D02001B353D /* carrots.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carrots.png; sourceTree = "<group>"; };
+		51B0470616632D02001B353D /* cereal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cereal.png; sourceTree = "<group>"; };
+		51B0470716632D02001B353D /* cookie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cookie.png; sourceTree = "<group>"; };
+		51B0470816632D02001B353D /* eggs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eggs.png; sourceTree = "<group>"; };
+		51B0470916632D02001B353D /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		51B0470A16632D02001B353D /* juice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juice.png; sourceTree = "<group>"; };
+		51B0470B16632D02001B353D /* orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orange.png; sourceTree = "<group>"; };
+		51B0470C16632D02001B353D /* shoppingCart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoppingCart.png; sourceTree = "<group>"; };
+		51B0470D16632D02001B353D /* strawberry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = strawberry.png; sourceTree = "<group>"; };
+		51B0470E16632D02001B353D /* urgent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = urgent.png; sourceTree = "<group>"; };
+		51B0470F16632D02001B353D /* watermelon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watermelon.png; sourceTree = "<group>"; };
 		51B1155D1635F50600F9934D /* scissors.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = scissors.jpg; sourceTree = "<group>"; };
 		51B115601635F50F00F9934D /* brush.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brush.jpg; sourceTree = "<group>"; };
 		51B115621635F51C00F9934D /* socks.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = socks.jpg; sourceTree = "<group>"; };
@@ -228,9 +248,6 @@
 		51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ListViewViewController.h; path = "Pic P/ListViewViewController.h"; sourceTree = SOURCE_ROOT; };
 		51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ListViewViewController.m; path = "Pic P/ListViewViewController.m"; sourceTree = SOURCE_ROOT; };
 		51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ListViewViewController_iPhone.xib; path = "Pic P/ListViewViewController_iPhone.xib"; sourceTree = SOURCE_ROOT; };
-		51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListEditViewController.h; sourceTree = "<group>"; };
-		51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListEditViewController.m; sourceTree = "<group>"; };
-		51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListEditViewController_iPhone.xib; sourceTree = "<group>"; };
 		51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCreateViewController.h; sourceTree = "<group>"; };
 		51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCreateViewController.m; sourceTree = "<group>"; };
 		51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCreateViewController_iPhone.xib; sourceTree = "<group>"; };
@@ -302,7 +319,6 @@
 				51C84EC61662BDD1001F9487 /* OurButton.m */,
 				76BA2B141630977D00DAE149 /* SecondViewController.m */,
 				51E2AD6F1630CAED007DA5C4 /* ListViewViewController.m */,
-				51E2AD761630CCC1007DA5C4 /* ListEditViewController.m */,
 				51E2AD7B1630CCD7007DA5C4 /* ListCreateViewController.m */,
 				51B0469116631D77001B353D /* ListPicturesViewController.m */,
 				6C9C006816350D3A00CB30C3 /* ListCell.m */,
@@ -347,7 +363,6 @@
 				51C84EC51662BDD1001F9487 /* OurButton.h */,
 				6C9C006716350D3A00CB30C3 /* ListCell.h */,
 				51E2AD6E1630CAED007DA5C4 /* ListViewViewController.h */,
-				51E2AD751630CCC1007DA5C4 /* ListEditViewController.h */,
 				6C9C006D1635141800CB30C3 /* ListItem.h */,
 				51E2AD7A1630CCD7007DA5C4 /* ListCreateViewController.h */,
 			);
@@ -387,7 +402,6 @@
 			isa = PBXGroup;
 			children = (
 				76BA2B201630977D00DAE149 /* SecondViewController_iPhone.xib */,
-				51E2AD771630CCC1007DA5C4 /* ListEditViewController_iPhone.xib */,
 				51E2AD701630CAED007DA5C4 /* ListViewViewController_iPhone.xib */,
 				51E2AD7C1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib */,
 				6C9C006B16350E6700CB30C3 /* ListCell_iPhone.xib */,
@@ -486,6 +500,26 @@
 			name = Authentication;
 			sourceTree = "<group>";
 		};
+		51B0470216632D02001B353D /* pictures */ = {
+			isa = PBXGroup;
+			children = (
+				51B0470316632D02001B353D /* blueberry.png */,
+				51B0470416632D02001B353D /* bread.png */,
+				51B0470516632D02001B353D /* carrots.png */,
+				51B0470616632D02001B353D /* cereal.png */,
+				51B0470716632D02001B353D /* cookie.png */,
+				51B0470816632D02001B353D /* eggs.png */,
+				51B0470916632D02001B353D /* happy.png */,
+				51B0470A16632D02001B353D /* juice.png */,
+				51B0470B16632D02001B353D /* orange.png */,
+				51B0470C16632D02001B353D /* shoppingCart.png */,
+				51B0470D16632D02001B353D /* strawberry.png */,
+				51B0470E16632D02001B353D /* urgent.png */,
+				51B0470F16632D02001B353D /* watermelon.png */,
+			);
+			path = pictures;
+			sourceTree = "<group>";
+		};
 		51E2AD691630C88C007DA5C4 /* Iphone Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +597,7 @@
 		76BA2B001630977D00DAE149 /* Pic P */ = {
 			isa = PBXGroup;
 			children = (
+				51B0470216632D02001B353D /* pictures */,
 				51B0467516630B05001B353D /* Authentication */,
 				A16E882E1634BFE80094C978 /* icon.png */,
 				51B1155D1635F50600F9934D /* scissors.jpg */,
@@ -688,7 +723,6 @@
 				76BA2B221630977D00DAE149 /* SecondViewController_iPhone.xib in Resources */,
 				51E2AD591630C6BF007DA5C4 /* ShareViewController_iPhone.xib in Resources */,
 				51E2AD601630C6CE007DA5C4 /* PictureViewController_iPhone.xib in Resources */,
-				51E2AD791630CCC1007DA5C4 /* ListEditViewController_iPhone.xib in Resources */,
 				51E2AD7E1630CCD7007DA5C4 /* ListCreateViewController_iPhone.xib in Resources */,
 				5119FE7C1632036D00CFCD33 /* SharePicturesViewController_iPhone.xib in Resources */,
 				5119FE931632049B00CFCD33 /* CreatePictureViewController_iPhone.xib in Resources */,
@@ -731,6 +765,19 @@
 				51B0468B16631359001B353D /* EditPictureViewController_iPhone.xib in Resources */,
 				51B0469416631D77001B353D /* ListPicturesViewController.xib in Resources */,
 				51B0469E16632679001B353D /* PictureAllViewController.xib in Resources */,
+				51B0471016632D02001B353D /* blueberry.png in Resources */,
+				51B0471116632D02001B353D /* bread.png in Resources */,
+				51B0471216632D02001B353D /* carrots.png in Resources */,
+				51B0471316632D02001B353D /* cereal.png in Resources */,
+				51B0471416632D02001B353D /* cookie.png in Resources */,
+				51B0471516632D02001B353D /* eggs.png in Resources */,
+				51B0471616632D02001B353D /* happy.png in Resources */,
+				51B0471716632D02001B353D /* juice.png in Resources */,
+				51B0471816632D02001B353D /* orange.png in Resources */,
+				51B0471916632D02001B353D /* shoppingCart.png in Resources */,
+				51B0471A16632D02001B353D /* strawberry.png in Resources */,
+				51B0471B16632D02001B353D /* urgent.png in Resources */,
+				51B0471C16632D02001B353D /* watermelon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -740,7 +787,6 @@
 			files = (
 				51B046C3166326B3001B353D /* FirstViewController_iPhone.xib in Resources */,
 				51B046C4166326B3001B353D /* SecondViewController_iPhone.xib in Resources */,
-				51B046C5166326B3001B353D /* ListEditViewController_iPhone.xib in Resources */,
 				51B046C6166326B3001B353D /* ListCreateViewController_iPhone.xib in Resources */,
 				51B046C7166326B3001B353D /* ListCell_iPhone.xib in Resources */,
 				51B046C8166326B3001B353D /* CategoryViewController_iPhone.xib in Resources */,
@@ -757,8 +803,6 @@
 				51B046B4166326A7001B353D /* socks.jpg in Resources */,
 				51B046B5166326A7001B353D /* hanger.jpg in Resources */,
 				51B046B6166326A7001B353D /* hat.jpg in Resources */,
-				51B046B7166326A7001B353D /* apple.png in Resources */,
-				51B046B8166326A7001B353D /* milk.png in Resources */,
 				51B046B9166326A7001B353D /* List.png in Resources */,
 				51B046BA166326A7001B353D /* Category.png in Resources */,
 				51B046BB166326A7001B353D /* Picture.png in Resources */,
@@ -808,7 +852,6 @@
 				51E2AD5A1630C6BF007DA5C4 /* ShareViewController.m in Sources */,
 				51E2AD611630C6CE007DA5C4 /* PictureViewController.m in Sources */,
 				51E2AD681630C6E3007DA5C4 /* CategoryViewController.m in Sources */,
-				51E2AD781630CCC1007DA5C4 /* ListEditViewController.m in Sources */,
 				51E2AD7D1630CCD7007DA5C4 /* ListCreateViewController.m in Sources */,
 				5119FE831632039200CFCD33 /* SharePicturesViewController.m in Sources */,
 				5119FE8B1632046F00CFCD33 /* CreatePictureViewController.m in Sources */,
@@ -828,7 +871,6 @@
 			files = (
 				51B046A21663269D001B353D /* AppDelegate.m in Sources */,
 				51B046A31663269D001B353D /* FirstViewController.m in Sources */,
-				51B046A41663269D001B353D /* ListEditViewController.m in Sources */,
 				51B046A51663269D001B353D /* ListCreateViewController.m in Sources */,
 				51B046A61663269D001B353D /* ListPicturesViewController.m in Sources */,
 				51B046A71663269D001B353D /* ListCell.m in Sources */,
