@@ -39,8 +39,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    ListItem *item=self.pickenItem;
-    NSString *str=textOfImage.text;
     
     UIImage *image;
     // NSLog(@"1");
@@ -97,16 +95,14 @@
 }
 
 
-- (IBAction)update:(id)sender {
+- (IBAction)update:(id)sender
+{
     NSString *newText=textOfImage.text;
-    //pickenItem.name=newText;
-    NSString *path=pickenItem.imagePath;
+ 
     AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
-    //NSMutableArray *array=delegate.items;
     
     NSString *originalPath=pickenItem.imagePath;
     
-    //[array delete:pickenItem];
     
     [delegate.items removeObject:pickenItem];
     ListItem *object = [[ListItem alloc] initWithName:newText imagePath: originalPath];

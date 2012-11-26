@@ -29,4 +29,17 @@
 	
 	return [UIImage imageNamed: self.imagePath ];
 }
+
+- (BOOL)isEqual:(ListItem *)anObject
+{
+    if( self.name == anObject.name)
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
+}
+
 @end
