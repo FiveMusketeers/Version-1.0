@@ -70,116 +70,137 @@
 
 - (IBAction) save{
     
-    
-    BOOL alldone = TRUE;
-    
-    //Open the Database
-    sqlite3 *database;
-    
-    //Information on list being added
-    //Grabs list name and picture file name
     NSString *listName = textField1.text;
     
-    NSString *listPictureFile;
-    if (delegate.listPicChosen == 1){
-        listPictureFile = @"list.png";
-    }
-    else if (delegate.listPicChosen == 2){
-        listPictureFile = @"urgent.png";
-    }
-    else if (delegate.listPicChosen == 3){
-        listPictureFile = @"shoppingCart.png";
-    }
-    else if (delegate.listPicChosen == 4){
-        listPictureFile = @"happy.png";
-    }
-
-    ListItem *theList = [ [ListItem alloc] initWithName:listName imagePath:listPictureFile ];
+//    NSLog(@"Textfield1: %@", listName);
+//    
+////    NSLog(@"%d", listName == [NSString stringWithString:@"Default List Name"]);
+//    NSLog(@"%d", listName == nil);
+//    NSLog(@"%d", listName == @" ");
+//    NSLog(@"%d", listName == @"Default List Name");
     
-    //Adding the list to the lists table
-    NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO lists VALUES ('%@', '%@')", listName, listPictureFile];
-    const char *sqlStatement = [sqlCommand UTF8String];
-    sqlite3_stmt *compiledStatement;
     
-    //Copy things from AppDelegate to update them
-    self.databasePath = delegate.databasePath;
-    self.listToAdd = delegate.listToAdd;
-    self.lists = delegate.lists;
-    self.listDictionary = delegate.listDictionary;
-    
-    NSLog(@"The path is: %@", self.databasePath);
-    if( sqlite3_open([delegate.databasePath UTF8String], &database) == SQLITE_OK )
+    if ( [listName isEqualToString: @" "] || [listName isEqualToString: @""] || listName == nil || [listName isEqualToString: @"Default List Name" ])
     {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"Enter a list name"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+    else
+    {
+        BOOL alldone = TRUE;
         
-        //Generate SQL Command based on name and picture and execute
-        int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
-        NSLog(@"%s", sqlStatement);
-        if (result == SQLITE_OK)
-        {
-            if (sqlite3_step(compiledStatement) == SQLITE_DONE){
-                    NSLog(@"value inserted into lists");
-                    
-                    //Create table and execute
-                    sqlCommand = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' (name VARCHAR(30), file VARCHAR(30))", listName];
-                    
-                    sqlStatement = [sqlCommand UTF8String];
-                    
-                    result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
-                    
-                    NSLog(@"%s", sqlStatement);
-                    if (result == SQLITE_OK)
-                    {
-                        if (sqlite3_step(compiledStatement) == SQLITE_DONE){
-                            NSLog(@"table Created");
-                            
-                            //Fill the table we just created
-                            for (ListItem *insertItem in self.listToAdd){
-                                sqlCommand = [NSString stringWithFormat:@"INSERT INTO '%@' VALUES ('%@','%@')", listName, insertItem.name, insertItem.imagePath];
-                                sqlStatement = [sqlCommand UTF8String];
-                                int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
-                                NSLog(@"%s", sqlStatement);
-                                
-                                if (result == SQLITE_OK)
-                                {
-                                    if (sqlite3_step(compiledStatement) == SQLITE_DONE){
-                                        NSLog(@"value inserted into list");
-                                    }
-                                }
-                                else
-                                {
-                                    NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
-                                    alldone = FALSE;
-                                }
-
-                            }
-                            
-                            if (alldone){
-                                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                                                message:@"List Created"
-                                                                               delegate:nil
-                                                                      cancelButtonTitle:@"OK"
-                                                                      otherButtonTitles:nil];
-                                [alert show];
-                                [self.lists addObject:theList];
-                                [self.listDictionary setObject:listToAdd forKey:listName];
-                            }
-
-                        }
-                    }
-                    else
-                    {
-                        NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
-                    }
-                    
+        //Open the Database
+        sqlite3 *database;
         
-            }
-            else
-            {
-                NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
-            }
+        //Information on list being added
+        //Grabs list name and picture file name
+        
+        
+        NSString *listPictureFile;
+        if (delegate.listPicChosen == 1){
+            listPictureFile = @"list.png";
         }
-        sqlite3_finalize(compiledStatement);
-        sqlite3_close(database);
+        else if (delegate.listPicChosen == 3){
+            listPictureFile = @"urgent.png";
+        }
+        else if (delegate.listPicChosen == 2){
+            listPictureFile = @"shoppingCart.png";
+        }
+        else if (delegate.listPicChosen == 4){
+            listPictureFile = @"happy.png";
+        }
+
+        ListItem *theList = [ [ListItem alloc] initWithName:listName imagePath:listPictureFile ];
+        
+        //Adding the list to the lists table
+        NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO lists VALUES ('%@', '%@')", listName, listPictureFile];
+        const char *sqlStatement = [sqlCommand UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        //Copy things from AppDelegate to update them
+        self.databasePath = delegate.databasePath;
+        self.listToAdd = delegate.listToAdd;
+        self.lists = delegate.lists;
+        self.listDictionary = delegate.listDictionary;
+        
+        NSLog(@"The path is: %@", self.databasePath);
+        if( sqlite3_open([delegate.databasePath UTF8String], &database) == SQLITE_OK )
+        {
+            
+            //Generate SQL Command based on name and picture and execute
+            int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+            NSLog(@"%s", sqlStatement);
+            if (result == SQLITE_OK)
+            {
+                if (sqlite3_step(compiledStatement) == SQLITE_DONE){
+                        NSLog(@"value inserted into lists");
+                        
+                        //Create table and execute
+                        sqlCommand = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' (name VARCHAR(30), file VARCHAR(30))", listName];
+                        
+                        sqlStatement = [sqlCommand UTF8String];
+                        
+                        result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+                        
+                        NSLog(@"%s", sqlStatement);
+                        if (result == SQLITE_OK)
+                        {
+                            if (sqlite3_step(compiledStatement) == SQLITE_DONE){
+                                NSLog(@"table Created");
+                                
+                                //Fill the table we just created
+                                for (ListItem *insertItem in self.listToAdd){
+                                    sqlCommand = [NSString stringWithFormat:@"INSERT INTO '%@' VALUES ('%@','%@')", listName, insertItem.name, insertItem.imagePath];
+                                    sqlStatement = [sqlCommand UTF8String];
+                                    int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+                                    NSLog(@"%s", sqlStatement);
+                                    
+                                    if (result == SQLITE_OK)
+                                    {
+                                        if (sqlite3_step(compiledStatement) == SQLITE_DONE){
+                                            NSLog(@"value inserted into list");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+                                        alldone = FALSE;
+                                    }
+
+                                }
+                                
+                                if (alldone){
+                                    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                                                    message:@"List Created"
+                                                                                   delegate:nil
+                                                                          cancelButtonTitle:@"OK"
+                                                                          otherButtonTitles:nil];
+                                    [alert show];
+                                    [self.lists addObject:theList];
+                                    [self.listDictionary setObject:listToAdd forKey:listName];
+                                }
+
+                            }
+                        }
+                        else
+                        {
+                            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+                        }
+                        
+            
+                }
+                else
+                {
+                    NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+                }
+            }
+            sqlite3_finalize(compiledStatement);
+            sqlite3_close(database);
+        }
     }
 }
 

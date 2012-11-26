@@ -98,88 +98,101 @@
 - (IBAction)update:(id)sender
 {
     NSString *newText=textOfImage.text;
- 
-    AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
     
-    NSString *originalPath=pickenItem.imagePath;
-    
-    
-    [delegate.items removeObject:pickenItem];
-    ListItem *object = [[ListItem alloc] initWithName:newText imagePath: originalPath];
-    NSLog(@"%@",object.name);
-    //[array setValue:pickenItem.name forKey:pickenItem.imagePath];
-    [delegate.items addObject:object];
-    NSLog(@"data updated");
-    [self saveImage:imageFromData.image withImageName:newText];
-    
-    for (ListItem *item in delegate.items) {
-        NSLog(@"%@",item.name);
-    }
-    
-    //SQL Command
-    //Define Database
-    sqlite3 *database;
-    
-    //Create command and statement for SQL
-    NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO food VALUES ('%@', '%@.png')", newText, newText];
-    const char *sqlStatement = [sqlCommand UTF8String];
-    sqlite3_stmt *compiledStatement;
-    
-    //Copy Database path from delegate
-    self.databasePath = delegate.databasePath;
-    
-    //Open Connection
-    if( sqlite3_open([delegate.databasePath UTF8String], &database) == SQLITE_OK )
+    if ( [newText isEqualToString: @" "] || [newText isEqualToString: @""] || newText == nil)
     {
-        
-        //Prepare Statement for execution
-        int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
-        NSLog(@"%s", sqlStatement);
-        if (result == SQLITE_OK)
-        {
-			//Execute Step
-            if (sqlite3_step(compiledStatement) == SQLITE_DONE){
-                NSLog(@"value inserted into items");
-			}
-		}
-        
-		//Check for error
-		else
-        {
-            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
-        }
-        sqlite3_finalize(compiledStatement);
-        
-        sqlCommand = [NSString stringWithFormat:@"DELETE FROM food WHERE (name='%@')", self.pickenItem.name];
-        sqlStatement = [sqlCommand UTF8String];
-        
-        result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
-        NSLog(@"%s", sqlStatement);
-        if (result == SQLITE_OK)
-        {
-			//Execute Step
-            if (sqlite3_step(compiledStatement) == SQLITE_DONE){
-                NSLog(@"value deleted into food");
-			}
-		}
-        
-		//Check for error
-		else
-        {
-            NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
-        }
-        sqlite3_finalize(compiledStatement);
-        
-        
-        sqlite3_close(database);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"Enter a picture name"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
     }
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
-                                                    message:@"Image Updated"
-                                                   delegate:nil
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
-    [self dismissModalViewControllerAnimated:YES];
+    else
+    {
+ 
+        AppDelegate *delegate= (AppDelegate*)[[UIApplication sharedApplication] delegate];
+        
+        NSString *originalPath=pickenItem.imagePath;
+        
+        
+        [delegate.items removeObject:pickenItem];
+        ListItem *object = [[ListItem alloc] initWithName:newText imagePath: originalPath];
+        NSLog(@"%@",object.name);
+        //[array setValue:pickenItem.name forKey:pickenItem.imagePath];
+        [delegate.items addObject:object];
+        NSLog(@"data updated");
+        [self saveImage:imageFromData.image withImageName:newText];
+        
+        for (ListItem *item in delegate.items) {
+            NSLog(@"%@",item.name);
+        }
+        
+        //SQL Command
+        //Define Database
+        sqlite3 *database;
+        
+        //Create command and statement for SQL
+        NSString *sqlCommand = [NSString stringWithFormat:@"INSERT INTO food VALUES ('%@', '%@.png')", newText, newText];
+        const char *sqlStatement = [sqlCommand UTF8String];
+        sqlite3_stmt *compiledStatement;
+        
+        //Copy Database path from delegate
+        self.databasePath = delegate.databasePath;
+        
+        //Open Connection
+        if( sqlite3_open([delegate.databasePath UTF8String], &database) == SQLITE_OK )
+        {
+            
+            //Prepare Statement for execution
+            int result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+            NSLog(@"%s", sqlStatement);
+            if (result == SQLITE_OK)
+            {
+                //Execute Step
+                if (sqlite3_step(compiledStatement) == SQLITE_DONE){
+                    NSLog(@"value inserted into items");
+                }
+            }
+            
+            //Check for error
+            else
+            {
+                NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+            }
+            sqlite3_finalize(compiledStatement);
+            
+            sqlCommand = [NSString stringWithFormat:@"DELETE FROM food WHERE (name='%@')", self.pickenItem.name];
+            sqlStatement = [sqlCommand UTF8String];
+            
+            result = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
+            NSLog(@"%s", sqlStatement);
+            if (result == SQLITE_OK)
+            {
+                //Execute Step
+                if (sqlite3_step(compiledStatement) == SQLITE_DONE){
+                    NSLog(@"value deleted into food");
+                }
+            }
+            
+            //Check for error
+            else
+            {
+                NSLog( @"Prepare-error: #%i: %s", result, sqlite3_errmsg( database ) );
+            }
+            sqlite3_finalize(compiledStatement);
+            
+            
+            sqlite3_close(database);
+        }
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@""
+                                                        message:@"Image Updated"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        [self dismissModalViewControllerAnimated:YES];
+    }
 }
 
 
